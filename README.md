@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Productos y servicios que vamos a ofrecer:
 
 
@@ -22,3 +23,7 @@ Magui:
 Julián:
 
 Julián:
+=======
+### Titulo
+sarasa
+>>>>>>> 8c1b2fcf4d2ad193a98519cf2c628fc79c7b2494
