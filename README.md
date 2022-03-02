@@ -1,12 +1,29 @@
-<<<<<<< HEAD
 Productos y servicios que vamos a ofrecer:
-
+Nuestras ventas serán de productos dulces, tanto como de pastelería, como de chocolatería y de panificados
 
 A que público apuntamos:
+Nuestra página será ATP porque incluiremos tortas y demás cosas para fiestas infantiles, pero al tener opción de venta los menores tendrán que estar supervisados por un adulto.
 
+Dentro de la página habrá opciones tanto de venta de productos ya armados, como de encargos personalizados.
 
 5 sitios usados como referencia:
+Buscamos no solo pastelerías, sino también chocolaterías y panaderías,
+tanto de Buenos Aires, como de Europa y EEUU.
 
+sitio de chocolates en Buenos aires
+https://vasalissa.com/
+
+sitio de macarones en Francia
+https://www.laduree.fr/
+
+sitio de pastelería americana
+https://hummingbirdbakery.com/
+
+sitio de donas americanas
+https://suzyq.ca/
+
+Patisserie en Buenos Aires
+https://www.latelierdouceur.com.ar/
 
 Integrantes del equipo:
 
@@ -20,10 +37,8 @@ Actualmente estoy trabajando en un teatro, pero me gustaría dedicarme a la prog
 
 Magui:
 
+Holis! soy Magui, me gusta cocinar, estudio gastronomía y ciencias de datos. Me gustaría compartir mis proyectos gastronómicos en el armado de este proyecto. 
+
 Julián:
 
 Julián:
-=======
-### Titulo
-sarasa
->>>>>>> 8c1b2fcf4d2ad193a98519cf2c628fc79c7b2494
