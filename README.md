@@ -39,6 +39,8 @@ Magui:
 
 Holis! soy Magui, me gusta cocinar, estudio gastronomía y ciencias de datos. Me gustaría compartir mis proyectos gastronómicos en el armado de este proyecto. 
 
-Julián:
+Julián O:
+
+Hola soy Julián, hace un tiempo arranque con la programación y me encanto. También me gustan los deportes, en especial basquet y fútbol. Espero poder aportar todo lo que se al grupo!
 
 Julián:
