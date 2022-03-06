@@ -45,4 +45,4 @@ Hola soy Julián, hace un tiempo arranque con la programación y me encanto. Tam
 
 Julián:
 Buenas soy Julian, hace un tiempo empese a meterme un poquito en el mundo de la programacion y no sali mas. Me gusta toddo tipo de deporte y el entrenamiento fisico.
-ansioso de ver este proyecto terminado.
+Ansioso de ver este proyecto terminado.
