@@ -44,3 +44,5 @@ Julián O:
 Hola soy Julián, hace un tiempo arranque con la programación y me encanto. También me gustan los deportes, en especial basquet y fútbol. Espero poder aportar todo lo que se al grupo!
 
 Julián:
+Buenas soy Julian, hace un tiempo empese a meterme un poquito en el mundo de la programacion y no sali mas. Me gusta toddo tipo de deporte y el entrenamiento fisico.
+ansioso de ver este proyecto terminado.
