@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+  --roboto: "Roboto", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--poppins);
+}
+
+.login {
+  width: 360px;
+  border: 1px solid black;
+  padding: 25px 0;
+}
+
+.form {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: 300px;
+  height: 50px;
+  padding: 1em;
+}
+
+form p,
+a {
+  font-size: 15px;
+}
+
+form h2 {
+  font-size: 24px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.obligatory-field {
+  align-self: flex-start;
+}
+
+.forgotPassword {
+  align-self: flex-end;
+}
+
+.stayConnected {
+  align-self: flex-start;
+}
+
+.btn {
+  width: 250px;
+  height: 50px;
+}
+
+.btn-register {
+  background-color: #dbe4d5;
+  border: 1px solid black;
+}
+
+.marginbtm {
+  margin-bottom: 12px;
+}

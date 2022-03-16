@@ -1,0 +1,27 @@
+{
+  "name": "grupo_2_pasteleria",
+  "version": "1.0.0",
+  "description": "Nuestras ventas serán de productos dulces, tanto como de pastelería, como de chocolatería y de panificados.\r Dentro de la página habrá opciones tanto de venta de productos ya armados, como de encargos personalizados.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juliann1/grupo_2_pasteleria.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juliann1/grupo_2_pasteleria/issues"
+  },
+  "homepage": "https://github.com/Juliann1/grupo_2_pasteleria#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
