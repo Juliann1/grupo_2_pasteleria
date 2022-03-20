@@ -17,6 +17,9 @@ html{
     
 }
 
+body{
+    padding-top: 100px;
+}
 
 header{
     position: fixed;
@@ -41,7 +44,13 @@ header .navbar a{
     margin-left: 2rem;
     transition: all .2s linear;
     padding-right: 1rem;
+    vertical-align: middle;
 }
+
+header .navbar a img{
+    height: 65px;
+}
+
 .navbar i{
     color: black;
     font-size: 3rem;
@@ -210,10 +219,10 @@ i{
 
 .caja-contenedor{
     flex: 1 1 30rem;
-    margin: 1.5rem;
     padding: 3rem 2rem;
     text-align: center;
     transition: .2s linear;
+    margin-top: 38px;
 }
 
 .carrusel2{
@@ -248,8 +257,7 @@ footer .caja{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding-bottom: 4rem;
-    margin: .5rem .5rem;
+    margin: 5px;
 }
 
 footer .caja h3{
@@ -274,13 +282,13 @@ footer .caja-contenedor .caja a{
     padding: .5rem 0;
     color: rgb(39, 36, 36);
     text-decoration: none;
-    margin: 0 2rem;
+    margin: 0 7px;
 }
 
 footer .caja-contenedor .caja a i{
     color: rgb(39, 36, 36);
     font-size: 2rem;
-    margin: 0 2rem;
+    vertical-align: middle;
 }
 
 
