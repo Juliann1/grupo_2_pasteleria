@@ -1,11 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&family=Roboto:wght@100;300&display=swap');
+
+*{
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
 .primer-bloque{
     display: flex;
+    justify-content: space-around;
+
 }
+
 .primer-bloque img{
     width: 400px;
+    margin-top: 53px;
+    display: flex;
+    flex-grow:1;
 }
 .datos-productos{
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    margin: auto;
+    margin-left: 20px;
+}
+}
+.logo-chico{
+    display: flex;
+    justify-content: center;
 }
