@@ -1,0 +1,11 @@
+.primer-bloque{
+    display: flex;
+}
+.primer-bloque img{
+    width: 400px;
+}
+.datos-productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
