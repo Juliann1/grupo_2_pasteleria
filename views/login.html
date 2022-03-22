@@ -8,9 +8,9 @@
     <title>Pasteleria</title>
   </head>
   <body>
-    <section class="login">
+    <section>
       <form action="" class="form">
-        <p class="obligatory-field marginbtm">* Campos obligatorios</p>
+        <p class="form__p--obligatory-field marginbtm">* Campos obligatorios</p>
         <img
           src="img/logo_teapothouse.png"
           alt="logo Teapot house"
@@ -18,8 +18,8 @@
           height="50"
           class="marginbtm"
         />
-        <h2 class="acceso marginbtm">ACCESO</h2>
-        <div class="form-input">
+        <h2 class="form__h2 marginbtm">ACCESO</h2>
+        <div class="form__div">
           <label for="email" class="marginbtm">* Su email</label>
           <input
             type="email"
@@ -27,28 +27,32 @@
             placeholder="example@gmail.com"
             class="input marginbtm"
             id="email"
+            required
           />
         </div>
-        <div class="form-input">
+        <div class="form__div">
           <label for="password" class="marginbtm">* Su contraseña</label>
           <input
-            type="text"
+            type="password"
             name="password"
             placeholder="Su contraseña"
             class="input marginbtm"
             id="password"
+            required
           />
         </div>
         <a href="#" class="forgotPassword marginbtm">Olvido su contraseña?</a>
-        <div class="stayConnected marginbtm">
+        <div class="form__div--stay-connected marginbtm">
           <label>
             <input type="checkbox" id="stayConnected" value="stayConnected" />
             Permanecer conectado
           </label>
         </div>
-        <button class="btn marginbtm">INICIAR SESIÓN</button>
+        <button class="button marginbtm">INICIAR SESIÓN</button>
         <p class="marginbtm">NO TIENES CUENTA AÚN?</p>
-        <button class="btn btn-register marginbtm">REGISTRATE</button>
+        <button class="button button--register marginbtm">
+          <a href="/register" class="a--style-none">REGISTRATE</a>
+        </button>
       </form>
     </section>
   </body>
