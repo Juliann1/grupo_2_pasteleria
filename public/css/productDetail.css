@@ -12,14 +12,17 @@
 .primer-bloque{
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
 
 }
 
 .primer-bloque img{
-    width: 400px;
+    width: 100%;
     margin-top: 53px;
     display: flex;
     flex-grow:1;
+    text-align:center;
+    padding:10px;
 }
 .datos-productos{
     text-align: center;
@@ -30,10 +33,54 @@
     margin-left: 20px;
 }
 
-.datos-productos .titulos h2{
-    font: bolder;
+.datos-productos .titulos p{
+    font-size: 25px;
+}
+.datos-productos .informacion p{
+    font-size: 14px;
+    padding: 7px;
+}
+.datos-productos .precio span{
+    font-weight: bold;
+    font-size: 20px;
+}
+.datos-productos .links{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+.datos-productos .links .link{
+    color: #1d9e9a;
+    border: 10px;
 }
 
+.datos-productos .carrito {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.datos-productos .carrito .compras{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.datos-productos .carrito .compras .numero{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+.datos-productos .carrito .compras .emogi i{
+    color: #6adbd8;
+    width: 20px;
+    height: 20px;
+}
+
+.datos-productos .carrito .añadir{
+    font-size: 20px;
+    border:1px solid gray;
+}
 .logo-chico{
     display: flex;
     justify-content: center;
