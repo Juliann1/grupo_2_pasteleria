@@ -24,4 +24,4 @@ app.get("/productDetail", (req, res) => {
   res.sendFile(path.resolve(__dirname, "views/productDetail.html"));
 });
 
-app.listen(3030, () => console.log("Servidor online"));
+app.listen(3030, () => console.log("Servidor online en puerto 3030"));
