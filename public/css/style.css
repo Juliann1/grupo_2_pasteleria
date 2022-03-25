@@ -25,7 +25,6 @@
 html {
   font-size: 62.4%;
   overflow-x: hidden;
-  /* background: url(/img/fondo1.jpg) fixed; */
   background-color: rgb(240, 240, 240);
 }
 
@@ -39,26 +38,21 @@ header {
   left: 0;
   width: 100%;
   background: #6adbd8;
-  /* background: rgb(214, 199, 181); */
   padding: 0.5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
   z-index: 1000;
-  /* box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.747); */
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center
 }
 .navbar-item {
   display: flex;
+  display: none;
 }
-
 header .navbar a {
   color: black;
   display: inline-block;
@@ -326,4 +320,10 @@ footer .creditos {
   border-top: 0.1rem solid rgb(39, 36, 36);
   padding: 2.5rem;
   text-align: center;
+}
+@media(min-width: 767px){
+  .navbar-item{
+    display: flex;
+    justify-content: space-around;
+  }
 }
