@@ -326,4 +326,16 @@ footer .creditos {
     display: flex;
     justify-content: space-around;
   }
+  .burger-menu{
+    display: none;
+  }
+  .navbar-item{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
