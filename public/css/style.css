@@ -28,10 +28,6 @@ html {
   background-color: rgb(240, 240, 240);
 }
 
-body {
-  padding-top: 100px;
-}
-
 header {
   position: fixed;
   top: 0;
@@ -43,7 +39,9 @@ header {
   padding-bottom: 2rem;
   z-index: 1000;
 }
-
+body {
+  padding-top: 80px;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -97,21 +95,6 @@ i:hover {
 }
 
 /* BODY*/
-.logo {
-  font-size: 2rem;
-  margin-top: 7rem;
-  display: flex;
-  width: 100%;
-  padding: 1rem;
-  padding-top: 2rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo img {
-  width: 20vw;
-  height: 10vw;
-}
 
 body {
   /* background: linear-gradient(rgba(238, 232, 208, 0.699), rgba(238, 200, 236, 0.781)); */
@@ -119,57 +102,6 @@ body {
 }
 
 
-.loguito {
-  top: 0;
-  left: 0;
-  min-height: 50vh;
-  position: fixed;
-}
-
-.cat {
-  margin-top: 18%;
-  margin-top: 2rem;
-}
-
-#contenedorcarrusel {
-  text-align: center;
-  height: 300px;
-  overflow: hidden;
-}
-
-.itemcarrusel {
-  height: 100%;
-  position: relative;
-}
-
-.tarjetacarrusel {
-  height: 100%;
-}
-
-.flechascarrusel {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10rem;
-}
-
-i {
-  color: black;
-  font-size: 6rem;
-}
-
-.tarjetacarrusel img {
-  width: 70%;
-  height: 100%;
-  margin-left: auto;
-  margin-top: auto;
-  border: solid 0.5rem whitesmoke;
-}
 
 .buscar {
   display: flex;
@@ -223,22 +155,6 @@ i {
   margin-top: 38px;
 }
 
-.carrusel2 {
-  flex: 1 1 30rem;
-  height: 35rem;
-  background: white;
-  border: 0.1rem solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  margin: 1.5rem;
-  padding: 3rem 2rem;
-  text-align: center;
-  transition: 0.2s linear;
-}
-
-.carrusel2 p {
-  font-size: 4rem;
-}
-
 .logo-footer {
   display: flex;
   justify-content: center;
@@ -246,81 +162,40 @@ i {
 }
 
 .logo-footer img {
-  width: 14rem;
+  height: 71px;
 }
 
 footer {
-  background-color: #d1eefc;
+  background-color: #6adbd8;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
-footer .caja {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 5px;
-}
-
-footer .caja h3 {
-  font-size: 2rem;
-  padding: 1rem 0;
-  color: rgb(39, 36, 36);
-  text-decoration: underline;
-  margin: 0 3rem;
-  text-underline-offset: 1rem;
-}
-
-footer .caja p {
-  display: flex;
-  font-size: 1.5rem;
-  padding: 0.5rem 0;
-  color: rgb(39, 36, 36);
-}
-
-footer .caja-contenedor .caja a {
-  display: block;
-  font-size: 1.5rem;
-  padding: 0.5rem 0;
-  color: rgb(39, 36, 36);
-  text-decoration: none;
-  margin: 0 7px;
-}
-
-footer .caja-contenedor .caja a i {
-  color: rgb(39, 36, 36);
-  font-size: 2rem;
-  vertical-align: middle;
-}
-
-footer .caja a:hover {
-  text-decoration: underline;
-}
-
-footer .caja .info {
-  display: flex;
+footer .logo-footer{
   align-items: center;
 }
 
-footer .caja-contenedor .caja .info i {
-  border-radius: 50%;
-  color: rgb(39, 36, 36);
-  font-size: 2rem;
-  height: 4.5rem;
-  width: 4.5rem;
-  line-height: 4.5rem;
-  text-align: center;
+footer .creditos{
+  display: none ;
 }
 
-footer .creditos {
-  font-size: 2rem;
-  font-weight: normal;
-  letter-spacing: 0.1rem;
-  color: rgb(39, 36, 36);
-  border-top: 0.1rem solid rgb(39, 36, 36);
-  padding: 2.5rem;
-  text-align: center;
+footer .caja{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
 }
+footer .caja i{
+  color: black;
+  font-size: 15px;
+}
+
+footer .caja .medio{
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 @media(min-width: 767px){
   .navbar-item{
     display: flex;
@@ -337,5 +212,30 @@ footer .creditos {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  footer {
+    background-color: #6adbd8;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .creditos{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 15px;
+    align-items: center;
+    font-weight: bold;
+  }
+  footer .caja i{
+    color: black;
+    font-size: 20px;
+  }
+  
+  footer .caja .medio{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
   }
 }

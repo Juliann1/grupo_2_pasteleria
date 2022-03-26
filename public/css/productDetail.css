@@ -12,6 +12,9 @@
 .enunciado .volver-home .volver{
     border: 1px solid gray;
 }
+.foto-logo .foto-chica{
+    display: none;
+}
 .primer-bloque{
     display: flex;
     justify-content: space-around;
@@ -116,6 +119,8 @@
     text-align:center;
     padding:10px;
 }
+
+
 @media(min-width: 769px){
     .primer-bloque{
         display: flex;
@@ -127,15 +132,27 @@
         display: flex;
         justify-content: space-around;
         flex-direction: row;
-    
+        
     }
     .segundo-bloque img{
-        width: 560px;
+        width: 600px;
         margin-top: 53px;
         display: flex;
         flex-grow: 1;
         text-align: center;
         padding: 10px;
     }
- 
+    .tercer-bloque{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+    }
+    .tercer-bloque img{
+        width: 700px;
+        margin-top: 53px;
+        display: flex;
+        flex-grow: 1;
+        text-align: center;
+        padding: 10px; 
+}
 }
