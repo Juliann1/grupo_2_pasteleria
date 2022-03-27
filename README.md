@@ -7,6 +7,10 @@ Dentro de la página habrá opciones tanto de venta de productos ya armados, com
 
 Nuestra página será ATP porque incluiremos tortas y demás cosas para fiestas infantiles, pero al tener opción de venta los menores tendrán que estar supervisados por un adulto.
 
+### Link hacia el tablero de trabajo
+
+[Trello](https://trello.com/b/VSYPGEUb/la-casita-del-t%C3%A9) - Tablero de trabajo
+
 ### Sitios usados como referencia
 
 Buscamos no solo pastelerías, sino también chocolaterías y panaderías,
