@@ -4,106 +4,111 @@
         <meta charset="UTF-8">
         <title>Mi carrito</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/productCart.css">
         <script src="https://kit.fontawesome.com/9bda9bfb9e.js" crossorigin="anonymous"></script>
     </head>
        
-        
+    <header>
+
+        <nav class="navbar">
+
+            <a class="primero" id="cotizacion" href="/"><img src="/img/logo_teapothouse.png" alt="logo"></a>
+            <div class="burger-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="navbar-item">
+                <a class="medio" id="nosotros" href="">Sobre Nosotros</a>
+                <a class="medio" id="nosotros" href="/register">Registrate</a>
+                <a class="primero" id="cuenta" href="/login"><i class="fa-solid fa-user"></i></a>
+                <a class="segundo" id="carrito" href="/productCart"><i class="fa-solid fa-basket-shopping"></i></a>
+            </div>
+        </nav>
+
+    </header>       
         
 <body>
-    <!-- <header>
-        <nav class="navbar">
-            <a class="primero" id="cotizacion" href=""><img src="/img/logo_teapothouse.png" alt="logo"></a>
-            <a class="medio" id="nosotros" href="">Sobre Nosotros</a>
-            <a class="medio" id="contacto" href="/contacto">Contacto</a>
-            <a class="medio" id="ubi" href="">Ubicacion</a>
-            <a class="medio" id="preguntas" href="">Preguntas frecuentes</a>
-            <a class="medio" id="info" href="/info">Info</a>
-            <a class="segundo" id="home" href="/home">Home</a>
-            <a class="segundo" id="cuenta" href="/cuenta">Mi Cuenta</a>
-            <a class="segundo" id="carrito" href="/carrito">carrito</a>
-            <a id="search" href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-        </nav>
-    </header> -->
-
-
-
     <main>
-        <div class="titulo">
-        <h1>Carrito de compras</h1>
+        
+        <!-- <div class="titulo">
+        <h2>Carrito de compras</h2>
         <i class="fa-solid fa-cart-shopping"></i>
-        </div>
+        </div> -->
         <section class="carrito">
+            <h2>Carrito de compras</h2>
             <div class="top-carrito">
                 <h3>Producto</h3>
-                <h3 class="top-carrito-oculto">Precio</h3>
+                <h3 class="top-carrito-ocultos">Precio</h3>
                 <h3>Cantidad</h3>
-                <h3 class="top-carrito-oculto">Subtotal</h3>
+                <h3 class="top-carrito-ocultos">Subtotal</h3>
             </div>
             <div class="main-carrito">
                 <article class="articulo-carrito">
-                    <div class="caja-1"><img src="/img/torta1.jpg" alt="tortaConFrutilla">
+                    <div class="caja-1"><img src="/img/macarons.jpg" alt="producto">
                     </div>
                     <div class="caja-2">
                         <p>Descripcion del producto</p>
-                        <p class="caja-2-oculto">Cantidad</p>
-                        <p class="caja-2-oculto">$1500</p>
+                    <div class="caja-2-cantidad_precio">
+                        <p class="caja-2-ocultos">1x</p>
+                        <p class="caja-2-ocultos" id="precio-negrita">$1500</p>
                     </div>
-                    <div class="caja-3-oculto">
+                    </div>
+                    <div class="caja-3-ocultos">
                         <p>$1500</p>
                     </div>
                     <div class="caja-4">
-                        <p>+ 1 -</p>
+                        <div class="compras">
+                            <button class="emogi"><i class="fa-solid fa-minus"></i></button>
+                            <input class="numero" type="number">
+                            <button class="emogi"><i class="fa-solid fa-plus"></i></button>
+                           
+                        </div>
                     </div>
-                    <div class="caja-5-oculto">
+                    
+                    <div class="caja-5-ocultos">
                         <p>$3000</p>
                     </div>
                     <div class="caja-6">
                         <button>X</button>
                     </div>
                     
-                </article>
+                </article>              
             </div>
             <div class="bottom-carrito">
-                <button>Seguir comprando</button>
-                <button>Actualizar carrito</button>
+                <button id="seguir-comprando">←Seguir comprando</button>
+                <button id="actualizar-carrito">Actualizar carrito</button>
             </div>
         </section>
         <section class="total">
-        
-        
-        
             <div class="top-total">
                 <h3>Total del carrito</h3>
             </div>
             <div class="main-total">
-                <div>
+                <div class="caja-1">
                     <p>Subtotal</p>
-                </div>
-                <div>
                     <p>$1500</p>
                 </div>
-                <div>
-                    <p>Envio</p>
+                <div class="caja-2">
+                    <div>
+                        <p>Envio</p>
+                    </div>
+                    <div class="form-envio">
+                        <p>Introduce tu direccion para calcular el costo de envío.</p>
+                        <button class="calcular-envio">Calcular envío</button>
+                        <form action="#" method="#" class="form-envio-oculto">
+                            <select name="localidad" id="localidad">
+                                <option value="caba">CABA</option>
+                                <option value="zona-norte">Zona Norte</option>
+                                <option value="zona-sur">Zona Sur</option>
+                                <option value="zona-oeste">Zona Oeste</option>
+                            </select>
+                            <input type="number" name="codigo-postal" placeholder="Código postal">
+                            <button type="reset">ACTUALIZAR</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="form-envio">
-                    <p>Introduce tu direccion para calcular el costo de envío.</p>
-                    <button>Calcular envío</button>
-                    <form action="..." method="...">
-                        <select name="localidad" id="localidad">
-                            <option value="caba">CABA</option>
-                            <option value="zona-norte">Zona Norte</option>
-                            <option value="zona-sur">Zona Sur</option>
-                            <option value="zona-oeste">Zona Oeste</option>
-                        </select>
-                        <input type="number" name="codigo-postal" placeholder="Código postal">
-                        <button type="reset">ACTUALIZAR</button>
-                    </form>
-                </div>
-                <div>
+                <div class="caja-3">
                     <p>Total</p>
-                </div>
-                <div>
                     <p>$3000</p>
                 </div>
             </div>
@@ -111,97 +116,113 @@
                 <button type="submit">FINALIZAR COMPRA</button>
             </div>
         </section>
+                
+                
+                
+        
+        
+        
                
                     
         <section class="recomendados">
-            <h2>Quizá te interese también</h2>
-            <article class="articulo-recomendados">
-                <div class="img-recomendados"></div>
-                <p>Descripción</p>
-                <p>$500</p>
-                <button>COMPRAR</button>
-            </article>
-            <article class="articulo-recomendados">
-                <div class="img-recomendados"></div>
-                <p>Descripción</p>
-                <p>$500</p>
-                <button>COMPRAR</button>
-            </article>
-            <article class="articulo-recomendados">
-                <div class="img-recomendados"></div>
-                <p>Descripción</p>
-                <p>$500</p>
-                <button>COMPRAR</button>
-            </article>
-            <article class="articulo-recomendados">
-                <div class="img-recomendados"></div>
-                <p>Descripción</p>
-                <p>$500</p>
-                <button>COMPRAR</button>
-            </article>
-            
+            <div class="top-recomendados">
+                <h3>Quizá te interese también</h3>
+            </div>
+            <div class="main-recomendados">
+                <article class="articulo-recomendados">
+                    <div class="caja-1">
+                        <img src="/img/macarons2.jpg" alt="otra foto del producto">
+                    </div>
+                    <div class="caja-2">
+                        <p>Descripción</p>
+                    </div>
+                    <div class="caja-3">
+                        <p>$500</p>
+                    </div>
+                    <div class="caja-4">
+                        <button>COMPRAR</button>
+                    </div>
+                </article>
+                <article class="articulo-recomendados">
+                    <div class="caja-1">
+                        <img src="/img/macarons3.jpg" alt="otra foto del producto">
+                    </div>
+                    <div class="caja-2">
+                        <p>Descripción</p>
+                    </div>
+                    <div class="caja-3">
+                        <p>$500</p>
+                    </div>
+                    <div class="caja-4">
+                        <button>COMPRAR</button>
+                    </div>
+                </article>
+                <article class="articulo-recomendados">
+                    <div class="caja-1">
+                        <img src="/img/torta3.jpg" alt="imagen-torta-3">
+                    </div>
+                    <div class="caja-2">
+                        <p>Descripción</p>
+                    </div>
+                    <div class="caja-3">
+                        <p>$500</p>
+                    </div>
+                    <div class="caja-4">
+                        <button>COMPRAR</button>
+                    </div>
+                </article>
+                <article class="articulo-recomendados">
+                    <div class="caja-1">
+                        <img src="/img/torta4.jpg" alt="imagen-torta-4">
+                    </div>
+                    <div class="caja-2">
+                        <p>Descripción</p>
+                    </div>
+                    <div class="caja-3">
+                        <p>$500</p>
+                    </div>
+                    <div class="caja-4">
+                        <button>COMPRAR</button>
+                    </div>
+                </article>
+            </div>
         </section>
-       
-       
-       
-       
-       
-       
-       
-       
     </main>
-        
-        
-        
-        
-        
-        
-
-
-    <!-- <footer>
-
-        <div class="caja-contenedor">
-            <div class="caja">
-                <h3>Más informacion:</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt distinctio soluta unde minima
-                    reiciendis
-                    mollitia veniam inventore ipsam autem.</p>
-            </div>
-
-            <div class="caja">
-                <h3>Buscanos en:</h3>
-                <br>
-                <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
-                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-            </div>
-
-            <div class="caja">
-                <h3>Contacto:</h3>
-
-                <div class="info">
-                    <i class="fas fa-phone"></i>
-                    <p>326264628260</p>
-                </div>
-
-                <div class="info">
-                    <i class="fas fa-envelope-open-text"></i>
-                    <p>teapothouse@gmail.com</p>
-                </div>
-
-                <div class="info">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-
-            </div>
-
-            <h1 class="creditos">
-                &copy copyright @2022 Proyencto DigitalHouse.
-            </h1>
-
+    <footer>
+        <div class="creditos">
+            <p> &copy copyright @2022 Proyecto DigitalHouse.</p>
+            <p>
+                Teapot House
+            </p>
         </div>
-    </footer> -->
-
+        <div class="logo-footer">
+            <img src="img/logo_teapothouse.png" alt="logo de la marca">
+        </div>
+        <div class="caja">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a class="medio" id="nosotros" href="#">Contacto</a>
+        </div>
+        </div>
+    </footer>
 </body>
 </html>
+            
+       
+       
+       
+       
+       
+       
+       
+       
+    
+        
+        
+        
+        
+        
+        
+
+

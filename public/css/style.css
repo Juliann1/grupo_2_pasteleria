@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+/* <<<<<<< HEAD */
+=======
+>>>>>>> 0d6dbc498a1cbc3559952b94c2bfbc7ce310e3e7
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&family=Roboto:wght@100;300&display=swap");
 
 :root{
@@ -6,6 +10,48 @@
     --degradado: linear-gradient(90deg, var(--celeste), var(--verde));
     --Gris-oscuro: #666666;
     --Gris-claro: #ebebeb;
+<<<<<<< HEAD
+}
+/* ======= */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&family=Roboto:wght@100;300&display=swap');
+
+*{
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+html{
+    font-size: 62.4%;
+    overflow-x: hidden;
+    background: url(/img/fondo1.jpg) fixed;
+    
+}
+
+body{
+    padding-top: 100px;
+}
+
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(214, 199, 181);
+    padding: .5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.747);
+/* >>>>>>> 6cf8d6504e0b74cc82b9c8ebd8dffa767294ca39 */
+=======
+>>>>>>> 0d6dbc498a1cbc3559952b94c2bfbc7ce310e3e7
 }
 
 /* COLOR TRELLO */
