@@ -10,6 +10,9 @@
 section.carrito{
     margin: 40px 10px;
 }
+section.carrito h2{
+    text-align: center;
+}
 /* TOP-CARRITO  */
 div.top-carrito {
   display: flex;
@@ -83,6 +86,7 @@ article.articulo-carrito div.caja-6 button{
 /* BOTTOM-CARRITO  */
 div.bottom-carrito {
   padding: 10px 10px 10px;
+  display: flex;
 }
 div.bottom-carrito button{
     display: block;
@@ -97,7 +101,7 @@ div.bottom-carrito #seguir-comprando{
     background-color: #fff;
     color: #25d1b2;
     border: 1px solid #25d1b2;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 
