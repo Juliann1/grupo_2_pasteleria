@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&family=Roboto:wght@100;300&display=swap");
 
-:root{
+:root {
     --verde: #0c443a;
     --celeste: #25d1b2;
     --degradado: linear-gradient(90deg, var(--celeste), var(--verde));
@@ -11,231 +11,224 @@
 /* COLOR TRELLO */
 /* #00c2e0; */
 
-
 * {
-  font-family: 'EB Garamond', serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  outline: none;
-  border: none;
+    /* font-family: "EB Garamond", serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
 }
 
 html {
-  font-size: 62.4%;
-  overflow-x: hidden;
-  background-color: rgb(240, 240, 240);
+    font-size: 62.4%;
+    overflow-x: hidden;
+    background-color: rgb(240, 240, 240);
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #6adbd8;
-  padding: 0.5rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #6adbd8;
+    padding: 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    z-index: 1000;
 }
-body {
-  padding-top: 80px;
-}
+
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .navbar-item {
-  display: flex;
-  display: none;
+    display: flex;
+    display: none;
 }
 header .navbar a {
-  color: black;
-  display: inline-block;
-  margin-left: 2rem;
-  transition: all 0.2s linear;
-  padding-right: 1rem;
-  vertical-align: middle;
+    color: black;
+    display: inline-block;
+    margin-left: 2rem;
+    transition: all 0.2s linear;
+    padding-right: 1rem;
+    vertical-align: middle;
 }
 
 header .navbar a img {
-  height: 71px;
+    height: 71px;
 }
 
 .navbar i {
-  color: black;
-  font-size: 20px;
+    color: black;
+    font-size: 20px;
 }
 
 header .navbar a:hover,
 #home:hover,
 i:hover {
-  color: gray;
-  transform: scale(1.1);
-  border: none;
-  transition: all 0.2s linear;
+    color: gray;
+    transform: scale(1.1);
+    border: none;
+    transition: all 0.2s linear;
 }
 
-.primero
- {
-  font-size: 2.5rem;
+.primero {
+    font-size: 2.5rem;
 }
-.segundo{
-  font-size: 2.5rem;
+.segundo {
+    font-size: 2.5rem;
 }
 .medio {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 #home {
-  border-left: solid 0.2rem rgba(99, 79, 79, 0.493);
-  padding-left: 1rem;
+    border-left: solid 0.2rem rgba(99, 79, 79, 0.493);
+    padding-left: 1rem;
 }
 
 /* BODY*/
 
 body {
-  /* background: linear-gradient(rgba(238, 232, 208, 0.699), rgba(238, 200, 236, 0.781)); */
-  opacity: 3;
+    /* background: linear-gradient(rgba(238, 232, 208, 0.699), rgba(238, 200, 236, 0.781)); */
+    opacity: 3;
 }
-
-
 
 .buscar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem;
-  transition: all 0.2s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    transition: all 0.2s linear;
 }
 .buscar:hover {
-  transform: scale(1.1);
-  transition: all 0.2s linear;
+    transform: scale(1.1);
+    transition: all 0.2s linear;
 }
 
 .busqueda {
-  align-content: center;
-  padding: 1rem;
-  margin: auto;
-  color: black;
-  font-size: 3rem;
-  background: rgb(204, 186, 186);
-  z-index: 900;
-  border: solid 0.1rem black;
+    align-content: center;
+    padding: 1rem;
+    margin: auto;
+    color: black;
+    font-size: 3rem;
+    background: rgb(204, 186, 186);
+    z-index: 900;
+    border: solid 0.1rem black;
 }
 .busqueda:hover {
-  color: gray;
-  border: solid 0.1rem gray;
-  background: rgb(214, 199, 181);
-  transition: all 0.2s linear;
+    color: gray;
+    border: solid 0.1rem gray;
+    background: rgb(214, 199, 181);
+    transition: all 0.2s linear;
 }
 
 .destacados {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
 .destacados h2 {
-  font-size: 3rem;
-  margin-top: 3rem;
-  align-content: center;
-  margin: auto;
-  flex: 1 1 30rem;
+    font-size: 3rem;
+    margin-top: 3rem;
+    align-content: center;
+    margin: auto;
+    flex: 1 1 30rem;
 }
 
 .caja-contenedor {
-  flex: 1 1 30rem;
-  padding: 3rem 2rem;
-  text-align: center;
-  transition: 0.2s linear;
-  margin-top: 38px;
+    flex: 1 1 30rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: 0.2s linear;
+    margin-top: 38px;
 }
 
 .logo-footer {
-  display: flex;
-  justify-content: center;
-  margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
 }
 
 .logo-footer img {
-  height: 71px;
+    height: 71px;
 }
 
 footer {
-  background-color: #6adbd8;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-footer .logo-footer{
-  align-items: center;
-}
-
-footer .creditos{
-  display: none ;
-}
-
-footer .caja{
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-
-}
-footer .caja i{
-  color: black;
-  font-size: 15px;
-}
-
-footer .caja .medio{
-  color: black;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-@media(min-width: 767px){
-  .navbar-item{
-    display: flex;
-    justify-content: space-around;
-  }
-  .burger-menu{
-    display: none;
-  }
-  .navbar-item{
-    display: flex;
-    justify-content: flex-end;
-  }
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  footer {
     background-color: #6adbd8;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  footer .creditos{
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column-reverse;
-    font-size: 15px;
+    justify-content: center;
+    flex-direction: column;
+}
+footer .logo-footer {
     align-items: center;
-    font-weight: bold;
-  }
-  footer .caja i{
+}
+
+footer .creditos {
+    display: none;
+}
+
+footer .caja {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+footer .caja i {
     color: black;
-    font-size: 20px;
-  }
-  
-  footer .caja .medio{
+    font-size: 15px;
+}
+
+footer .caja .medio {
     color: black;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
-  }
+}
+
+@media (min-width: 767px) {
+    .navbar-item {
+        display: flex;
+        justify-content: space-around;
+    }
+    .burger-menu {
+        display: none;
+    }
+    .navbar-item {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    footer {
+        background-color: #6adbd8;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    footer .creditos {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 15px;
+        align-items: center;
+        font-weight: bold;
+    }
+    footer .caja i {
+        color: black;
+        font-size: 20px;
+    }
+
+    footer .caja .medio {
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+    }
 }

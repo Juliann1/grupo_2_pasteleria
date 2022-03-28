@@ -5,55 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Pasteleria</title>
   </head>
   <body>
-    <section>
-      <form action="" class="form">
-        <p class="form__p--obligatory-field marginbtm">* Campos obligatorios</p>
-        <img
-          src="img/logo_teapothouse.png"
-          alt="logo Teapot house"
-          width="142"
-          height="50"
-          class="marginbtm"
-        />
-        <h2 class="form__h2 marginbtm">ACCESO</h2>
-        <div class="form__div">
-          <label for="email" class="marginbtm">* Su email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="example@gmail.com"
-            class="input marginbtm"
-            id="email"
-            required
+    <header>
+
+      <nav class="navbar">
+
+          <a class="primero" id="cotizacion" href="/"><img src="/img/logo_teapothouse.png" alt="logo"></a>
+          <div class="burger-menu">
+              <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="navbar-item">
+              <a class="medio" id="nosotros" href="">Sobre Nosotros</a>
+              <a class="medio" id="nosotros" href="/register">Registrate</a>
+              <a class="primero" id="cuenta" href="/login"><i class="fa-solid fa-user"></i></a>
+              <a class="segundo" id="carrito" href="/productCart"><i class="fa-solid fa-basket-shopping"></i></a>
+          </div>
+      </nav>
+
+  </header>
+    <main>
+      <section class="login-form">
+        <form action="#" method="POST" class="form">
+      
+          <img
+            src="img/logo_teapothouse.png"
+            alt="logo Teapot house"
+            width="142"
+            height="50"
+            class="tphouse-logo marginbtm"
           />
-        </div>
-        <div class="form__div">
-          <label for="password" class="marginbtm">* Su contraseña</label>
-          <input
-            type="password"
-            name="password"
-            placeholder="Su contraseña"
-            class="input marginbtm"
-            id="password"
-            required
-          />
-        </div>
-        <a href="#" class="forgotPassword marginbtm">Olvido su contraseña?</a>
-        <div class="form__div--stay-connected marginbtm">
-          <label>
-            <input type="checkbox" id="stayConnected" value="stayConnected" />
-            Permanecer conectado
-          </label>
-        </div>
-        <button class="button marginbtm">INICIAR SESIÓN</button>
-        <p class="marginbtm">NO TIENES CUENTA AÚN?</p>
-        <button class="button button--register marginbtm">
-          <a href="/register" class="a--style-none">REGISTRATE</a>
-        </button>
-      </form>
-    </section>
+          <h2 class="form__h2 marginbtm">ACCESO</h2>
+          <div class="form__div">
+            <label for="email" class="marginbtm">Su email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@gmail.com"
+              class="input brd-radius marginbtm"
+              id="email"
+              required
+            />
+          </div>
+          <div class="form__div">
+            <label for="password" class="marginbtm">Su contraseña</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Su contraseña"
+              class="input brd-radius marginbtm"
+              id="password"
+              required
+            />
+          </div>
+          <a href="#" class="forgotPassword marginbtm">Olvido su contraseña?</a>
+          <div class="form__div--stay-connected marginbtm">
+            <label>
+              <input type="checkbox" id="stayConnected" value="stayConnected" />
+              Permanecer conectado
+            </label>
+          </div>
+          <button class="button brd-radius marginbtm">INICIAR SESIÓN</button>
+          <p class="marginbtm">NO TIENES CUENTA AÚN?</p>
+          <button class="button brd-radius button--register marginbtm">
+            REGISTRATE
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="creditos">
+          <p> &copy copyright @2022 Proyecto DigitalHouse.</p>
+          <p>
+              Teapot House
+          </p>
+      </div>
+      <div class="logo-footer">
+          <img src="img/logo_teapothouse.png" alt="logo de la marca" class="tphouse-logo">
+      </div>
+      <div class="caja">
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a class="medio" id="nosotros" href="#">Contacto</a>
+      </div>
+      </div>
+  </footer>
   </body>
 </html>
