@@ -39,9 +39,6 @@
     margin-left: 20px;
 }
 
-<<<<<<< HEAD
-.logo-chico{
-=======
 .datos-productos .titulos p{
     font-size: 25px;
     margin-top: 25px;
@@ -116,7 +113,6 @@
     background-color:#6adbd8 ;
 }
 .segundo-bloque{
->>>>>>> 0d6dbc498a1cbc3559952b94c2bfbc7ce310e3e7
     display: flex;
     flex-direction: column;
 }
