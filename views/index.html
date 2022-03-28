@@ -11,17 +11,19 @@
 </head>
 <body>
     <header>
+        <a href="/" class="logo">
+            <img src="img/logo_teapothouse.png" alt="logo"></a>
+
+        <!-- ACA METO EL BOTONSITO DE LAS TRES BARRITAS PARA DESPLEGAR LA BARRA DE NAVEGACION EN PANTALLAS CHICAS-->
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fa fa-bars"></label>
+
+        <!--ESTA ES LA BARRA DE NAVEGACION-->
         <nav class="navbar">
-            <a class="primero" id="cotizacion" href="/"><img src="/img/logo_teapothouse.png" alt="logo"></a>
-            <div class="burger-menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="navbar-item">
-                <a class="medio" id="nosotros" href="">Sobre Nosotros</a>
-                <a class="medio" id="nosotros" href="/register">Registrate</a>
-                <a class="primero" id="cuenta" href="/login"><i class="fa-solid fa-user"></i></a>
-                <a class="segundo" id="carrito" href="/productCart"><i class="fa-solid fa-basket-shopping"></i></a>
-            </div>
+            <a href="/nosotros">Sobre nosotros</a>
+            <a href="/register">Registrate</a>
+            <a href="/login"><i class="fa-solid fa-user"></i></a>
+            <a href="/productCart"><i class="fa-solid fa-basket-shopping"></i></a>
         </nav>
     </header>
         <section class="recomendados">
@@ -48,21 +50,29 @@
     </section>
 
     <footer>
-        <div class="creditos">
-            <p> &copy copyright @2022 Proyecto DigitalHouse.</p>
-            <p>
-                Teapot House
-            </p>
-        </div>
+
         <div class="logo-footer">
             <img src="img/logo_teapothouse.png" alt="logo de la marca">
         </div>
-        <div class="caja">
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-            <a class="medio" id="nosotros" href="#">Contacto</a>
-        </div>
+
+        <div class="contenedor-footer">
+            <div class="creditos">
+                <h3>&copy copyright @2022 Proyecto DigitalHouse.</h3>
+                <h3>Teapot House</h3>
+            </div>
+
+            <div class="caja-contacto">
+
+                <div class="cajita-contacto">
+                    <div class="cajita">
+                        <h4>Contacto</h4>
+                    </div>
+
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
