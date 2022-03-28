@@ -1,0 +1,121 @@
+:root {
+    --color1: #1cc2bc;
+    --color2: #6adbd8;
+    --poppins: "Poppins", sans-serif;
+}
+
+
+
+form h3{
+    font-size: 3rem;
+}
+
+
+
+label{
+    font-size: 15px;
+}
+
+/* Main */
+main{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    width: 550px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5rem;
+    border: var(--color2) solid 2px;
+    
+}
+
+main form{
+    background: white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+main form label{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+main form .inputcaja,
+.password{
+    margin: 10px 0;
+    border-radius: 5rem;
+}
+.password{
+    width: 90%;
+    margin: auto;
+}
+main form .inputcaja input,
+main .password input{
+    color: var(--gris-oscuro);
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    width: 90%;
+    border: solid var(--color2) 1.5px;
+    transition: .5s;
+    border-radius: 5rem;
+}
+
+main form .inputcaja input:hover,
+.password input:hover{
+    border: solid 1.5px var(--color1);
+}
+
+
+
+.btn{
+    border: #1cc2bc solid 2px;
+    border-radius: 5rem;
+    font-size: 3rem;
+    width: 30rem;
+    margin: 2rem;
+    padding: 1rem;
+    background: #6adbd8;
+    transition: all .5s linear;
+}
+
+.btn:hover{
+    background: var(--color1);
+    border: var(--color2);
+    transform: scale(1.1)
+    
+}
+
+@media (max-width: 767px){
+    main{
+        width: 90%;
+    }
+}
+
+
+
+@media (max-width: 361px){
+    main{
+        width: 80%;
+    }
+
+    main form{
+        width: 80%;
+        padding: 5px;
+    }
+
+    input,
+    main .password input{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .password{
+        width: 80%;
+    }
+}
