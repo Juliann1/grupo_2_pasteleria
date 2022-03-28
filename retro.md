@@ -1,3 +1,4 @@
+## Retrospectiva del sprint 1 y 2
 ### Comenzar a hacer:
   organizar mejor el código para poder trabajar más comodamente sin tener que pisarnos
   (por ejemplo el header, los estilos, el footer q son comunes entre todos). También siguiendo esta linea, deberíamos aprender más en detalle cual es la manera óptima      para separar las tareas.

@@ -1,9 +1,22 @@
-/* ocultos: .top-carrito-oculto, .caja-2-oculto, .caja-3-oculto, .caja-4-oculto */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+    --Celeste: #6adbd8;
+    --Celeste-oscuro: #1cc2bc;
+    --Gris-oscuro: #666666;
+    --Gris-claro: #ebebeb;
+    --roboto: "Roboto", sans-serif;
+    --poppins: "Poppins", sans-serif;
+}
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+html {
+    font-family: var(--poppins);
 }
 
 main{
@@ -59,6 +72,7 @@ main{
 }
 .caja-6{
     width: 10%;
+    align-self: flex-start;
 }
 .bottom-carrito{
     display: flex;
@@ -78,7 +92,7 @@ main{
 
 /* MEDIAQUERYS */
 
-@media(min-width: 548px){
+@media(min-width: 769px){
     .top-carrito-oculto{
         display: block;
     }
