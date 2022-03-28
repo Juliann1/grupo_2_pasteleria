@@ -52,45 +52,40 @@
                 </article>              
             </div>
             <div class="bottom-carrito">
-                <button id="seguir-comprando">  ←Seguir comprando  </button>
-                <button id="actualizar-carrito">  Actualizar carrito  </button>
+                <button id="seguir-comprando">←Seguir comprando</button>
+                <button id="actualizar-carrito">Actualizar carrito</button>
             </div>
         </section>
         <section class="total">
-        
-        
-        
             <div class="top-total">
                 <h3>Total del carrito</h3>
             </div>
             <div class="main-total">
-                <div>
+                <div class="caja-1">
                     <p>Subtotal</p>
-                </div>
-                <div>
                     <p>$1500</p>
                 </div>
-                <div>
-                    <p>Envio</p>
+                <div class="caja-2">
+                    <div>
+                        <p>Envio</p>
+                    </div>
+                    <div class="form-envio">
+                        <p>Introduce tu direccion para calcular el costo de envío.</p>
+                        <button class="calcular-envio">Calcular envío</button>
+                        <form action="#" method="#" class="form-envio-oculto">
+                            <select name="localidad" id="localidad">
+                                <option value="caba">CABA</option>
+                                <option value="zona-norte">Zona Norte</option>
+                                <option value="zona-sur">Zona Sur</option>
+                                <option value="zona-oeste">Zona Oeste</option>
+                            </select>
+                            <input type="number" name="codigo-postal" placeholder="Código postal">
+                            <button type="reset">ACTUALIZAR</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="form-envio">
-                    <p>Introduce tu direccion para calcular el costo de envío.</p>
-                    <button>Calcular envío</button>
-                    <form action="..." method="...">
-                        <select name="localidad" id="localidad">
-                            <option value="caba">CABA</option>
-                            <option value="zona-norte">Zona Norte</option>
-                            <option value="zona-sur">Zona Sur</option>
-                            <option value="zona-oeste">Zona Oeste</option>
-                        </select>
-                        <input type="number" name="codigo-postal" placeholder="Código postal">
-                        <button type="reset">ACTUALIZAR</button>
-                    </form>
-                </div>
-                <div>
+                <div class="caja-3">
                     <p>Total</p>
-                </div>
-                <div>
                     <p>$3000</p>
                 </div>
             </div>
@@ -98,6 +93,12 @@
                 <button type="submit">FINALIZAR COMPRA</button>
             </div>
         </section>
+                
+                
+                
+        
+        
+        
                
                     
         <section class="recomendados">
