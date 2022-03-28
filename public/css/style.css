@@ -36,7 +36,7 @@ header .logo{
 
 header a img{
   display: flex;
-  width: 12rem;
+  width: 11rem;
   margin-left: 2rem;
 }
 
@@ -100,7 +100,7 @@ footer .logo-footer{
 }
 
 footer .logo-footer img{
-  width: 10rem;
+  width: 12rem;
   margin-top: 1.5rem;
 }
 
@@ -116,7 +116,8 @@ footer .creditos, .caja-contacto{
 
 footer .creditos{
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  font-size: 12px;
 }
 
 footer .caja-contacto{

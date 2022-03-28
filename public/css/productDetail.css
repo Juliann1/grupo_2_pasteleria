@@ -22,15 +22,19 @@
 
 }
 
+.enunciado .vuelta-home {
+    font-size: 20px;
+    padding: 0px;
+}
 .primer-bloque img{
     width: 100%;
-    margin-top: 53px;
     display: flex;
     flex-grow:1;
     text-align:center;
     padding:10px;
 }
 .datos-productos{
+    padding:0px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -62,6 +66,7 @@
     background-color: #1cc2bc;
     border: 1px solid gray;
     font-size: 20px;
+    border-radius: 9px;
 }
 
 .datos-productos .carrito {
@@ -104,6 +109,7 @@
     color: black;
     background-color: #1cc2bc;
     border: 1px solid gray;
+    border-radius: 9px;
     cursor: pointer;
 }
 .datos-productos .carrito .añadir:hover{
@@ -114,6 +120,7 @@
 }
 .segundo-bloque{
     display: flex;
+    margin-top: -64px;
     flex-direction: column;
 }
 
@@ -126,6 +133,7 @@
 }
 .tercer-bloque{
     display: flex;
+    margin-top: -64px;
     flex-direction: column;
 }
 .tercer-bloque img{
@@ -137,6 +145,7 @@
 }
 .recomendados{
     display: flex;
+    margin-top: -64px;
     flex-direction: column;
 }
 .recomendados .carrousel{
@@ -177,6 +186,7 @@
     }
     .segundo-bloque{
         display: flex;
+        margin-top: -64px;
         justify-content: space-around;
         flex-direction: row;
         
