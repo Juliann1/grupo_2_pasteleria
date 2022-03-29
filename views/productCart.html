@@ -29,58 +29,57 @@
 <body>
     <main>
         
-        <!-- <div class="titulo">
-        <h2>Carrito de compras</h2>
-        <i class="fa-solid fa-cart-shopping"></i>
-        </div> -->
         <section class="carrito">
             <h2>Carrito de compras</h2>
-            <div class="top-carrito">
-                <h3>Producto</h3>
-                <h3 class="top-carrito-ocultos">Precio</h3>
-                <h3>Cantidad</h3>
-                <h3 class="top-carrito-ocultos">Subtotal</h3>
-            </div>
-            <div class="main-carrito">
-                <article class="articulo-carrito">
-                    <div class="caja-1"><img src="/img/macarons.jpg" alt="producto">
+            <div class="interior-carrito">
+                <div class="col-1">
+                    <h3>Producto</h3>
+                    <img src="/img/macarons.jpg" alt="producto">
+                </div>
+                <div class="col-2">
+                    <h3>Precio</h3>
+                    <p>$1500</p>
+                </div>
+                <div class="col-3">
+                    <h3>Cantidad</h3>
+                    <div class="compras">                         
+                                <button class="emogi"><i class="fa-solid fa-minus"></i></button>
+                                <input class="numero" type="number">
+                                <button class="emogi"><i class="fa-solid fa-plus"></i></button>                         
                     </div>
-                    <div class="caja-2">
-                        <p>Descripcion del producto</p>
-                    <div class="caja-2-cantidad_precio">
-                        <p class="caja-2-ocultos">1x</p>
-                        <p class="caja-2-ocultos" id="precio-negrita">$1500</p>
-                    </div>
-                    </div>
-                    <div class="caja-3-ocultos">
-                        <p>$1500</p>
-                    </div>
-                    <div class="caja-4">
-                        <div class="compras">
-                            <button class="emogi"><i class="fa-solid fa-minus"></i></button>
-                            <input class="numero" type="number">
-                            <button class="emogi"><i class="fa-solid fa-plus"></i></button>
-                           
-                        </div>
-                    </div>
-                    
-                    <div class="caja-5-ocultos">
-                        <p>$3000</p>
-                    </div>
-                    <div class="caja-6">
-                        <button>X</button>
-                    </div>
-                    
-                </article>              
+                </div>
+                <div class="col-4">
+                    <h3>Subtotal</h3>
+                    <p>$3000</p>
+                </div>
             </div>
             <div class="bottom-carrito">
                 <button id="seguir-comprando">←Seguir comprando</button>
                 <button id="actualizar-carrito">Actualizar carrito</button>
             </div>
         </section>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <section class="total">
             <div class="top-total">
-                <h3>Total del carrito</h3>
+                <h2>Total del carrito</h2>
             </div>
             <div class="main-total">
                 <div class="caja-1">
@@ -125,7 +124,7 @@
                     
         <section class="recomendados">
             <div class="top-recomendados">
-                <h3>Quizá te interese también</h3>
+                <h2>Quizá te interese también</h2>
             </div>
             <div class="main-recomendados">
                 <article class="articulo-recomendados">

@@ -1,95 +1,71 @@
 
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+
 html {
     font-family: var(--poppins);
 }
-
+section{        /* CAMBIAR */
+  padding: 0;
+}
+main{
+  font-size: 13px;
+}
+h2{
+  text-align: center;
+    margin-bottom: 20px;
+}
 /* SECTION CARRITO  */
 section.carrito{
     margin: 40px 10px;
 }
-section.carrito h2{
-    text-align: center;
-}
-/* TOP-CARRITO  */
-div.top-carrito {
+/* INTERIOR CARRITO */
+div.interior-carrito{
   display: flex;
-  justify-content: space-between;
-  border-bottom: 3px solid burlywood;
-  padding: 10px;
-}
-
-h3.top-carrito-ocultos {
-  display: none;
-}
-
-/* MAIN-CARRITO  */
-
-/* ARTICLE  */
-article.articulo-carrito {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid burlywood;
-  font-size: 13px;
-}
-article.articulo-carrito div.caja-1 {
-  padding: 15px 6.5px;
-}
-article.articulo-carrito div.caja-1 img {
-  width: 100px;
-  height: 100px;
-}
-article.articulo-carrito div.caja-2 {
-  padding: 15px 6.5px;
-}
-article.articulo-carrito div.caja-2 p {
-    padding: 2px;
-}
-p#precio-negrita{
-    font-weight: bold;
-}
-article.articulo-carrito div.caja-2-cantidad_precio{
-    display: flex;
-}
-article.articulo-carrito div.caja-3-ocultos,
-article.articulo-carrito div.caja-5-ocultos {
-  display: none;
-}
-article.articulo-carrito div.caja-4 {
+  justify-content: center;
   text-align: center;
-  padding: 15px 6.5px;
+  
 }
-article.articulo-carrito div.caja-4 input.numero{
-    width: 10px;
+div.interior-carrito div{
+  border-bottom: 1px solid gray;
 }
-article.articulo-carrito div.caja-4 button.emogi{
-    border-style: none;
+div.interior-carrito div.compras{
+  border: none;
 }
-article.articulo-carrito div.caja-4 button.emogi i {
-    background-color: #fff;
-    
+div.interior-carrito h3{
+  border-bottom: 3px solid gray;
 }
-article.articulo-carrito div.caja-6{
-    order: -1;
-    align-self: baseline;
+div.col-1{
+  width: 25%;
 }
-article.articulo-carrito div.caja-6 button{
-    border-style: none;
-    background-color: #fff;
-    font-size: 15px;
-    padding: 5px;
+div.col-1 img{
+  width: 100%;
+  height: auto;
+}
+div.col-2{
+  width: 25%;
+}
+div.col-3{
+  width: 25%;
+}
+ div.col-3 input.numero{
+  width: 10px;
+}
+ div.col-3 button.emogi{
+  border-style: none;
+}
+ div.col-3 button.emogi i {
+  background-color: #fff;
+  
+}
+div.col-4{
+  width: 25%;
 }
 
 /* BOTTOM-CARRITO  */
 div.bottom-carrito {
   padding: 10px 10px 10px;
   display: flex;
+  justify-content: space-around;
 }
 div.bottom-carrito button{
     display: block;
@@ -104,7 +80,7 @@ div.bottom-carrito #seguir-comprando{
     background-color: #fff;
     color: #25d1b2;
     border: 1px solid #25d1b2;
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
 }
 
 
@@ -115,22 +91,22 @@ section.total{
 /* TOP TOTAL  */
 section.total div.top-total{
   text-align: left;
-  border-bottom: 3px solid burlywood;
+  border-bottom: 3px solid gray;
   padding: 10px;
 }
 /* MAIN TOTAL */
 section.total div.main-total{
-  border-bottom: 3px solid burlywood;
+  border-bottom: 3px solid gray;
 }
 section.total div.main-total div.caja-1{
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid burlywood;
+  border-bottom: 1px solid gray;
 }
 section.total div.main-total div.caja-2{
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid burlywood;
+  border-bottom: 1px solid gray;
 }
 section.total div.main-total div.form-envio{
   text-align: end;
@@ -176,9 +152,13 @@ section.recomendados article{
     margin: auto;  
     width: 45%;   
 }
+section.recomendados article div.caja-1{
+  max-width: 100%;    
+   height: auto;
+}
 section.recomendados article div.caja-1 img{
-    width: 100%;    
-   height: 100px;       /*BORRAR!! */
+    max-width: 100%;    
+   height: auto;      /*BORRAR!! */
 }
 section.recomendados article div.caja-2 p{
     margin: 10px 0;
@@ -197,8 +177,7 @@ margin: 5px 5px;
 }
 
 /* MEDIAQUERYS */
-@media (min-width: 548px) {
-  h3.top-carrito-ocultos {
-    display: flex;
-  }
-}
+@media(min-width:768px){
+  
+  }          
+

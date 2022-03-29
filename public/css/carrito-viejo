@@ -1,0 +1,140 @@
+
+/* TOP-CARRITO  */
+div.top-carrito {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid burlywood;
+  padding: 10px;
+}
+
+h3.top-carrito-ocultos {
+  display: none;
+}
+
+/* MAIN-CARRITO  */
+
+/* ARTICLE  */
+article.articulo-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid burlywood;
+  font-size: 13px;
+}
+article.articulo-carrito div.caja-1 {
+  padding: 15px 6.5px;
+}
+article.articulo-carrito div.caja-1 img {
+  width: 100px;
+  height: 100px;
+}
+article.articulo-carrito div.caja-2 {
+  padding: 15px 6.5px;
+}
+article.articulo-carrito div.caja-2 p {
+    padding: 2px;
+}
+p#precio-negrita{
+    font-weight: bold;
+}
+article.articulo-carrito div.caja-2-cantidad_precio{
+    display: flex;
+}
+article.articulo-carrito div.caja-3-ocultos,
+article.articulo-carrito div.caja-5-ocultos {
+  display: none;
+}
+article.articulo-carrito div.caja-4 {
+  text-align: center;
+  padding: 15px 6.5px;
+}
+article.articulo-carrito div.caja-4 input.numero{
+    width: 10px;
+}
+article.articulo-carrito div.caja-4 button.emogi{
+    border-style: none;
+}
+article.articulo-carrito div.caja-4 button.emogi i {
+    background-color: #fff;
+    
+}
+article.articulo-carrito div.caja-6{
+    order: -1;
+    align-self: baseline;
+}
+article.articulo-carrito div.caja-6 button{
+    border-style: none;
+    background-color: #fff;
+    font-size: 12px;
+    padding: 5px;
+}
+* BOTTOM-CARRITO  */
+div.bottom-carrito {
+  padding: 10px 10px 10px;
+  display: flex;
+  justify-content: space-around;
+}
+div.bottom-carrito button{
+    display: block;
+    padding: 10px 10px;
+    color:#fff;
+    background-color: #25d1b2;
+    border-style: none;
+    border-radius: 15px;
+    margin: 5px 5px;
+}
+div.bottom-carrito #seguir-comprando{
+    background-color: #fff;
+    color: #25d1b2;
+    border: 1px solid #25d1b2;
+    /* margin-bottom: 10px; */
+}
+
+
+/* HTML  */
+
+<!-- <section class="carrito">
+            <h2>Carrito de compras</h2>
+            <div class="top-carrito">
+                <h3>Producto</h3>
+                <h3 class="top-carrito-ocultos">Precio</h3>
+                <h3>Cantidad</h3>
+                <h3 class="top-carrito-ocultos">Subtotal</h3>
+            </div>
+            <div class="main-carrito">
+                <article class="articulo-carrito">
+                    <div class="caja-1"><img src="/img/macarons.jpg" alt="producto">
+                    </div>
+                    <div class="caja-2">
+                        <p>Descripcion del producto</p>
+                    <div class="caja-2-cantidad_precio">
+                        <p class="caja-2-ocultos">1x</p>
+                        <p class="caja-2-ocultos" id="precio-negrita">$1500</p>
+                    </div>
+                    </div>
+                    <div class="caja-3-ocultos">
+                        <p>$1500</p>
+                    </div>
+                    <div class="caja-4">
+                        <div class="compras">
+                            <button class="emogi"><i class="fa-solid fa-minus"></i></button>
+                            <input class="numero" type="number">
+                            <button class="emogi"><i class="fa-solid fa-plus"></i></button>
+                           
+                        </div>
+                    </div>
+                    
+                    <div class="caja-5-ocultos">
+                        <p>$3000</p>
+                    </div>
+                    <div class="caja-6">
+                        <button>X</button>
+                    </div>
+                    
+                </article>              
+            </div>
+            <div class="bottom-carrito">
+                <button id="seguir-comprando">←Seguir comprando</button>
+                <button id="actualizar-carrito">Actualizar carrito</button>
+            </div>
+        </section> -->
