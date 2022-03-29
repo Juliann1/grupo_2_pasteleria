@@ -12,6 +12,11 @@
 .enunciado .volver-home .volver{
     border: 1px solid gray;
 }
+
+.todas-las-descripciones{
+
+    padding: 10px;
+}
 .foto-logo .foto-chica{
     display: none;
 }
@@ -45,7 +50,7 @@
 
 .datos-productos .titulos p{
     font-size: 25px;
-    margin-top: 25px;
+    margin-top: 82px;
 }
 .datos-productos .informacion p{
     font-size: 16px;
