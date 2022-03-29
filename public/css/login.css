@@ -13,6 +13,7 @@
 }
 
 html {
+    font-size: 62.4% !important;
     font-family: var(--poppins);
 }
 
@@ -20,8 +21,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     height: 100vh;
+}
+
+.login__section {
+    padding: 5% 0 3.5% 0;
+    margin-top: 5%;
 }
 
 .form {
@@ -33,11 +38,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*Para mejor vista/centrar hasta que lo pasemos a modal */
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .input {
@@ -62,8 +62,7 @@ form h2 {
     flex-direction: column;
 }
 
-/* form__div--forgot-password */
-.forgotPassword {
+.form__div--forgot-password {
     align-self: flex-end;
 }
 
@@ -81,8 +80,12 @@ form h2 {
 .a--style-none {
     text-decoration: none;
 }
-main {
+.main__form--login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    padding-top: 50px;
 }
 
 .marginbtm {
@@ -100,4 +103,8 @@ main {
 .tphouse-logo {
     height: auto;
     max-width: 100%;
+}
+
+.cajita-contacto i {
+    margin: 1rem !important;
 }
