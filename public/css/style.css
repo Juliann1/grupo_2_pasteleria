@@ -78,11 +78,151 @@ header label{
 
 body {
 opacity: 3;
-padding-top: 80px;
+padding-top: 40px;
 }
 
-section{
-  padding: 7.5rem 9% 2rem 9%;
+.recomendados{
+  display: flex;
+  margin-top: -64px;
+  flex-direction: column;
+}
+.recomendados .carrousel-title{
+  margin-top: 150px;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+}
+
+.recomendados .carrousel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  padding-top: 20px;
+}
+.recomendados .carrousel .fotos-carrousel{
+  flex-grow: 1;
+}
+.recomendados .carrousel .flecha i{
+  color:#1cc2bc;
+  font-size: 30px;
+  cursor: pointer;
+}
+.recomendados .carrousel .flecha i:hover{
+  font-size: 35px;
+  color: #6adbd8;
+}
+.recomendados .carrousel img{
+  width: 100%;
+
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.recomendados .te-gustara{
+  font-size: 25px;
+  margin-top: 30px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+}
+
+.listado-productos .caja-contenedor{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.listado-productos .titulo-feo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.listado-productos .caja-contenedor p{
+
+  font-size: 0px;
+}
+
+.listado-productos .caja-contenedor .nombre{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listado-productos .caja-contenedor .nombre h2{
+  font-size: 40px;
+  color: white;
+  text-shadow: 0px 0px 5px black;
+}
+
+.listado-productos .caja-contenedor .caja{
+  height: 310px;
+  cursor: pointer;
+}
+
+.listado-productos .caja-contenedor .caja img{
+  width: 100%;
+  height: 100%;
+  margin-top: -100%;
+  transition: all .5s ease;
+}
+
+.listado-productos .caja-contenedor .caja:hover img{
+  filter: blur(3px);
+}
+
+.personalizar{
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  flex-direction: row;
+  margin: 30px;
+}
+.personalizar .imagen{
+  padding: 20px;
+  max-width: 50%;
+}
+
+.personalizar .imagen img{
+  width: 100%;
+}
+
+.personalizar .texto{
+  font-size:20px;
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.personalizar2{
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  flex-direction: row-reverse;
+  margin: 30px;
+}
+.personalizar2 .imagen{
+  padding: 20px;
+  max-width: 50%;
+}
+.personalizar2 .imagen img{
+  max-width: 100%;
+}
+.personalizar2 .texto{
+  font-size:20px;
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 footer {
@@ -151,22 +291,6 @@ footer i:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media(max-width:768px){
   header label{
       visibility: visible;
@@ -209,6 +333,50 @@ footer i:hover{
       content: '\f00d';
   }
 
+  .recomendados .carrousel-title{
+    font-size: 30px;
+  }
+
+  .recomendados .carrousel{
+    padding: 10px;
+  }
+
+  .listado-productos .caja-contenedor{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  .listado-productos .caja-contenedor .caja {
+    width: 100%;
+  }
+  .listado-productos .caja-contenedor p{
+    font-size: 25px;
+  }
+  .listado-productos .titulo-feo{
+    display: none;
+  }
+  .personalizar{
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    flex-direction: column;
+    margin: 30px;
+  }
+  .personalizar img{
+    width: 100%;
+  }
+  .personalizar2{
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    flex-direction: column;
+    margin: 30px;
+  }
+  .personalizar2 img{
+    width: 100%;
+  }
   footer{
       height: 100%;
       display: flex;
@@ -227,12 +395,10 @@ footer i:hover{
       display: flex;
       justify-content: center;
   }
-
-
-
+}
 
 @media(max-width:450px){
   html{
-      font-size: 49%;
+    font-size: 49%;
   }
 }

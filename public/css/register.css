@@ -4,13 +4,10 @@
     --poppins: "Poppins", sans-serif;
 }
 
-
-
 form h3{
-    font-size: 3rem;
+    font-size: 2rem;
+    margin: 25px auto;
 }
-
-
 
 label{
     font-size: 15px;
@@ -21,12 +18,11 @@ main{
     background: white;
     display: flex;
     flex-direction: column;
-    margin: 25px auto;
+    margin: 100px auto 100px;
     width: 550px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 5rem;
     border: var(--color2) solid 2px;
     
 }
@@ -42,13 +38,15 @@ main form{
 
 main form label{
     font-size: 2rem;
-    margin-bottom: 2rem;
 }
 
 main form .inputcaja,
 .password{
-    margin: 10px 0;
-    border-radius: 5rem;
+    margin: 20px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .password{
     width: 90%;
@@ -57,13 +55,12 @@ main form .inputcaja,
 main form .inputcaja input,
 main .password input{
     color: var(--gris-oscuro);
-    border-radius: 5px;
     font-size: 16px;
     padding: 10px;
     width: 90%;
     border: solid var(--color2) 1.5px;
+    border-radius: 8px;
     transition: .5s;
-    border-radius: 5rem;
 }
 
 main form .inputcaja input:hover,
@@ -71,24 +68,21 @@ main form .inputcaja input:hover,
     border: solid 1.5px var(--color1);
 }
 
-
-
 .btn{
     border: #1cc2bc solid 2px;
-    border-radius: 5rem;
-    font-size: 3rem;
+    border-radius: 8px;
+    font-size: 2rem;
     width: 30rem;
     margin: 2rem;
     padding: 1rem;
     background: #6adbd8;
-    transition: all .5s linear;
+    transition: background, border-color .2s linear;
+    cursor: pointer;
 }
 
 .btn:hover{
     background: var(--color1);
-    border: var(--color2);
-    transform: scale(1.1)
-    
+    border-color: var(--color2);
 }
 
 @media (max-width: 767px){
