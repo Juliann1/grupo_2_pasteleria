@@ -140,6 +140,46 @@ padding-top: 40px;
   filter: blur(4px);
   
 }
+.personalizar{
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  flex-direction: row;
+  margin: 30px;
+}
+.personalizar .imagen{
+  width: 100%;
+  padding: 20px;
+  margin-right: 20px;
+}
+.personalizar .texto{
+  font-size:20px;
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.personalizar2{
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  flex-direction: row-reverse;
+  margin: 30px;
+}
+.personalizar2 .imagen{
+  width: 100%;
+  padding: 20px;
+  margin-right: 20px;
+}
+.personalizar2 .texto{
+  font-size:20px;
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
 section{
   padding: 7.5rem 9% 2rem 9%;
 }
@@ -267,6 +307,26 @@ footer i:hover{
   }
   .listado-productos .titulo-feo{
     display: none;
+  }
+  .personalizar{
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    flex-direction: column;
+    margin: 30px;
+  }
+  .personalizar img{
+    width: 100%;
+  }
+  .personalizar2{
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    flex-direction: column;
+    margin: 30px;
+  }
+  .personalizar2 img{
+    width: 100%;
   }
   footer{
       height: 100%;
