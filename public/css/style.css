@@ -78,9 +78,70 @@ header label{
 
 body {
 opacity: 3;
-padding-top: 80px;
+padding-top: 40px;
 }
 
+.recomendados{
+  display: flex;
+  margin-top: -64px;
+  flex-direction: column;
+}
+.recomendados .carrousel{
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.recomendados .carrousel .flecha i{
+  color:#1cc2bc;
+  font-size: 30px;
+}
+.recomendados .carrousel .flecha i:hover{
+  font-size: 35px;
+  color: #6adbd8;
+}
+.recomendados .carrousel img{
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.recomendados .te-gustara{
+  font-size: 25px;
+  margin-top: 30px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+}
+
+.listado-productos .caja-contenedor{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.listado-productos .titulo-feo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.listado-productos .caja-contenedor p{
+
+  font-size: 0px;
+}
+
+.listado-productos .caja-contenedor img{
+  width: 30%;
+}
+.listado-productos .caja-contenedor img:hover{
+  filter: blur(4px);
+  
+}
 section{
   padding: 7.5rem 9% 2rem 9%;
 }
@@ -151,22 +212,6 @@ footer i:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media(max-width:768px){
   header label{
       visibility: visible;
@@ -208,7 +253,23 @@ footer i:hover{
   header input:checked ~ label::before{
       content: '\f00d';
   }
+  .listado-productos .caja-contenedor{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  .listado-productos .caja-contenedor img{
+    width: 90%;
+  }
+  .listado-productos .caja-contenedor p{
 
+    font-size: 25px;
+  }
+  .listado-productos .titulo-feo{
+    display: none;
+  }
   footer{
       height: 100%;
       display: flex;
