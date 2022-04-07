@@ -1,12 +1,14 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const PORT = process.env.PORT || 3030;
+const rutaMain = require("./routes/main");
 
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/index.html"));
-});
+app.set("view engine", "ejs");
+
+app.get("/", rutaMain);
 
 app.get("/register", (req, res) => {
     res.sendFile(path.resolve(__dirname, "views/register.html"));
@@ -24,4 +26,4 @@ app.get("/productDetail", (req, res) => {
     res.sendFile(path.resolve(__dirname, "views/productDetail.html"));
 });
 
-app.listen(3030, () => console.log("Servidor online en puerto 3030"));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

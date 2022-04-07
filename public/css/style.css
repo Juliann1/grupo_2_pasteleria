@@ -1,404 +1,213 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&family=Roboto:wght@100;300&display=swap");
-*{
-  font-family: 'EB Garamond', serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  outline: none;
-  border: none;
+* {
+    font-family: "EB Garamond", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
 }
 
-html{
-  font-size: 62.4%;
-  overflow-x: hidden;
-  background-color: rgb(240, 240, 240);
-  min-height: 100%;
+html {
+    font-size: 62.4%;
+    overflow-x: hidden;
+    background-color: rgb(240, 240, 240);
+    min-height: 100%;
 }
-
-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #6adbd8;
-  padding: .5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1000;
-  
-}
-
-header .logo{
-  font-size: 4rem;
-}
-
-header a img{
-  display: flex;
-  width: 11rem;
-  margin-left: 2rem;
-}
-
-header a img:hover{
-  transform: scale(1.1);
-  transition: all .2s linear;
-}
-
-header .navbar{
-  display: flex;
-  margin-right: 3rem;
-}
-
-header .navbar a{
-  font-size: 2rem;
-  margin-left: 2rem;
-  color: black;
-  transition: all .3s linear;
-}
-
-header .navbar a:hover{
-  transform: scale(1.1);
-  color: gray;
-  transition: all .2s linear;
-}
-
-header input{
-  display: none;
-}
-
-header label{
-  font-size: 3rem;
-  color: black;
-  cursor:pointer;
-  visibility: hidden;
-  opacity: 0;
-}
-
 
 body {
-opacity: 3;
-padding-top: 40px;
+    padding-top: 40px;
 }
 
-.recomendados{
-  display: flex;
-  margin-top: -64px;
-  flex-direction: column;
+.recomendados {
+    display: flex;
+    margin-top: -64px;
+    flex-direction: column;
 }
-.recomendados .carrousel-title{
-  margin-top: 150px;
-  width: 100%;
-  text-align: center;
-  font-size: 50px;
-}
-
-.recomendados .carrousel{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  padding-top: 20px;
-}
-.recomendados .carrousel .fotos-carrousel{
-  flex-grow: 1;
-}
-.recomendados .carrousel .flecha i{
-  color:#1cc2bc;
-  font-size: 30px;
-  cursor: pointer;
-}
-.recomendados .carrousel .flecha i:hover{
-  font-size: 35px;
-  color: #6adbd8;
-}
-.recomendados .carrousel img{
-  width: 100%;
-
-  padding: 10px;
-  margin-bottom: 20px;
-}
-.recomendados .te-gustara{
-  font-size: 25px;
-  margin-top: 30px;
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
+.recomendados .carrousel-title {
+    margin-top: 150px;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
 }
 
-.listado-productos .caja-contenedor{
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-
-}
-.listado-productos .titulo-feo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-
-.listado-productos .caja-contenedor p{
-
-  font-size: 0px;
-}
-
-.listado-productos .caja-contenedor .nombre{
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.listado-productos .caja-contenedor .nombre h2{
-  font-size: 40px;
-  color: white;
-  text-shadow: 0px 0px 5px black;
-}
-
-.listado-productos .caja-contenedor .caja{
-  height: 310px;
-  cursor: pointer;
-}
-
-.listado-productos .caja-contenedor .caja img{
-  width: 100%;
-  height: 100%;
-  margin-top: -100%;
-  transition: all .5s ease;
-}
-
-.listado-productos .caja-contenedor .caja:hover img{
-  filter: blur(3px);
-}
-
-.personalizar{
-  display: flex;
-  padding: 10px;
-  background-color: white;
-  flex-direction: row;
-  margin: 30px;
-}
-.personalizar .imagen{
-  padding: 20px;
-
-}
-
-.personalizar .imagen img{
-  width: 100%;
-}
-
-.personalizar .texto{
-  font-size:20px;
-  display: flex;
-  padding: 10px;
-  text-align: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.personalizar2{
-  display: flex;
-  padding: 10px;
-  background-color: white;
-  flex-direction: row-reverse;
-  margin: 30px;
-}
-.personalizar2 .imagen{
-  padding: 20px;
-
-}
-.personalizar2 .imagen img{
-  max-width: 100%;
-}
-.personalizar2 .texto{
-  font-size:20px;
-  display: flex;
-  padding: 10px;
-  text-align: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-footer {
-background-color: #6adbd8;
-display: flex;
-justify-content: center;
-flex-direction: column;
-width: 100%;
-}
-
-
-footer .logo-footer{
-  display: flex;
-  justify-content: center;
-}
-
-footer .logo-footer img{
-  width: 12rem;
-  margin-top: 1.5rem;
-}
-
-footer .contenedor-footer{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1.5rem;
-}
-
-footer .creditos, .caja-contacto{
-  width: 50%;
-}
-
-footer .creditos{
-  display: flex;
-  align-items: flex-end;
-  font-size: 12px;
-}
-
-footer .caja-contacto{
-  display: flex;
-  justify-content: end;    
-}
-
-footer .cajita-contacto .cajita{
-  display: flex;
-  justify-content: center;
-}
-
-footer .cajita-contacto .cajita h4{
-  font-size: 1.5rem;
-  right: 3rem;
-  text-decoration: underline;
-
-}
-
-footer .cajita-contacto i{
-  color: black;
-  font-size: 2rem;
-  margin: 2rem;
-}
-
-footer i:hover{
-  transform: scale(1.1);
-  color: gray;
-  transition: all .2s linear;
-}
-
-
-
-@media(max-width:768px){
-  header label{
-      visibility: visible;
-      opacity: 1;
-      margin-right: 3rem;
-  }
-  
-
-  /*ACA OCULTO LA BARRA DE NAVEGACION PORQUE LA PANTALLA ES CHICA*/
-  header .navbar{
-      display: block;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      padding: 1rem 2rem;
-      border-top: .1rem solid rgba(0, 0, 0, .2);
-      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-      transform-origin: top;
-      transform: scaleY(0);
-      opacity: 0;
-      transition: .2s linear;
-  }
-
-  header .navbar a{
-      display: block;
-      margin: 2rem 0;
-      font-size: 2rem;
-  }
-
-  /*ACA LA BARRA DE NAVEGACION SE MUESTRA EN EL ICONO DE LA HAMBURGUESA*/
-  header input:checked ~ .navbar{ 
-      transform: scaleY(1);
-      opacity: 1;
-  }
-
-  /* CON ESTO EL ICONO DE HAMBURGUESA CAMBIA A UNA "X" PARA CERRAR LA BARRA DE NAVEGACION*/
-  header input:checked ~ label::before{
-      content: '\f00d';
-  }
-
-  .recomendados .carrousel-title{
-    font-size: 30px;
-  }
-
-  .recomendados .carrousel{
-    padding: 10px;
-  }
-
-  .listado-productos .caja-contenedor{
+.recomendados .carrousel {
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
-  
-  }
-  .listado-productos .caja-contenedor .caja {
+    padding: 50px;
+    padding-top: 20px;
+}
+.recomendados .carrousel .fotos-carrousel {
+    flex-grow: 1;
+}
+.recomendados .carrousel .flecha i {
+    color: #1cc2bc;
+    font-size: 30px;
+    cursor: pointer;
+}
+.recomendados .carrousel .flecha i:hover {
+    font-size: 35px;
+    color: #6adbd8;
+}
+.recomendados .carrousel img {
     width: 100%;
-  }
-  .listado-productos .caja-contenedor p{
+
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.recomendados .te-gustara {
     font-size: 25px;
-  }
-  .listado-productos .titulo-feo{
-    display: none;
-  }
-  .personalizar{
+    margin-top: 30px;
+    font-weight: 400;
     display: flex;
-    padding: 10px;
-    background-color: white;
-    flex-direction: column;
-    margin: 30px;
-  }
-  .personalizar img{
-    width: 100%;
-  }
-  .personalizar2{
-    display: flex;
-    padding: 10px;
-    background-color: white;
-    flex-direction: column;
-    margin: 30px;
-  }
-  .personalizar2 img{
-    width: 100%;
-  }
-  footer{
-      height: 100%;
-      display: flex;
-  }
-
-  footer .creditos{
-      display: none;
-  }
-
-  footer .contenedor-footer{
-      display: flex;
-      justify-content: center;
-  }
-
-  footer .contenedor-footer .caja-contacto{
-      display: flex;
-      justify-content: center;
-  }
+    justify-content: center;
 }
 
-@media(max-width:450px){
-  html{
-    font-size: 49%;
-  }
+.listado-productos .caja-contenedor {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.listado-productos .titulo-feo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.listado-productos .caja-contenedor p {
+    font-size: 0px;
+}
+
+.listado-productos .caja-contenedor .nombre {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listado-productos .caja-contenedor .nombre h2 {
+    font-size: 40px;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+}
+
+.listado-productos .caja-contenedor .caja {
+    height: 310px;
+    cursor: pointer;
+}
+
+.listado-productos .caja-contenedor .caja img {
+    width: 100%;
+    height: 100%;
+    margin-top: -100%;
+    transition: all 0.5s ease;
+}
+
+.listado-productos .caja-contenedor .caja:hover img {
+    filter: blur(3px);
+}
+
+.personalizar {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    flex-direction: row;
+    margin: 30px;
+}
+.personalizar .imagen {
+    padding: 20px;
+}
+
+.personalizar .imagen img {
+    width: 100%;
+}
+
+.personalizar .texto {
+    font-size: 20px;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.personalizar2 {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    flex-direction: row-reverse;
+    margin: 30px;
+}
+.personalizar2 .imagen {
+    padding: 20px;
+}
+.personalizar2 .imagen img {
+    max-width: 100%;
+}
+.personalizar2 .texto {
+    font-size: 20px;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .recomendados .carrousel-title {
+        font-size: 30px;
+    }
+
+    .recomendados .carrousel {
+        padding: 10px;
+    }
+
+    .listado-productos .caja-contenedor {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .listado-productos .caja-contenedor .caja {
+        width: 100%;
+    }
+    .listado-productos .caja-contenedor p {
+        font-size: 25px;
+    }
+    .listado-productos .titulo-feo {
+        display: none;
+    }
+    .personalizar {
+        display: flex;
+        padding: 10px;
+        background-color: white;
+        flex-direction: column;
+        margin: 30px;
+    }
+    .personalizar img {
+        width: 100%;
+    }
+    .personalizar2 {
+        display: flex;
+        padding: 10px;
+        background-color: white;
+        flex-direction: column;
+        margin: 30px;
+    }
+    .personalizar2 img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 49%;
+    }
 }
