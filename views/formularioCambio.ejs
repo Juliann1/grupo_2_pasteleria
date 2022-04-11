@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head')%>
+<body>
+    <%- include('./partials/header'); %> 
+
+    <main>
+        <form action="">
+            <img src="img/logo_teapothouse.png" alt="logo Teapot house" width="142" height="100" class="tphouse-logo marginbtm" />
+            <h3>Cambia información de algún producto</h3>
+            <div class="inputcaja">
+                <label for="nombre">Ingrese Identificador del producto</label>
+                <input name="nombre" type="text" placeholder=" Debe ser el mismo que el ingresado" required>
+            </div>
+            <div class="inputcaja">
+                <label for="id">Nuevo nombre</label>
+                <input name="id" type="text" placeholder="Ej: macarons" required>
+            </div>
+            <div class="inputcaja">
+                <label for="informacion">Nueva info</label>
+                <input name="informacion" type="text" placeholder="Escriba aquí la informacion del producto" required>
+            </div>
+            <div class="inputcaja">
+                <label for="precio">Nuevo precio($)</label>
+                <input name="precio" type="text" placeholder=" $1000" required>
+            </div>
+            <div class="inputcaja">
+                <label for="entrega">Nueva entrega</label>
+                <input name="entrega" type="text" placeholder="Ej: solo vía moto" required>
+            </div>
+            <div class="inputcaja">
+                <label for="consejos">Nuevo consejos</label>
+                <input name="consejos" type="text" placeholder="Ej:no mantener al sol " required>
+            </div>
+            <div class="inputcaja">
+                <label for="reclamos">Nuevo reclamos</label>
+                <input name="reclamos" type="text" placeholder="Escribir a..." required>
+            </div>
+            <div class="inputcaja">
+                <label for="Descripción">Nueva descripción detallada</label>
+                <input name="Descripción" type="text" placeholder="Escriba aquí la informacion larga del producto " required>
+            </div>
+            <div class="inputcaja">
+                <label for="tipoProducto">Qué tipo de producto es?</label>
+                <select id="tipoProducto" name="tipoProducto">
+                    <option value="panadería">Panadería</option>
+                    <option value="Pastelería">Pastelería</option>
+                    <option value="Chocolateria">Chocolateria</option>
+                </select>
+            </div>
+            <div class="inputcaja">
+                <label for="Imagen">Nueva imagen del producto</label>
+                <input type="file" name="foto" accept=".jpg" multiple>
+            </div>
+            <button class="btn">Enviar</button>
+            <button class="btn">Borrar</button>
+        </form>
+    </main>
+    <%- include('./partials/footer'); %> 
+</body>
+</html>

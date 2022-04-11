@@ -12,6 +12,7 @@ const rutaProductCart = require('./routes/productCart')
 const rutaProductDetail = require('./routes/productDetail');
 const rutaRegister = require('./routes/register');
 const rutaFormularioProducto = require("./routes/formularioProducto");
+const rutaFormularioCambio = require("./routes/formularioCambio");
 
 app.get("/", rutaMain);
 app.get('/login', rutaLogin);
@@ -19,6 +20,7 @@ app.get('/productCart', rutaProductCart);
 app.use('/productDetail', rutaProductDetail);
 app.get('/register', rutaRegister);
 app.get("/formularioProducto", rutaFormularioProducto);
+app.get("/formularioCambio", rutaFormularioCambio);
 const PORT = process.env.PORT || 3030;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
