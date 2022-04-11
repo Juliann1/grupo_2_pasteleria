@@ -50,9 +50,13 @@
 }
 
 .datos-productos .titulos p{
-    font-size: 25px;
-    margin-top: 82px;
+
+    font-size: 23px;
+    margin-top: 70px;
+    font-family: 'Cinzel', serif;
 }
+
+
 .datos-productos .informacion p{
     font-size: 16px;
     padding: 12px;

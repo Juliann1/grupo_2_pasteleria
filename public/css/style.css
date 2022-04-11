@@ -36,9 +36,11 @@ body {
     font-size: 50px;
 }
 .recomendados .carrousel-subtitle{
-    font-size: 25px;
+    font-size: 23px;
+    color: darkgray;
     text-align: center;
     font-family: 'Cinzel', serif;
+    margin: -6px;
 
 }
 .recomendados .carrousel {
@@ -92,9 +94,9 @@ body {
 }
 
 .listado-productos .caja-contenedor .nombre h2 {
-    font-size: 40px;
+    font-size: 30px;
     color: white;
-    text-shadow: 0px 0px 5px black;
+    font-family: 'Cinzel', serif;
 }
 
 .listado-productos .caja-contenedor .caja {
