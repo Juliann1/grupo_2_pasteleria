@@ -42,6 +42,7 @@
     padding:0px;
     text-align: center;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: end;
     margin: auto;
@@ -71,6 +72,8 @@
     background-color: #1cc2bc;
     border: 1px solid gray;
     font-size: 20px;
+    width: 50%;
+    margin:auto;
     border-radius: 9px;
 }
 
@@ -108,7 +111,8 @@
 
 .datos-productos .carrito .añadir{
     font-size: 20px;
-    width: 100%;
+    width: 50%;
+    margin:auto;
     cursor: pointer;
     flex-grow: 1;
     color: black;
@@ -132,7 +136,7 @@
 .segundo-bloque img{
     width: 100%;
     display: flex;
-    flex-grow:1;
+
     text-align:center;
     padding:10px;
 }
@@ -189,6 +193,9 @@
         flex-direction: row;
     
     }
+    .primer-bloque img{
+        width: 57%;
+    }
     .segundo-bloque{
         display: flex;
         margin-top: -64px;
@@ -197,10 +204,10 @@
         
     }
     .segundo-bloque img{
-        width: 600px;
+        width: 43%;
         margin-top: 53px;
         display: flex;
-        flex-grow: 1;
+
         text-align: center;
         padding: 10px;
     }
@@ -210,10 +217,10 @@
         flex-direction: row-reverse;
     }
     .tercer-bloque img{
-        width: 700px;
+        width: 57%;
         margin-top: 53px;
         display: flex;
-        flex-grow: 1;
+
         text-align: center;
         padding: 10px; 
     }

@@ -16,7 +16,7 @@ const rutaFormularioProducto = require("./routes/formularioProducto");
 app.get("/", rutaMain);
 app.get('/login', rutaLogin);
 app.get('/productCart', rutaProductCart);
-app.get('/productDetail', rutaProductDetail);
+app.use('/productDetail', rutaProductDetail);
 app.get('/register', rutaRegister);
 app.get("/formularioProducto", rutaFormularioProducto);
 const PORT = process.env.PORT || 3030;

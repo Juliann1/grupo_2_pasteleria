@@ -5,7 +5,7 @@
     <%- include('./partials/header'); %>
     <section class="todas-las-descripciones">
         <section class="primer-bloque">
-            <img src="/img/macarons.jpg" alt="producto">
+            <img src= <%= producto.img1 %>>
             <section class="datos-productos">
                 <div class="titulos">
                     <p><%= producto.name %></p>
@@ -45,7 +45,7 @@
                     <p><%= producto.consejos %></p>
                 </div>
             </div>
-            <img src="/img/macarons2.jpg" alt="otra foto del producto">
+            <img src= <%= producto.img2 %>>
         </section>
         <section class="tercer-bloque">
             <div class="datos-productos">
@@ -62,7 +62,7 @@
                     <p><%= producto.reclamos %></p>
                 </div>
             </div>
-            <img src="/img/macarons3.jpg" alt="otra foto del producto">
+            <img src= <%= producto.img3 %>>
             </section>
     
     </section>
