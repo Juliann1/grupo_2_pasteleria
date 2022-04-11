@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&family=Roboto:wght@100;300&display=swap");
 * {
     font-family: "EB Garamond", serif;
@@ -26,12 +29,18 @@ body {
     flex-direction: column;
 }
 .recomendados .carrousel-title {
-    margin-top: 150px;
+    margin-top: 135px;
     width: 100%;
+    font-family: 'Cinzel', serif;
     text-align: center;
     font-size: 50px;
 }
+.recomendados .carrousel-subtitle{
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Cinzel', serif;
 
+}
 .recomendados .carrousel {
     display: flex;
     align-items: center;
@@ -39,22 +48,10 @@ body {
     padding: 50px;
     padding-top: 20px;
 }
-.recomendados .carrousel .fotos-carrousel {
-    flex-grow: 1;
-}
-.recomendados .carrousel .flecha i {
-    color: #1cc2bc;
-    font-size: 30px;
-    cursor: pointer;
-}
-.recomendados .carrousel .flecha i:hover {
-    font-size: 35px;
-    color: #6adbd8;
-}
+
 .recomendados .carrousel img {
     width: 100%;
 
-    padding: 10px;
     margin-bottom: 20px;
 }
 .recomendados .te-gustara {
@@ -76,6 +73,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    font-family: 'Cinzel', serif;
     margin-bottom: 30px;
 }
 
