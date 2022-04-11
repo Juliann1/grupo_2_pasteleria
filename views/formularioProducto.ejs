@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head')%>
+<body>
+    <%- include('./partials/header'); %> 
+
+    <main>
+        <form action="">
+            <h3>Ingresá tus productos</h3>
+            <div class="inputcaja">
+                <label for="nombre">Nombre del producto</label>
+                <input name="nombre" type="text" placeholder="Ej: macarons" required>
+            </div>
+            <div class="inputcaja">
+                <label for="informacion">Información</label>
+                <input name="informacion" type="text" placeholder="Escriba aquí la informacion del producto" required>
+            </div>
+            <div class="inputcaja">
+                <label for="precio">Precio del producto ($)</label>
+                <input name="precio" type="text" placeholder=" $1000" required>
+            </div>
+            <div class="inputcaja">
+                <label for="entrega">Entrega</label>
+                <input name="entrega" type="text" placeholder="Ej: solo vía moto" required>
+            </div>
+            <div class="inputcaja">
+                <label for="consejos">Consejos</label>
+                <input name="consejos" type="text" placeholder="Ej:no mantener al sol " required>
+            </div>
+            <div class="inputcaja">
+                <label for="reclamos">Reclamos</label>
+                <input name="reclamos" type="text" placeholder="Escribir a..." required>
+            </div>
+            <div class="inputcaja">
+                <label for="Descripción">Descrripción detallada</label>
+                <input name="Descripción" type="text" placeholder="Escriba aquí la informacion larga del producto " required>
+            </div>
+            <div class="inputcaja">
+                <label for="tipoProducto">qué tipo de producto es?</label>
+                <select id="tipoProducto" name="tipoProducto">
+                    <option value="panadería">Panadería</option>
+                    <option value="Pastelería">Pastelería</option>
+                    <option value="Chocolateria">Chocolateria</option>
+                </select>
+            </div>
+            <div class="inputcaja">
+                <label for="Imagen">Imagen del producto</label>
+                <input type="file" name="foto" accept=".jpg" multiple>
+            </div>
+            <button class="btn">Enviar</button>
+            <button class="btn">Borrar</button>
+        </form>
+    </main>
+    <%- include('./partials/footer'); %> 
+</body>
+</html>

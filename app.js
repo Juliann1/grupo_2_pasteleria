@@ -11,12 +11,14 @@ const rutaLogin = require("./routes/login")
 const rutaProductCart = require('./routes/productCart')
 const rutaProductDetail = require('./routes/productDetail');
 const rutaRegister = require('./routes/register');
+const rutaFormularioProducto = require("./routes/formularioProducto");
 
 app.get("/", rutaMain);
 app.get('/login', rutaLogin);
 app.get('/productCart', rutaProductCart);
 app.get('/productDetail', rutaProductDetail);
 app.get('/register', rutaRegister);
+app.get("/formularioProducto", rutaFormularioProducto);
 const PORT = process.env.PORT || 3030;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
