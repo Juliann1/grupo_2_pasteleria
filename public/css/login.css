@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 :root {
     --color1: #1cc2bc;
     --color2: #6adbd8;
-    --poppins: "Poppins", sans-serif;
 }
 
 * {
@@ -13,21 +10,9 @@
 }
 
 html {
-    font-size: 62.4% !important;
-    font-family: var(--poppins);
+    font-size: 62.5% !important;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-}
-
-.login__section {
-    padding: 5% 0 3.5% 0;
-    margin-top: 5%;
-}
 
 .form {
     background-color: #fff;
@@ -37,11 +22,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 283px;
 }
 
 .input {
-    width: 300px;
+    width: 25.5rem;
     height: 50px;
     padding: 1em;
     border: 1px solid var(--color2);
@@ -49,8 +33,9 @@ body {
 
 form p,
 a,
-label {
-    font-size: 15px;
+label,
+.input {
+    font-size: 1.6rem;
 }
 
 form h2 {
@@ -72,10 +57,16 @@ form h2 {
 }
 
 .button {
-    width: 250px;
+    width: 22rem;
     height: 50px;
+    font-size: 1.6rem;
     letter-spacing: 0.08em;
     background-color: var(--color2);
+    transition: background .2s linear;
+}
+
+.button:hover {
+    background: var(--color1);
 }
 
 .a--style-none {
@@ -86,19 +77,14 @@ form h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-top: 50px;
+    margin: 100px auto 69px;
 }
 
 .marginbtm {
     margin-bottom: 12px;
 }
 .brd-radius {
-    border-radius: 15px;
-}
-
-.footer {
-    width: 100%;
-    margin: auto auto 0 auto;
+    border-radius: .8rem;
 }
 
 .tphouse-logo {
