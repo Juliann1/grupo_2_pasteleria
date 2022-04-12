@@ -36,7 +36,7 @@
     display: flex;
     flex-grow:1;
     text-align:center;
-    padding:10px;
+    padding:30px;
 }
 .datos-productos{
     padding:0px;
@@ -199,6 +199,7 @@
     }
     .primer-bloque img{
         width: 57%;
+        padding: 47px;
     }
     .segundo-bloque{
         display: flex;
