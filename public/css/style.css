@@ -94,8 +94,8 @@ body {
 }
 
 .listado-productos .caja-contenedor .nombre h2 {
-    font-size: 30px;
-    color: white;
+    font-size: 17px;
+    margin-top: 250px;
     font-family: 'Cinzel', serif;
 }
 

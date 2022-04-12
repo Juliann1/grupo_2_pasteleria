@@ -32,12 +32,12 @@ body {
 .form {
     background-color: #fff;
     border: 1px solid var(--color2);
-    border-radius: 50px;
-    width: 320px;
+    width: 100%;
     padding: 5px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 283px;
 }
 
 .input {
@@ -54,7 +54,8 @@ label {
 }
 
 form h2 {
-    font-size: 24px;
+    font-size: 18px;
+    font-family: 'Cinzel', serif;
 }
 
 .form__div {
@@ -92,7 +93,7 @@ form h2 {
     margin-bottom: 12px;
 }
 .brd-radius {
-    border-radius: 99px;
+    border-radius: 15px;
 }
 
 .footer {
