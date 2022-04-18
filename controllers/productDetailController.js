@@ -1,4 +1,4 @@
-const {listaProductos} = require ("../models/data");
+const listaProductos = require ("../data/products.json");
 
 const productDetailController = {
     productDetail: (req, res) =>{
