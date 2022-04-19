@@ -20,7 +20,8 @@
   "homepage": "https://github.com/Juliann1/grupo_2_pasteleria#readme",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "method-override": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
