@@ -1,0 +1,20 @@
+<html lang="en">
+    <%- include('./partials/head')%>
+
+<body>
+    <%- include('./partials/header'); %>
+    <section class="titulo">
+        <p>Nuestros Productos</p>
+    </section>
+    <section class="productos">
+        <% for (let i = 0; i <producto.length; i++){ %>
+        <ul  class="caja-producto">
+            <li class="imagen"><%= producto[i].img1 %> </li>
+            <li class="nombre-producto"><%= producto[i].name %> </li>
+            <li class="precio"><%= producto[i].precio  %> </li>
+        </ul>
+        <% } %> 
+    </section>
+    <%- include('./partials/footer'); %>
+</body>
+</html>
