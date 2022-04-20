@@ -9,7 +9,7 @@ const productController = {
 product: (req, res) => {
     let producto = products.filter(producto => producto.category == req.params.categoriaProductos);
 
-    res.render('products', {producto, style: 'productDetail.css'});
+    res.render('products', {producto, style: 'products.css'});
 }  
 
 

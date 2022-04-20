@@ -9,3 +9,50 @@
     border: none;
 }
 
+.titulo-productos{
+    margin-top: 200px;
+}
+.productos{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.caja-producto{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 25px;
+    list-style: none;
+    align-items: center;
+}
+.caja-producto img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.caja-producto .nombre-producto{
+    font-size: 22px;
+
+    margin-bottom: 5px;
+
+}
+
+.caja-producto .precio {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media(min-width: 770px){
+    
+.productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+}
