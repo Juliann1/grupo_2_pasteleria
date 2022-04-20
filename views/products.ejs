@@ -9,11 +9,11 @@
         <p>Nuestos productos</p>
     </section>
     <section class="productos">
-        <% for (let i = 0; i <producto.length; i++){ %>
-        <a href="/productDetail/<%= producto[i].id %>"><ul  class="caja-producto">
-            <li  class="imagen"><img src="<%= producto[i].img1 %>"></li>
-            <li class="nombre-producto"><%= producto[i].name %> </li>
-            <li class="precio"><%= producto[i].precio  %> </li>
+        <% for (let i = 0; i <productCategory.length; i++){ %>
+        <a href="/productDetail/<%= productCategory[i].id %>"><ul  class="caja-producto">
+            <li  class="imagen"><img src="<%= productCategory[i].img1 %>"></li>
+            <li class="nombre-producto"><%= productCategory[i].name %> </li>
+            <li class="precio"><%= productCategory[i].precio  %> </li>
         </ul></a>
         <% } %> 
     </section>
