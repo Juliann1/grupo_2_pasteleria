@@ -14,28 +14,31 @@ app.use(methodOverride('_method'));
 // REQUIRE RUTAS
 
 
+const rutaMain = require("./routes/main");
+const rutaUsers = require("./routes/users")
 const rutaProducts = require("./routes/products");
 
 
-const rutaMain = require("./routes/main");
-const rutaLogin = require("./routes/login")
-const rutaProductCart = require('./routes/productCart')
-const rutaProductDetail = require('./routes/productDetail');
-const rutaRegister = require('./routes/register');
-const rutaFormularioCambio = require("./routes/formularioCambio");
+
+
+
+
 
 
 
 // CONTROLLER RUTAS
 
-app.use('/products', rutaProducts)
 
-app.get("/", rutaMain);
-app.get('/login', rutaLogin);
-app.get('/productCart', rutaProductCart);
-app.use('/productDetail', rutaProductDetail);
-app.get('/register', rutaRegister);
-app.get("/formularioCambio", rutaFormularioCambio);
+
+// app.get("/", rutaMain);
+// app.use('/users', rutaUsers);          //HAY QUE VER POR QUE NO FUNCIONA CON GET.
+app.use('/products', rutaProducts);      //HAY QUE VER POR QUE NO FUNCIONA CON GET.
+
+
+
+
+
+
 
 
 // LOCAL HOST 
