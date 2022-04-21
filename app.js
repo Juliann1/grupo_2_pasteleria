@@ -30,7 +30,7 @@ const rutaProducts = require("./routes/products");
 
 
 
-// app.get("/", rutaMain);
+app.get("/", rutaMain);
 // app.use('/users', rutaUsers);          //HAY QUE VER POR QUE NO FUNCIONA CON GET.
 app.use('/products', rutaProducts);      //HAY QUE VER POR QUE NO FUNCIONA CON GET.
 
