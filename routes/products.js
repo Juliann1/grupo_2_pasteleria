@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const productsController = require('../controllers/productsController')
+const productsController = require('../controllers/productsController');
 
 
 
 
 
-
-router.get('/:category', productsController.products);  //FUNCIONA. PERO COMENTAR PARA QUE FUNCIONE EL RESTO.
-// router.get('/create', productsController.create);
-router.get('/:id', productsController.productDetail);  
-// router.get('/:id/edit', productsController.edit);
-// router.get('/productCart', productsController.productCart);  //FUNCIONA. PERO COMENTAR productDetail PARA QUE FUNCIONE. 
+router.get('/products', productsController.products);     
+// router.get('/products/:category', productsController.categorys);  
+router.get('/products/create', productsController.create);
+router.get('/products/:id', productsController.productDetail);  
+router.get('/products/:id/edit', productsController.edit);
+router.get('/productCart', productsController.productCart); 
 
 module.exports = router;

@@ -15,8 +15,7 @@ app.use(methodOverride('_method'));
 
 
 const rutaMain = require("./routes/main");
-const rutaUsers = require("./routes/users")
-const rutaProducts = require("./routes/products");
+
 
 
 
@@ -27,12 +26,7 @@ const rutaProducts = require("./routes/products");
 
 
 // CONTROLLER RUTAS
-
-
-
-app.get("/", rutaMain);
-// app.use('/users', rutaUsers);          //HAY QUE VER POR QUE NO FUNCIONA CON GET.
-app.use('/products', rutaProducts);      //HAY QUE VER POR QUE NO FUNCIONA CON GET.
+app.use("/", rutaMain);
 
 
 

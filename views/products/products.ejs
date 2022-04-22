@@ -10,7 +10,7 @@
     </section>
     <section class="productos">
         <% for (let i = 0; i <productCategory.length; i++){ %>
-        <a href="/productDetail/<%= productCategory[i].id %>"><ul  class="caja-producto">
+        <a href="/products/<%= productCategory.id%><%= productCategory[i].id %>"><ul  class="caja-producto">
             <li  class="imagen"><img src="<%= productCategory[i].img1 %>"></li>
             <li class="nombre-producto"><%= productCategory[i].name %> </li>
             <li class="precio"><%= productCategory[i].precio  %> </li>

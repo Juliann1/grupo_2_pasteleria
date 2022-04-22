@@ -1,8 +1,10 @@
 const { Router } = require("express");
 const router = Router();
-const mainController = require("../controllers/mainController");
+const rutaUsers = require("./users")
+const rutaProducts = require("./products");
 
-router.get("/", mainController.index);
-
+                                 
+router.use('/users', rutaUsers);
+router.use('/', rutaProducts); 
 
 module.exports = router;

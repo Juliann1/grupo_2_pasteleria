@@ -7,7 +7,13 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const productsController = {
 
         products: (req, res) => {
-            let productCategory = products.filter(producto => producto.category == req.params.category);
+        res.render("index");
+        
+        },
+
+        categorys: (req, res) => {
+            let categoryId = req.params.category;
+            let productCategory = products.filter(producto => producto.category == categoryId);
             
             res.render('products/products', {productCategory, style: 'products.css'});
         },
@@ -16,7 +22,8 @@ const productsController = {
             res.render('products/productCreate', {style: 'register.css'});
         },
         productDetail: (req, res) =>{
-            let producto = products.find((producto) => producto.id == req.params.id);
+            let productId = req.params.id;
+            let producto = products.find((producto) => producto.id == productId);
             res.render('products/productDetail', {style: 'productDetail.css', producto: producto})
         },
         productCart: (req, res) =>{
