@@ -1,146 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head')%>
-       
-       
-        
-<body>
-
-    <%- include('../partials/header'); %> 
-    <main>
-        
-        <section class="carrito">
-            <h2>Carrito de compras</h2>
-            <div class="interior-carrito">
-                <div class="col-1">
-                    <h3>Producto</h3>
-                    <img src="/img/macarons.jpg" alt="producto">
-                </div>
-                <div class="col-2">
-                    <h3>Precio</h3>
-                    <p>$1500</p>
-                </div>
-                <div class="col-3">
-                    <h3>Cantidad</h3>
-                    <div class="compras">                         
-                                <button class="emogi"><i class="fa-solid fa-minus"></i></button>
-                                <input class="numero" type="number">
-                                <button class="emogi"><i class="fa-solid fa-plus"></i></button>                         
+    <body>
+        <%- include('../partials/header'); %> 
+        <main>
+            <section class="carrito">
+                <h2>Carrito de compras</h2>
+                <div class="interior-carrito">
+                    <div class="col-1">
+                        <h3>Producto</h3>
+                        <img src="/img/macarons.jpg" alt="producto">
+                    </div>
+                    <div class="col-2">
+                        <h3>Precio</h3>
+                        <p>$1500</p>
+                    </div>
+                    <div class="col-3">
+                        <h3>Cantidad</h3>
+                        <div class="compras">                         
+                                    <button class="emogi"><i class="fa-solid fa-minus"></i></button>
+                                    <input class="numero" type="number">
+                                    <button class="emogi"><i class="fa-solid fa-plus"></i></button>                         
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <h3>Subtotal</h3>
+                        <p>$3000</p>
                     </div>
                 </div>
-                <div class="col-4">
-                    <h3>Subtotal</h3>
-                    <p>$3000</p>
+                <div class="bottom-carrito">
+                    <button id="seguir-comprando">←Seguir comprando</button>
+                    <button id="actualizar-carrito">Actualizar carrito</button>
                 </div>
-            </div>
-            <div class="bottom-carrito">
-                <button id="seguir-comprando">←Seguir comprando</button>
-                <button id="actualizar-carrito">Actualizar carrito</button>
-            </div>
-        </section>
-        <section class="total">
-            <div class="top-total">
-                <h2>Total del carrito</h2>
-            </div>
-            <div class="main-total">
-                <div class="caja-1">
-                    <p>Subtotal</p>
-                    <p>$1500</p>
+            </section>
+            <section class="total">
+                <div class="top-total">
+                    <h2>Total del carrito</h2>
                 </div>
-                <div class="caja-2">
-                    <div>
-                        <p>Envio</p>
-                    </div>
-                    <div class="form-envio">
-                        <p>Introduce tu direccion para calcular el costo de envío.</p>
-                        <button class="calcular-envio">Calcular envío</button>
-                        <form action="#" method="#" class="form-envio-oculto">
-                            <select name="localidad" id="localidad">
-                                <option value="caba">CABA</option>
-                                <option value="zona-norte">Zona Norte</option>
-                                <option value="zona-sur">Zona Sur</option>
-                                <option value="zona-oeste">Zona Oeste</option>
-                            </select>
-                            <input type="number" name="codigo-postal" placeholder="Código postal">
-                            <button type="reset">ACTUALIZAR</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="caja-3">
-                    <p>Total</p>
-                    <p>$3000</p>
-                </div>
-            </div>
-            <div class="bottom-total">
-                <button type="submit">FINALIZAR COMPRA</button>
-            </div>
-        </section>
-        <section class="recomendados">
-            <div class="top-recomendados">
-                <h2>Quizá te interese también</h2>
-            </div>
-            <div class="main-recomendados">
-                <article class="articulo-recomendados">
+                <div class="main-total">
                     <div class="caja-1">
-                        <img src="/img/macarons2.jpg" alt="otra foto del producto">
+                        <p>Subtotal</p>
+                        <p>$1500</p>
                     </div>
                     <div class="caja-2">
-                        <p>Descripción</p>
+                        <div>
+                            <p>Envio</p>
+                        </div>
+                        <div class="form-envio">
+                            <p>Introduce tu direccion para calcular el costo de envío.</p>
+                            <button class="calcular-envio">Calcular envío</button>
+                            <form action="#" method="#" class="form-envio-oculto">
+                                <select name="localidad" id="localidad">
+                                    <option value="caba">CABA</option>
+                                    <option value="zona-norte">Zona Norte</option>
+                                    <option value="zona-sur">Zona Sur</option>
+                                    <option value="zona-oeste">Zona Oeste</option>
+                                </select>
+                                <input type="number" name="codigo-postal" placeholder="Código postal">
+                                <button type="reset">ACTUALIZAR</button>
+                            </form>
+                        </div>
                     </div>
                     <div class="caja-3">
-                        <p>$500</p>
+                        <p>Total</p>
+                        <p>$3000</p>
                     </div>
-                    <div class="caja-4">
-                        <button>COMPRAR</button>
-                    </div>
-                </article>
-                <article class="articulo-recomendados">
-                    <div class="caja-1">
-                        <img src="/img/macarons3.jpg" alt="otra foto del producto">
-                    </div>
-                    <div class="caja-2">
-                        <p>Descripción</p>
-                    </div>
-                    <div class="caja-3">
-                        <p>$500</p>
-                    </div>
-                    <div class="caja-4">
-                        <button>COMPRAR</button>
-                    </div>
-                </article>
-                <article class="articulo-recomendados">
-                    <div class="caja-1">
-                        <img src="/img/torta3.jpg" alt="imagen-torta-3">
-                    </div>
-                    <div class="caja-2">
-                        <p>Descripción</p>
-                    </div>
-                    <div class="caja-3">
-                        <p>$500</p>
-                    </div>
-                    <div class="caja-4">
-                        <button>COMPRAR</button>
-                    </div>
-                </article>
-                <article class="articulo-recomendados">
-                    <div class="caja-1">
-                        <img src="/img/torta4.jpg" alt="imagen-torta-4">
-                    </div>
-                    <div class="caja-2">
-                        <p>Descripción</p>
-                    </div>
-                    <div class="caja-3">
-                        <p>$500</p>
-                    </div>
-                    <div class="caja-4">
-                        <button>COMPRAR</button>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
-    <%- include('../partials/footer'); %> 
-</body>
+                </div>
+                <div class="bottom-total">
+                    <button type="submit">FINALIZAR COMPRA</button>
+                </div>
+            </section>
+            <section class="recomendados">
+                <div class="top-recomendados">
+                    <h2>Quizá te interese también</h2>
+                </div>
+                <div class="main-recomendados">
+                    <article class="articulo-recomendados">
+                        <div class="caja-1">
+                            <img src="/img/macarons2.jpg" alt="otra foto del producto">
+                        </div>
+                        <div class="caja-2">
+                            <p>Descripción</p>
+                        </div>
+                        <div class="caja-3">
+                            <p>$500</p>
+                        </div>
+                        <div class="caja-4">
+                            <button>COMPRAR</button>
+                        </div>
+                    </article>
+                    <article class="articulo-recomendados">
+                        <div class="caja-1">
+                            <img src="/img/macarons3.jpg" alt="otra foto del producto">
+                        </div>
+                        <div class="caja-2">
+                            <p>Descripción</p>
+                        </div>
+                        <div class="caja-3">
+                            <p>$500</p>
+                        </div>
+                        <div class="caja-4">
+                            <button>COMPRAR</button>
+                        </div>
+                    </article>
+                    <article class="articulo-recomendados">
+                        <div class="caja-1">
+                            <img src="/img/torta3.jpg" alt="imagen-torta-3">
+                        </div>
+                        <div class="caja-2">
+                            <p>Descripción</p>
+                        </div>
+                        <div class="caja-3">
+                            <p>$500</p>
+                        </div>
+                        <div class="caja-4">
+                            <button>COMPRAR</button>
+                        </div>
+                    </article>
+                    <article class="articulo-recomendados">
+                        <div class="caja-1">
+                            <img src="/img/torta4.jpg" alt="imagen-torta-4">
+                        </div>
+                        <div class="caja-2">
+                            <p>Descripción</p>
+                        </div>
+                        <div class="caja-3">
+                            <p>$500</p>
+                        </div>
+                        <div class="caja-4">
+                            <button>COMPRAR</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <%- include('../partials/footer'); %> 
+    </body>
 </html>
 
 

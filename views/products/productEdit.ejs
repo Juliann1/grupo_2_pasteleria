@@ -5,44 +5,41 @@
     <%- include('../partials/header'); %> 
 
     <main>
-        <form action="">
+        <form method="POST" action="/products/<%= producto.id %>?_method=PUT" >
             <img src="/../img/logo_teapothouse.png" alt="logo Teapot house" width="142" height="100" class="tphouse-logo marginbtm" />
             <h3>Cambia información de algún producto</h3>
             <div class="inputcaja">
-                <label for="nombre">Ingrese Identificador del producto</label>
-                <input name="nombre" type="text" placeholder=" Debe ser el mismo que el ingresado" required>
+                <label for="name">Nuevo nombre</label>
+                <input name="name" type="text" placeholder="Ej: macarons" value="<%= producto.name%>" required>
             </div>
-            <div class="inputcaja">
-                <label for="id">Nuevo nombre</label>
-                <input name="id" type="text" placeholder="Ej: macarons" required>
-            </div>
+
             <div class="inputcaja">
                 <label for="informacion">Nueva info</label>
-                <input name="informacion" type="text" placeholder="Escriba aquí la informacion del producto" required>
+                <input name="information" type="text" placeholder="Escriba aquí la informacion del producto" value="<%= producto.information %>" required>
             </div>
             <div class="inputcaja">
                 <label for="precio">Nuevo precio($)</label>
-                <input name="precio" type="text" placeholder=" $1000" required>
+                <input name="precio" type="text" placeholder=" $1000" value="<%= producto.precio%>" required>
             </div>
             <div class="inputcaja">
                 <label for="entrega">Nueva entrega</label>
-                <input name="entrega" type="text" placeholder="Ej: solo vía moto" required>
+                <input name="entrega" type="text" placeholder="Ej: solo vía moto"value="<%= producto.entrega%>" required>
             </div>
             <div class="inputcaja">
                 <label for="consejos">Nuevo consejos</label>
-                <input name="consejos" type="text" placeholder="Ej:no mantener al sol " required>
+                <input name="consejos" type="text" placeholder="Ej:no mantener al sol " value="<%= producto.consejos%>" required>
             </div>
             <div class="inputcaja">
                 <label for="reclamos">Nuevo reclamos</label>
-                <input name="reclamos" type="text" placeholder="Escribir a..." required>
+                <input name="reclamos" type="text" placeholder="Escribir a..." value="<%= producto.reclamos%>" required>
             </div>
             <div class="inputcaja">
                 <label for="Descripción">Nueva descripción detallada</label>
-                <input name="Descripción" type="text" placeholder="Escriba aquí la informacion larga del producto " required>
+                <input name="description" type="text" placeholder="Escriba aquí la informacion larga del producto " value="<%= producto.description%>" required>
             </div>
             <div class="inputcaja">
                 <label for="tipoProducto">Qué tipo de producto es?</label>
-                <select id="tipoProducto" name="tipoProducto">
+                <select id="tipoProducto" name="category">
                     <option value="panadería">Panadería</option>
                     <option value="Pastelería">Pastelería</option>
                     <option value="Chocolateria">Chocolateria</option>

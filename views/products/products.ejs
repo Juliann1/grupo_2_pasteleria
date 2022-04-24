@@ -9,13 +9,13 @@
         <p>Nuestos productos</p>
     </section>
     <section class="productos">
-        <% for (let i = 0; i <productCategory.length; i++){ %>
-        <a href="/products/<%= productCategory.id%><%= productCategory[i].id %>"><ul  class="caja-producto">
-            <li  class="imagen"><img src="<%= productCategory[i].img1 %>"></li>
-            <li class="nombre-producto"><%= productCategory[i].name %> </li>
-            <li class="precio"><%= productCategory[i].precio  %> </li>
-        </ul></a>
-        <% } %> 
+        <% productCategory.forEach( p => { %>
+            <a href="/products/<%= p.id %>"><ul  class="caja-producto">
+                <li  class="imagen"><img src="<%= p.img1 %>"></li>
+                <li class="nombre-producto"><%= p.name %> </li>
+                <li class="precio"><%= p.precio  %> </li>
+            </ul></a>
+        <% }) %> 
     </section>
     <%- include('../partials/footer'); %>
 </body>

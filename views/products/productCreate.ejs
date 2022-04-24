@@ -3,22 +3,17 @@
     <%- include('../partials/head')%>
 <body>
     <%- include('../partials/header'); %> 
-
     <main>
-        <form action="#" method="#">
+        <form method="POST" action="/products/create">
             <img src="/../img/logo_teapothouse.png" alt="logo Teapot house" width="142" height="100" class="tphouse-logo marginbtm" />
             <h3>Ingresá tus productos</h3>
             <div class="inputcaja">
                 <label for="nombre">Nombre del producto</label>
-                <input name="nombre" type="text" placeholder="Ej: macarons" required>
-            </div>
-            <div class="inputcaja">
-                <label for="id">Identificador del producto</label>
-                <input name="id" type="text" placeholder="Ej: macarons" required>
+                <input name="name" type="text" placeholder="Ej: macarons" required>
             </div>
             <div class="inputcaja">
                 <label for="informacion">Información</label>
-                <input name="informacion" type="text" placeholder="Escriba aquí la informacion del producto" required>
+                <input name="information" type="text" placeholder="Escriba aquí la informacion del producto" required>
             </div>
             <div class="inputcaja">
                 <label for="precio">Precio del producto ($)</label>
@@ -38,19 +33,21 @@
             </div>
             <div class="inputcaja">
                 <label for="Descripción">Descripción detallada</label>
-                <input name="Descripción" type="text" placeholder="Escriba aquí la informacion larga del producto " required>
+                <input name="description" type="text" placeholder="Escriba aquí la informacion larga del producto " required>
             </div>
             <div class="inputcaja">
                 <label for="tipoProducto">Qué tipo de producto es?</label>
-                <select id="tipoProducto" name="tipoProducto">
-                    <option value="panadería">Panadería</option>
-                    <option value="Pastelería">Pastelería</option>
-                    <option value="Chocolateria">Chocolateria</option>
+                <select id="tipoProducto" name="category">
+                    <option value="panaderia">Panadería</option>
+                    <option value="pasteleria">Pastelería</option>
+                    <option value="chocolateria">Chocolateria</option>
                 </select>
             </div>
             <div class="inputcaja">
                 <label for="Imagen">Imagen del producto</label>
-                <input type="file" name="foto" accept=".jpg" multiple>
+                <input type="file" name="img1" accept=".jpg">
+                <input type="file" name="img2" accept=".jpg">
+                <input type="file" name="img3" accept=".jpg">
             </div>
             <button class="btn">Enviar</button>
             <button class="btn">Borrar</button>
