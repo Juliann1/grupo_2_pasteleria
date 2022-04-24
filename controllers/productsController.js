@@ -11,7 +11,7 @@ const productsController = {
         
         },
 
-        categorys: (req, res) => {
+        categories: (req, res) => {
             let categoryId = req.params.category;
             let productCategory = products.filter(producto => producto.category == categoryId);
             

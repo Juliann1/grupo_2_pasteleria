@@ -13,26 +13,11 @@ app.use(methodOverride('_method'));
 
 // REQUIRE RUTAS
 
-
 const rutaMain = require("./routes/main");
-
-
-
-
-
-
-
-
 
 
 // CONTROLLER RUTAS
 app.use("/", rutaMain);
-
-
-
-
-
-
 
 
 // LOCAL HOST 
