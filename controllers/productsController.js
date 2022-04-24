@@ -40,7 +40,9 @@ const productsController = {
         editPUT: (req, res) =>{
             let id = req.params.id;
             let newProduct = req.body;
-            products = products.map(p => (p.id == id ? newProduct : p));
+            products = products.map(p => {
+                return (p.id == id ? newProduct : p);
+            });
             fs.writeFileSync(productsFilePath, JSON.stringify(products));
             res.redirect('/products/' + id);  
         },

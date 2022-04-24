@@ -1,15 +1,14 @@
 [
     {
-        "id": "1",
+        "id":"1",
         "name": "Macarons",
-        "description": "Dulce francés de harina de almendras a base de merengue con relleno de ganache de frutos o chocolate",
-        "image": "macarons.jpg",
-        "category": "pasteleria",
+        "information": "se vende por unidad o por cajas de media docena",
         "precio": "$300",
         "entrega": "Es un producto delicado, la entrega únicamente será en auto o para retirar desde el local",
         "consejos": "Mantener en la heladera solo por 3 días",
         "reclamos": "Ante cualquier reclamo, comuniquese a tphouse@gmail.com",
-        "information": "se vende por unidad o por cajas de media docena",
+        "description": "Dulce francés de harina de almendras a base de merengue con relleno de ganache de frutos o chocolate",
+        "category": "panadería",
         "img1": "/img/macarons.jpg",
         "img2": "/img/macarons2.jpg",
         "img3": "/img/macarons3.jpg"
@@ -136,12 +135,12 @@
     },
     {
         "name": "Hola",
-        "information": "htufjiofjpo",
+        "information": "rghofijse",
         "precio": "100",
-        "entrega": "fdogjiseifjse",
-        "consejos": "dfkogjopsdfjs",
-        "reclamos": "dpijfsof",
-        "description": "sdkofjsoifdjds",
+        "entrega": "griofjsofjse",
+        "consejos": "sgoifsojf",
+        "reclamos": "dgoifjspofjs",
+        "description": "sdfoijfspojfa",
         "category": "panadería",
         "img1": ""
     }
