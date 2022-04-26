@@ -1,58 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head')%>
-<body>
-    <%- include('../partials/header'); %> 
-    <main>
-        <form method="POST" action="/products/create">
-            <img src="/../img/logo_teapothouse.png" alt="logo Teapot house" width="142" height="100" class="tphouse-logo marginbtm" />
-            <h3>Ingresá tus productos</h3>
-            <div class="inputcaja">
-                <label for="nombre">Nombre del producto</label>
-                <input name="name" type="text" placeholder="Ej: macarons" required>
-            </div>
-            <div class="inputcaja">
-                <label for="informacion">Información</label>
-                <input name="information" type="text" placeholder="Escriba aquí la informacion del producto" required>
-            </div>
-            <div class="inputcaja">
-                <label for="precio">Precio del producto ($)</label>
-                <input name="precio" type="text" placeholder=" $1000" required>
-            </div>
-            <div class="inputcaja">
-                <label for="entrega">Entrega</label>
-                <input name="entrega" type="text" placeholder="Ej: solo vía moto" required>
-            </div>
-            <div class="inputcaja">
-                <label for="consejos">Consejos</label>
-                <input name="consejos" type="text" placeholder="Ej:no mantener al sol " required>
-            </div>
-            <div class="inputcaja">
-                <label for="reclamos">Reclamos</label>
-                <input name="reclamos" type="text" placeholder="Escribir a..." required>
-            </div>
-            <div class="inputcaja">
-                <label for="Descripción">Descripción detallada</label>
-                <input name="description" type="text" placeholder="Escriba aquí la informacion larga del producto " required>
-            </div>
-            <div class="inputcaja">
-                <label for="tipoProducto">Qué tipo de producto es?</label>
-                <select id="tipoProducto" name="category">
-                    <option value="panaderia">Panadería</option>
-                    <option value="pasteleria">Pastelería</option>
-                    <option value="chocolateria">Chocolateria</option>
-                </select>
-            </div>
-            <div class="inputcaja">
-                <label for="Imagen">Imagen del producto</label>
-                <input type="file" name="img1" accept=".jpg">
-                <input type="file" name="img2" accept=".jpg">
-                <input type="file" name="img3" accept=".jpg">
-            </div>
-            <button class="btn">Enviar</button>
-            <button class="btn">Borrar</button>
-        </form>
-    </main>
-    <%- include('../partials/footer'); %> 
-</body>
+    <body>
+        <%- include('../partials/header'); %>
+        <main>
+            <form
+                method="POST"
+                action="/products/create"
+                enctype="multipart/form-data"
+            >
+                <img
+                    src="/../img/logo_teapothouse.png"
+                    alt="logo Teapot house"
+                    width="142"
+                    height="100"
+                    class="tphouse-logo marginbtm"
+                />
+                <h3>Ingresá tus productos</h3>
+                <div class="inputcaja">
+                    <label for="nombre">Nombre del producto</label>
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Ej: macarons"
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="informacion">Información</label>
+                    <input
+                        name="information"
+                        type="text"
+                        placeholder="Escriba aquí la informacion del producto"
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="precio">Precio del producto ($)</label>
+                    <input
+                        name="precio"
+                        type="text"
+                        placeholder=" $1000"
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="entrega">Entrega</label>
+                    <input
+                        name="entrega"
+                        type="text"
+                        placeholder="Ej: solo vía moto"
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="consejos">Consejos</label>
+                    <input
+                        name="consejos"
+                        type="text"
+                        placeholder="Ej:no mantener al sol "
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="reclamos">Reclamos</label>
+                    <input
+                        name="reclamos"
+                        type="text"
+                        placeholder="Escribir a..."
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="Descripción">Descripción detallada</label>
+                    <input
+                        name="description"
+                        type="text"
+                        placeholder="Escriba aquí la informacion larga del producto "
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="tipoProducto">Qué tipo de producto es?</label>
+                    <select id="tipoProducto" name="category">
+                        <option value="panaderia">Panadería</option>
+                        <option value="pasteleria">Pastelería</option>
+                        <option value="chocolateria">Chocolateria</option>
+                    </select>
+                </div>
+                <div class="inputcaja">
+                    <label for="Imagen">Imagen del producto</label>
+                    <input type="file" name="img1" accept=".jpg" required />
+                    <input type="file" name="img2" accept=".jpg" required />
+                    <input type="file" name="img3" accept=".jpg" required />
+                </div>
+                <button class="btn">Enviar</button>
+                <button class="btn">Borrar</button>
+            </form>
+        </main>
+        <%- include('../partials/footer'); %>
+    </body>
 </html>

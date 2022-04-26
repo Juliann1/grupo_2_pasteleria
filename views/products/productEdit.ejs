@@ -1,58 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head')%>
-<body>
-    <%- include('../partials/header'); %> 
+    <body>
+        <%- include('../partials/header'); %>
 
-    <main>
-        <form method="POST" action="/products/<%= producto.id %>?_method=PUT" >
-            <img src="/../img/logo_teapothouse.png" alt="logo Teapot house" width="142" height="100" class="tphouse-logo marginbtm" />
-            <h3>Cambia información de algún producto</h3>
-            <div class="inputcaja">
-                <label for="name">Nuevo nombre</label>
-                <input name="name" type="text" placeholder="Ej: macarons" value="<%= producto.name%>" required>
-            </div>
+        <main>
+            <form
+                method="POST"
+                action="/products/<%= producto.id %>?_method=PUT"
+                enctype="multipart/form-data"
+            >
+                <img
+                    src="/../img/logo_teapothouse.png"
+                    alt="logo Teapot house"
+                    width="142"
+                    height="100"
+                    class="tphouse-logo marginbtm"
+                />
+                <h3>Cambia información de algún producto</h3>
+                <div class="inputcaja">
+                    <label for="name">Nuevo nombre</label>
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Ej: macarons"
+                        value="<%= producto.name%>"
+                        required
+                    />
+                </div>
 
-            <div class="inputcaja">
-                <label for="informacion">Nueva info</label>
-                <input name="information" type="text" placeholder="Escriba aquí la informacion del producto" value="<%= producto.information %>" required>
-            </div>
-            <div class="inputcaja">
-                <label for="precio">Nuevo precio($)</label>
-                <input name="precio" type="text" placeholder=" $1000" value="<%= producto.precio%>" required>
-            </div>
-            <div class="inputcaja">
-                <label for="entrega">Nueva entrega</label>
-                <input name="entrega" type="text" placeholder="Ej: solo vía moto"value="<%= producto.entrega%>" required>
-            </div>
-            <div class="inputcaja">
-                <label for="consejos">Nuevo consejos</label>
-                <input name="consejos" type="text" placeholder="Ej:no mantener al sol " value="<%= producto.consejos%>" required>
-            </div>
-            <div class="inputcaja">
-                <label for="reclamos">Nuevo reclamos</label>
-                <input name="reclamos" type="text" placeholder="Escribir a..." value="<%= producto.reclamos%>" required>
-            </div>
-            <div class="inputcaja">
-                <label for="Descripción">Nueva descripción detallada</label>
-                <input name="description" type="text" placeholder="Escriba aquí la informacion larga del producto " value="<%= producto.description%>" required>
-            </div>
-            <div class="inputcaja">
-                <label for="tipoProducto">Qué tipo de producto es?</label>
-                <select id="tipoProducto" name="category">
-                    <option value="panadería">Panadería</option>
-                    <option value="Pastelería">Pastelería</option>
-                    <option value="Chocolateria">Chocolateria</option>
-                </select>
-            </div>
-            <div class="inputcaja">
-                <label for="Imagen">Nueva imagen del producto</label>
-                <input type="file" name="img1" accept=".jpg" multiple>
-            </div>
-            <button class="btn">Enviar</button>
-            <button class="btn">Borrar</button>
-        </form>
-    </main>
-    <%- include('../partials/footer'); %> 
-</body>
+                <div class="inputcaja">
+                    <label for="informacion">Nueva info</label>
+                    <input
+                        name="information"
+                        type="text"
+                        placeholder="Escriba aquí la informacion del producto"
+                        value="<%= producto.information %>"
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="precio">Nuevo precio($)</label>
+                    <input
+                        name="precio"
+                        type="text"
+                        placeholder=" $1000"
+                        value="<%= producto.precio%>"
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="entrega">Nueva entrega</label>
+                    <input
+                        name="entrega"
+                        type="text"
+                        placeholder="Ej: solo vía moto"
+                        value="<%= producto.entrega%>"
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="consejos">Nuevo consejos</label>
+                    <input
+                        name="consejos"
+                        type="text"
+                        placeholder="Ej:no mantener al sol "
+                        value="<%= producto.consejos%>"
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="reclamos">Nuevo reclamos</label>
+                    <input
+                        name="reclamos"
+                        type="text"
+                        placeholder="Escribir a..."
+                        value="<%= producto.reclamos%>"
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="Descripción">Nueva descripción detallada</label>
+                    <input
+                        name="description"
+                        type="text"
+                        placeholder="Escriba aquí la informacion larga del producto "
+                        value="<%= producto.description%>"
+                        required
+                    />
+                </div>
+                <div class="inputcaja">
+                    <label for="tipoProducto">Qué tipo de producto es?</label>
+                    <select id="tipoProducto" name="category">
+                        <option value="panadería">Panadería</option>
+                        <option value="Pastelería">Pastelería</option>
+                        <option value="Chocolateria">Chocolateria</option>
+                    </select>
+                </div>
+                <div class="inputcaja">
+                    <label for="Imagen">Nueva imagen del producto</label>
+                    <input type="file" name="img1" accept=".jpg" />
+                    <input type="file" name="img2" accept=".jpg" />
+                    <input type="file" name="img3" accept=".jpg" />
+                </div>
+                <button class="btn">Enviar</button>
+            </form>
+            <form
+                action="/products/<%= producto.id%>?_method=DELETE"
+                method="POST"
+            >
+                <button class="btn">Borrar</button>
+            </form>
+        </main>
+        <%- include('../partials/footer'); %>
+    </body>
 </html>
