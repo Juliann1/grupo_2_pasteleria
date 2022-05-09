@@ -1,1 +1,79 @@
-[{"id":"1","nombreApellido":"Juan Perez","usuario":"JPerez","email":"JPerez@gmail.com","contraseña":"1234","categoria":"comprador mayorista","imagen":"img","nacimiento":"12/03/2001","domicilio":"Juncal 365, CABA","telefono":"1539002285"},{"id":"2","nombreApellido":"Lucia Galbin","usuario":"luliGalbin","email":"luli@gmail.com","contraseña":"luliluli","categoria":"comprador minorista","imagen":"img","nacimiento":"22/05/2001","domicilio":"Av Santa Fe 2567","telefono":"1112756902"},{"id":"3","nombreApellido":"Ignacio López","usuario":"ignaPasteleria","email":"nachoL@gmail.com","contraseña":"nachokpo","categoria":"comprador mayorista","imagen":"img","nacimiento":"30/01/1996","domicilio":"Tucuman 340, CABA","telefono":"1163109471"},{"nombreApellido":"vxdccf","usuario":"xcvvxcv","email":"xvch@h","nacimiento":"2022-03-29","domicilio":"fdfxc","telefono":"xcv","password":"$2a$10$xi/eOPgvGjRgueF06YeJhOtI7sejZkXtcfkviNl1L3B.c8GwmRDVG","password2":"hola","id":"4"}]
+[
+    {
+        "id": "1",
+        "nombreApellido": "Juan Perez",
+        "usuario": "JPerez",
+        "email": "JPerez@gmail.com",
+        "contraseña": "1234",
+        "categoria": "comprador mayorista",
+        "imagen": "img",
+        "nacimiento": "12/03/2001",
+        "domicilio": "Juncal 365, CABA",
+        "telefono": "1539002285"
+    },
+    {
+        "id": "2",
+        "nombreApellido": "Lucia Galbin",
+        "usuario": "luliGalbin",
+        "email": "luli@gmail.com",
+        "contraseña": "luliluli",
+        "categoria": "comprador minorista",
+        "imagen": "img",
+        "nacimiento": "22/05/2001",
+        "domicilio": "Av Santa Fe 2567",
+        "telefono": "1112756902"
+    },
+    {
+        "id": "3",
+        "nombreApellido": "Ignacio López",
+        "usuario": "ignaPasteleria",
+        "email": "nachoL@gmail.com",
+        "contraseña": "nachokpo",
+        "categoria": "comprador mayorista",
+        "imagen": "img",
+        "nacimiento": "30/01/1996",
+        "domicilio": "Tucuman 340, CABA",
+        "telefono": "1163109471"
+    },
+    {
+        "nombreApellido": "vxdccf",
+        "usuario": "xcvvxcv",
+        "email": "xvch@h",
+        "nacimiento": "2022-03-29",
+        "domicilio": "fdfxc",
+        "telefono": "xcv",
+        "password": "$2a$10$xi/eOPgvGjRgueF06YeJhOtI7sejZkXtcfkviNl1L3B.c8GwmRDVG",
+        "password2": "hola",
+        "id": "4"
+    },
+    {
+        "nombreApellido": "hOLGA",
+        "usuario": "trhfgdsfdggsdf",
+        "email": "bdx@g",
+        "nacimiento": "2022-03-10",
+        "domicilio": "tgdfs",
+        "telefono": "8498",
+        "password": "$2a$10$8AR34R17HlCeA90ndPO/T.ye/2NmvHRB4GogFMh0xf/ZFLa/c1Fp6",
+        "id": "5"
+    },
+    {
+        "nombreApellido": "hOLGA",
+        "usuario": "trhfgdsfdggsdf",
+        "email": "bdx@g",
+        "nacimiento": "2022-03-10",
+        "domicilio": "tgdfs",
+        "telefono": "8498",
+        "password": "$2a$10$WomxoEY50.vpA5URUngA8OzYnD1WLWVQg9Ji5nUKVZxdZ4kpRgzJq",
+        "id": "6"
+    },
+    {
+        "nombreApellido": "hOLGA",
+        "usuario": "trhfgdsfdggsdf",
+        "email": "bdx@g",
+        "nacimiento": "2022-03-10",
+        "domicilio": "tgdfs",
+        "telefono": "8498",
+        "password": "$2a$10$/dcb6pd/pgEsj0MMCr29..s9.QcugRi/7vCuCDC/5vgBtFZpHjbPq",
+        "id": "7"
+    }
+]

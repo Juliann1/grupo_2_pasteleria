@@ -27,7 +27,7 @@ const usersController ={
         users.push(newUser);
 
         fs.writeFileSync(usersFilePath, JSON.stringify(users));
-        res.redirect("/users/");
+        res.redirect("/users/" + newUser.id);
     }
 };
 

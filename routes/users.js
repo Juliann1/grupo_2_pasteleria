@@ -24,5 +24,5 @@ let fileUpload = multer({ storage });
 router.get('/login', usersController.login);
 router.get('/register', usersController.register);
 router.post('/register', fileUpload.any(), usersController.registerPOST);
-
+router.get("/:id", usersController.login);
 module.exports = router;
