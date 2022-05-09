@@ -4,7 +4,8 @@
   "description": "Nuestras ventas serán de productos dulces, tanto como de pastelería, como de chocolatería y de panificados.\r Dentro de la página habrá opciones tanto de venta de productos ya armados, como de encargos personalizados.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/Juliann1/grupo_2_pasteleria#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "method-override": "^3.0.0",
