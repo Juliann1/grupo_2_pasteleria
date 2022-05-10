@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')%>
+<body>
+    <%- include('../partials/header'); %>
+    <p class="titulo-principal">Información sobre mi perfil</p>
+    <section class="bloque">
+        <img src= <%= usuario.profile_pic %>>
+        <section class="datos-usuario">
+            <div class="nombre-usuario">
+                <h3><%= usuario.usuario %></h3>
+            </div>
+            <div class="nombre-apellido">
+                <p>Nombre: <%= usuario.nombreApellido %></p>
+            </div>
+            
+            <div class="email">
+                <p> Email:  <%= usuario.email %> <p>
+            </div>
+            <div class="domicilio">
+                <p> Domicilio: <%= usuario.domicilio %> </p>
+            </div>
+            <div class="telefono">
+                <p> Número de teléfono: <%= usuario.telefono %> </p>
+            </div>
+        </section>
+    </section>
+    <%- include('../partials/footer'); %> 
+</body>
+</html>
