@@ -1,1 +1,86 @@
-[{"id":"1","nombreApellido":"Juan Perez","usuario":"JPerez","email":"JPerez@gmail.com","contraseña":"1234","categoria":"comprador mayorista","imagen":"img","nacimiento":"12/03/2001","domicilio":"Juncal 365, CABA","telefono":"1539002285"},{"id":"2","nombreApellido":"Lucia Galbin","usuario":"luliGalbin","email":"luli@gmail.com","contraseña":"luliluli","categoria":"comprador minorista","imagen":"img","nacimiento":"22/05/2001","domicilio":"Av Santa Fe 2567","telefono":"1112756902","profile_pic":"/img/users/jnfijs-1652144006705.jpg"},{"id":"3","nombreApellido":"Ignacio López","usuario":"ignaPasteleria","email":"nachoL@gmail.com","contraseña":"nachokpo","categoria":"comprador mayorista","imagen":"img","nacimiento":"30/01/1996","domicilio":"Tucuman 340, CABA","telefono":"1163109471"},{"nombreApellido":"vxdccf","usuario":"xcvvxcv","email":"xvch@h","nacimiento":"2022-03-29","domicilio":"fdfxc","telefono":"xcv","password":"$2a$10$xi/eOPgvGjRgueF06YeJhOtI7sejZkXtcfkviNl1L3B.c8GwmRDVG","password2":"hola","id":"4"},{"nombreApellido":"jnfijs","usuario":"jnhjkh","email":"jjkb@v","nacimiento":"2022-04-07","domicilio":"hgbuyg","telefono":"gouygy","password":"$2a$10$OUSmeCHBuzb.kId9.VDiuOQ9GgzqegVKweJ1ZwVZLWc5YR/DGWNAK","password2":false,"profile_pic":"/img/users/jnfijs-1652144006705.jpg","id":"15"},{"nombreApellido":"Magali","usuario":"magui","email":"magali@gmail","nacimiento":"2022-04-21","domicilio":"aaca","telefono":"564654654","password":"$2a$10$eBnJpS1EbXBC87p9CXMjc.6tLjcuIGh0NerVLM5y3U6zfglbCbwNe","password2":false,"profile_pic":"/img/users/Magali-1652145297544.jpg","id":"6"},{"nombreApellido":"Magali","usuario":"magui","email":"magali@gmail","nacimiento":"2022-04-21","domicilio":"aaca","telefono":"564654654","password":"$2a$10$ZxhbRNT5iGKxqjNY5UA.oOCkCbdOgMWeNYBZjkcIb1Ek58fmGVWmq","password2":false,"profile_pic":"/img/users/Magali-1652145328650.jpg","id":"7"}]
+[
+ {
+  "id": "1",
+  "nombreApellido": "Juan Perez",
+  "usuario": "JPerez",
+  "email": "JPerez@gmail.com",
+  "contraseña": "1234",
+  "categoria": "comprador mayorista",
+  "imagen": "img",
+  "nacimiento": "12/03/2001",
+  "domicilio": "Juncal 365, CABA",
+  "telefono": "1539002285"
+ },
+ {
+  "id": "2",
+  "nombreApellido": "Lucia Galbin",
+  "usuario": "luliGalbin",
+  "email": "luli@gmail.com",
+  "contraseña": "luliluli",
+  "categoria": "comprador minorista",
+  "imagen": "img",
+  "nacimiento": "22/05/2001",
+  "domicilio": "Av Santa Fe 2567",
+  "telefono": "1112756902",
+  "profile_pic": "/img/users/jnfijs-1652144006705.jpg"
+ },
+ {
+  "id": "3",
+  "nombreApellido": "Ignacio López",
+  "usuario": "ignaPasteleria",
+  "email": "nachoL@gmail.com",
+  "contraseña": "nachokpo",
+  "categoria": "comprador mayorista",
+  "imagen": "img",
+  "nacimiento": "30/01/1996",
+  "domicilio": "Tucuman 340, CABA",
+  "telefono": "1163109471"
+ },
+ {
+  "nombreApellido": "vxdccf",
+  "usuario": "xcvvxcv",
+  "email": "xvch@h",
+  "nacimiento": "2022-03-29",
+  "domicilio": "fdfxc",
+  "telefono": "xcv",
+  "password": "$2a$10$xi/eOPgvGjRgueF06YeJhOtI7sejZkXtcfkviNl1L3B.c8GwmRDVG",
+  "password2": "hola",
+  "id": "4"
+ },
+ {
+  "nombreApellido": "jnfijs",
+  "usuario": "jnhjkh",
+  "email": "jjkb@v",
+  "nacimiento": "2022-04-07",
+  "domicilio": "hgbuyg",
+  "telefono": "gouygy",
+  "password": "$2a$10$OUSmeCHBuzb.kId9.VDiuOQ9GgzqegVKweJ1ZwVZLWc5YR/DGWNAK",
+  "password2": false,
+  "profile_pic": "/img/users/jnfijs-1652144006705.jpg",
+  "id": "15"
+ },
+ {
+  "nombreApellido": "Magali",
+  "usuario": "magui",
+  "email": "magali@gmail",
+  "nacimiento": "2022-04-21",
+  "domicilio": "aaca",
+  "telefono": "564654654",
+  "password": "$2a$10$eBnJpS1EbXBC87p9CXMjc.6tLjcuIGh0NerVLM5y3U6zfglbCbwNe",
+  "password2": false,
+  "profile_pic": "/img/users/Magali-1652145297544.jpg",
+  "id": "6"
+ },
+ {
+  "nombreApellido": "Magali",
+  "usuario": "magui",
+  "email": "magali@gmail",
+  "nacimiento": "2022-04-21",
+  "domicilio": "aaca",
+  "telefono": "564654654",
+  "password": "$2a$10$ZxhbRNT5iGKxqjNY5UA.oOCkCbdOgMWeNYBZjkcIb1Ek58fmGVWmq",
+  "password2": false,
+  "profile_pic": "/img/users/Magali-1652145328650.jpg",
+  "id": "7"
+ }
+]

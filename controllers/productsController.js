@@ -34,7 +34,7 @@ const productsController = {
         newProduct.id = String(products.length + 1);
         products.push(newProduct);
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products));
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
         res.redirect("/products/" + newProduct.id);
     },
     productDetail: (req, res) => {
@@ -77,13 +77,13 @@ const productsController = {
             return product;
         });
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products));
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
         res.redirect("/products/" + id);
     },
     delete: (req, res) => {
         let id = req.params.id;
         products = products.filter((p) => p.id != id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products));
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
         res.redirect("/products");
     },
 };
