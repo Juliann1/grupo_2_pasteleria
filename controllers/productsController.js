@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const productsFilePath = path.join(__dirname, "../data/products.json");
 let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+const { validationResult } = require("express-validator");
 
 const productsController = {
     products: (req, res) => {
@@ -22,6 +23,16 @@ const productsController = {
         res.render("products/productCreate", { style: "register.css" });
     },
     createPOST: (req, res) => {
+        let errors = validationResult(req);
+        
+        if (!errors.isEmpty()) {
+            return res.render("products/productCreate", {
+                style: "register.css",
+                errors: errors.mapped(),
+                oldData: req.body
+            });
+        }
+       
         let files = req.files.map((e) => `/img/${e.filename}`);
 
         let newProduct = {
@@ -31,7 +42,7 @@ const productsController = {
             img3: files[2],
         };
 
-        newProduct.id = String(products.length + 1);
+        newProduct.id = products.length + 1;
         products.push(newProduct);
 
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
