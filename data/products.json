@@ -1,9 +1,9 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "name": "Macarons",
         "information": "se vende por unidad o por cajas de media docena",
-        "precio": "$300",
+        "precio": 300,
         "entrega": "Es un producto delicado, la entrega únicamente será en auto o para retirar desde el local",
         "consejos": "Mantener en la heladera solo por 3 días",
         "reclamos": "Ante cualquier reclamo, comuniquese a tphouse@gmail.com",
@@ -14,13 +14,13 @@
         "img3": "/img/macarons3.jpg"
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "Muffins",
         "information": "Caja de 12 unidades",
         "description": " Mini torta de chocolate, vainilla o red velvet con relleno a elección y cobertura de buttercream o ganache de chocolate ",
         "image": "muffins.jpg",
         "category": "panaderia",
-        "precio": "$2000",
+        "precio": 2000,
         "entrega": "Es un producto delicado, la entrega únicamente será en auto o para retirar desde el local",
         "consejos": "Los muffins con buttercream deben permanecer dentro de la heladera, así como los que tengan rellenos frutales",
         "reclamos": "Ante cualquier reclamo, comuniquese a tphouse@gmail.com",
@@ -29,12 +29,12 @@
         "img3": "/img/muffins4.jpg"
     },
     {
-        "id": "3",
+        "id": 3,
         "name": "Barra de chocolate",
         "description": "Barra de chocolate artesanal, realizado con chocolate cobertura amargo, blanco o semi amargo, con el método de templado por tableado",
         "image": "chocolate.jpg",
         "category": "chocolateria",
-        "precio": "$800",
+        "precio": 800,
         "entrega": "Se puede realizar cualquier método de entrega",
         "consejos": "Se mantiene a temperatura ambiente y en días de mucho calor se puede poner en refrigeración a no menos de 20° ",
         "reclamos": "Ante cualquier reclamo, comuniquese a tphouse@gmail.com",
@@ -44,12 +44,12 @@
         "img3": "/img/chocolate2.jpg"
     },
     {
-        "id": "4",
+        "id": 4,
         "name": "Cumple Torta",
         "description": "Torta de vainilla rellena de dulce de leche y cubierta con buttercream",
         "image": "macarons.jpg",
         "category": "pasteleria",
-        "precio": "$4000",
+        "precio": 4000,
         "entrega": "Es un producto delicado, la entrega únicamente será en auto o para retirar desde el local",
         "consejos": "Mantener en la heladera solo por 10 días",
         "reclamos": "Ante cualquier reclamo, comuniquese a tphouse@gmail.com",
@@ -59,12 +59,12 @@
         "img3": "/img/cake.jpg"
     },
     {
-        "id": "5",
+        "id": 5,
         "name": "Croissants",
         "description": "Factura francesa a base de una masa de hojaldre",
         "image": "macarons.jpg",
         "category": "panaderia",
-        "precio": "$600",
+        "precio": 600,
         "entrega": "Es un producto delicado, la entrega únicamente será en auto o para retirar desde el local",
         "consejos": "Mantener en ambiente fresco no más de 24 hs",
         "reclamos": "Ante cualquier reclamo, comuniquese a tphouse@gmail.com",
@@ -74,12 +74,12 @@
         "img3": "/img/croissants.jpg"
     },
     {
-        "id": "6",
+        "id": 6,
         "name": "Chocolate Blanco",
         "description": "Barra de chocolate realizada con chocolate cobertura blanca con método de templado por sembrado",
         "image": "macarons.jpg",
         "category": "chocolateria",
-        "precio": "$800",
+        "precio": 800,
         "entrega": "Es un producto delicado, la entrega únicamente será en auto o para retirar desde el local",
         "consejos": "Mantener en ambiente fresco",
         "reclamos": "Ante cualquier reclamo, comuniquese a tphouse@gmail.com",
@@ -89,12 +89,12 @@
         "img3": "/img/chocolateblanco.jpg"
     },
     {
-        "id": "7",
+        "id": 7,
         "name": "Alfajores",
         "description": "Dulce clásico Argentino a base de una masa sableé de chocolate o vainilla, relleno de dulce de leche repostero",
         "image": "macarons.jpg",
         "category": "panaderia",
-        "precio": "$1500",
+        "precio": 1500,
         "entrega": "Es un producto delicado, la entrega únicamente será en auto o para retirar desde el local",
         "consejos": "Mantener en ambiente fresco no más de una semana",
         "reclamos": "Ante cualquier reclamo, comuniquese a tphouse@gmail.com",
@@ -104,12 +104,12 @@
         "img3": "/img/alfajores.jpg"
     },
     {
-        "id": "8",
+        "id": 8,
         "name": "Torta bomba",
         "description": "Genoisse de cacao con relleno de buttercream de café y cobertura de ganache de chocolate con leche",
         "image": "macarons.jg",
         "category": "pasteleria",
-        "precio": "$4000",
+        "precio": 4000,
         "entrega": "Es un producto delicado, la entrega únicamente será en auto o para retirar desde el local",
         "consejos": "Mantener en heladera no más de 72 hs",
         "reclamos": "Ante cualquier reclamo, comuniquese a tphouse@gmail.com",
@@ -119,12 +119,12 @@
         "img3": "/img/pasteleria.jpg"
     },
     {
-        "id": "9",
+        "id": 9,
         "name": "Chocolate con leche",
         "description": "Barra de chocolate cobertura con leche templado con método de tableado",
         "image": "macarons.jpg",
         "category": "chocolateria",
-        "precio": "$800",
+        "precio": 800,
         "entrega": "Es un producto delicado, la entrega únicamente será en auto o para retirar desde el local",
         "consejos": "Mantener en ambiente fresco",
         "reclamos": "Ante cualquier reclamo, comuniquese a tphouse@gmail.com",
@@ -134,20 +134,9 @@
         "img3": "/img/chocolate2.jpg"
     },
     {
-        "name": "Hola",
-        "information": "rghofijse",
-        "precio": "100",
-        "entrega": "griofjsofjse",
-        "consejos": "sgoifsojf",
-        "reclamos": "dgoifjspofjs",
-        "description": "sdfoijfspojfa",
-        "category": "panadería",
-        "img1": ""
-    },
-    {
         "name": "fdij",
         "information": "dfgjpsodfjsdzpd",
-        "precio": "15",
+        "precio": 15,
         "entrega": "dfivjxcjpsos",
         "consejos": "dlfknlcspods",
         "reclamos": "dlskjsdfjopz",
@@ -156,6 +145,6 @@
         "img1": "/img/fdij-1652053174219.jpg",
         "img2": "/img/fdij-1652053174345.jpg",
         "img3": "/img/fdij-1652053174374.jpg",
-        "id": "11"
+        "id": 10
     }
 ]
