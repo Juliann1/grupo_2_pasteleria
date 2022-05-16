@@ -85,6 +85,11 @@ main form .inputcaja input:hover,
     border-color: var(--color2);
 }
 
+.error-text {
+    font-size: 1.4rem;
+    color: red;
+}
+
 @media (max-width: 767px){
     main{
         width: 90%;
