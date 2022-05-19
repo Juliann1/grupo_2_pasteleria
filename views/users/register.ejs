@@ -21,7 +21,7 @@
                 <label for="nombreUsuario">Nombre y Apellido</label>
                 <input name="nombreApellido" type="text" placeholder="Ej: Teapot House" <% if (locals.oldData && oldData.nombreApellido) { %>
                  value="<%= oldData.nombreApellido %>"
-                <% } %>>
+                <% } %> required>
                 <% if (locals.errors && errors.nombreApellido) { %>
                 <span class="error-text"><%= errors.nombreApellido.msg %></span> 
                 <% } %>
@@ -30,7 +30,7 @@
                 <label for="usuario">Nombre de Usuario</label>
                 <input name="usuario" type="text" placeholder="Ej: TeapotH" <% if (locals.oldData && oldData.usuario) { %>
                 value="<%= oldData.usuario %>"
-                <% } %>>
+                <% } %> required>
                 <% if (locals.errors && errors.usuario) { %>
                 <span class="error-text"><%= errors.usuario.msg %></span>
                 <% } %>
@@ -39,7 +39,7 @@
                 <label for="email">Email</label>
                 <input name="email" type="email" placeholder="Ej: teapothouse@gmail.com" <% if (locals.oldData && oldData.email) { %>
                 value="<%= oldData.email %>"
-                <% } %>>
+                <% } %> required>
                 <% if (locals.errors && errors.email) { %>
                 <span class="error-text"><%= errors.email.msg %></span>
                 <% } %>
@@ -48,7 +48,7 @@
                 <label for="nacimiento">Fecha de nacimiento</label>
                 <input name="nacimiento" type="date" <% if (locals.oldData && oldData.nacimiento) { %>
                 value="<%= oldData.nacimiento %>"
-                <% } %> autocomplete>
+                <% } %> autocomplete required>
                 <% if (locals.errors && errors.nacimiento) { %>
                 <span class="error-text"><%= errors.nacimiento.msg %></span>
                 <% } %>
@@ -57,7 +57,7 @@
                 <label for="domicilio">Domicilio</label>
                 <input name="domicilio" type="text" placeholder="Ubicacion" <% if (locals.oldData && oldData.domicilio) { %>
                 value="<%= oldData.domicilio %>"
-                <% } %>>
+                <% } %> required>
                 <% if (locals.errors && errors.domicilio) { %>
                 <span class="error-text"><%= errors.domicilio.msg %> </span>
                 <% } %>
@@ -66,28 +66,28 @@
                 <label for="telefono">Numero de telefono</label>
                 <input name="telefono" type="tel" placeholder="Ej: 3434565879" <% if (locals.oldData && oldData.telefono) { %>
                 value="<%= oldData.telefono %>"
-                <% } %>>
+                <% } %> required>
                 <% if (locals.errors && errors.telefono) { %>
                 <span class="error-text"><%= errors.telefono.msg %> </span>
                 <% } %>
             </div>
             <div class="inputcaja">
                 <label for="password">Ingrese contraseña</label>
-                <input name="password" type="password" placeholder="********">
+                <input name="password" type="password" placeholder="********" required>
                 <% if (locals.errors && errors.password) { %>
                 <span class="error-text"><%= errors.password.msg %> </span>
                 <% } %>
             </div>
             <div class="inputcaja">
                 <label for="password2">Confirme su contraseña</label>
-                <input name="password2" type="password" placeholder="********">
+                <input name="password2" type="password" placeholder="********" required>
                 <% if (locals.errors && errors.password2) { %>
                 <span class="error-text"><%= errors.password2.msg %> </span>
                 <% } %>
             </div>
             <div class="inputcaja">
                 <label for="imagen">Imagen de usuario</label>
-                <input type="file" name="profile_pic" accept=".jpg" />
+                <input type="file" name="profile_pic" accept=".jpg" required/>
                 <% if (locals.errors && errors.profile_pic) { %>
                 <span class="error-text"><%= errors.profile_pic.msg %> </span>
                 <% } %>
