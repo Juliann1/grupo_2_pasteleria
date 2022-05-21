@@ -28,7 +28,7 @@ const usersController = {
 
         let profile_pic = `/img/users/${req.file.filename}`;
 
-        let encPassword = bcrypt.hashSync(password, 10);
+        let encPassword = bcrypt.hashSync(req.body.password, 10);
 
         let newUser = {
             ...req.body,

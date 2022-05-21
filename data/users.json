@@ -82,5 +82,17 @@
   "password2": false,
   "profile_pic": "/img/users/Magali-1652145328650.jpg",
   "id": 7
+ },
+ {
+  "nombreApellido": "Gus Yoldi",
+  "usuario": "Roli",
+  "email": "yoldi.gustavo@gmail.com",
+  "nacimiento": "2022-05-25",
+  "domicilio": "callefalsa 123",
+  "telefono": "01143456348",
+  "password": "$2a$10$IXJnQx3E.sxCSOC2XfUJ6.75mVPWvITQKcVHKioKhBBGNM2pzQrji",
+  "password2": "123",
+  "profile_pic": "/img/users/1653100019711.jpg",
+  "id": 8
  }
 ]

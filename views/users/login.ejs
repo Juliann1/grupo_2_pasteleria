@@ -1,68 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head')%>
-    <body>
-        <%- include('../partials/header'); %>
-        <main class="main__form--login">
-            <section class="login__section">
-                <form action="#" method="POST" class="form">
-                    <img
-                        src="../img/logo_teapothouse.png"
-                        alt="logo Teapot house"
-                        width="142"
-                        height="50"
-                        class="tphouse-logo marginbtm"
-                    />
-                    <h2 class="form__h2 marginbtm">ACCESO</h2>
-                    <div class="form__div">
-                        <label for="email" class="marginbtm">Su email</label>
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="example@gmail.com"
-                            class="input brd-radius marginbtm"
-                            id="email"
-                            required
-                        />
-                    </div>
-                    <div class="form__div">
-                        <label for="password" class="marginbtm"
-                            >Su contraseña</label
-                        >
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Su contraseña"
-                            class="input brd-radius marginbtm"
-                            id="password"
-                            required
-                        />
-                    </div>
-                    <a href="#" class="form__div--forgot-password marginbtm"
-                        >Olvido su contraseña?</a
-                    >
-                    <div class="form__div--stay-connected marginbtm">
-                        <label>
-                            <input
-                                type="checkbox"
-                                id="stayConnected"
-                                value="stayConnected"
-                            />
-                            Permanecer conectado
-                        </label>
-                    </div>
-                    <button class="button brd-radius marginbtm">
-                        INICIAR SESIÓN
-                    </button>
-                    <p class="marginbtm">NO TIENES CUENTA AÚN?</p>
-                    <button
-                        class="button brd-radius button--register marginbtm"
-                    >
-                        REGISTRATE
-                    </button>
-                </form>
-            </section>
-        </main>
-        <%- include('../partials/footer'); %> 
-    </body>
+  <%- include('../partials/head')%>
+  <body>
+    <%- include('../partials/header'); %>
+    <main class="main__form--login">
+      <section class="login__section">
+        <form action="#" method="POST" class="form">
+          <img
+            src="../img/logo_teapothouse.png"
+            alt="logo Teapot house"
+            width="142"
+            height="50"
+            class="tphouse-logo marginbtm"
+          />
+          <h2 class="form__h2 marginbtm">ACCESO</h2>
+          <div class="form__div">
+            <label for="email" class="marginbtm">Su email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@gmail.com"
+              class="input brd-radius marginbtm"
+              id="email"
+              required
+            />
+          </div>
+          <div class="form__div">
+            <label for="password" class="marginbtm">Su contraseña</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Su contraseña"
+              class="input brd-radius marginbtm"
+              id="password"
+              required
+            />
+          </div>
+          <a href="#" class="form__div--forgot-password marginbtm"
+            >Olvido su contraseña?</a
+          >
+          <div class="form__div--stay-connected marginbtm">
+            <label>
+              <input type="checkbox" id="stayConnected" value="stayConnected" />
+              Permanecer conectado
+            </label>
+          </div>
+          <button class="button brd-radius marginbtm">INICIAR SESIÓN</button>
+          <p class="marginbtm">NO TIENES CUENTA AÚN?</p>
+          <button class="button brd-radius button--register marginbtm">
+            REGISTRATE
+          </button>
+        </form>
+      </section>
+    </main>
+    <%- include('../partials/footer'); %>
+  </body>
 </html>
