@@ -9,6 +9,20 @@ const usersController = {
     login: (req, res) => {
         res.render("users/login", { style: "login.css" });
     },
+    loginProcess: (req, res) => {
+        const errors = validationResult(req)
+        let userToLogin = users.find(user => user.email == req.body.email);
+        
+        if (userToLogin) {
+            let passwordMatch = bcrypt.compareSync(req.body.password, userToLogin.password)
+            if (passwordMatch) {
+                return res.send('Email y contraseña coinciden')
+            }
+            res.render('users/login', { style: "login.css", errors: errors.mapped()});
+        }
+
+        res.render('users/login', { style: "login.css", errors: errors.mapped()});
+    },
     register: (req, res) => {
         res.render("users/register", { style: "register.css" });
     },
@@ -31,12 +45,13 @@ const usersController = {
         let encPassword = bcrypt.hashSync(req.body.password, 10);
 
         let newUser = {
+            id: users.length + 1,
             ...req.body,
             password: encPassword,
             profile_pic,
+            
         };
 
-        newUser.id = users.length + 1;
         users.push(newUser);
 
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));

@@ -1,5 +1,8 @@
 const { body } = require("express-validator");
 const path = require('path')
+const fs = require("fs");
+const usersFilePath = path.join(__dirname, "../data/users.json");
+let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
 const validations = [
     body("nombreApellido").notEmpty().withMessage("Debe ingresar su nombre"),
@@ -25,7 +28,7 @@ const validations = [
         .withMessage("Debe ingresar la contraseña nuevamente")
         .bail()
         .custom((value, { req }) => {
-            if (value !== req.body.password) {
+            if (value !== users.password) {
                 throw new Error("La contraseña no coincide");
             }
             return true;
