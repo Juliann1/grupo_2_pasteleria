@@ -44,12 +44,13 @@ const usersController = {
 
         let encPassword = bcrypt.hashSync(req.body.password, 10);
 
+        delete req.body.password2;
+
         let newUser = {
             id: users.length + 1,
             ...req.body,
             password: encPassword,
             profile_pic,
-            
         };
 
         users.push(newUser);

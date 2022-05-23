@@ -44,7 +44,6 @@
   "domicilio": "fdfxc",
   "telefono": "xcv",
   "password": "$2a$10$xi/eOPgvGjRgueF06YeJhOtI7sejZkXtcfkviNl1L3B.c8GwmRDVG",
-  "password2": "hola",
   "id": 4
  },
  {
@@ -55,7 +54,6 @@
   "domicilio": "hgbuyg",
   "telefono": "gouygy",
   "password": "$2a$10$OUSmeCHBuzb.kId9.VDiuOQ9GgzqegVKweJ1ZwVZLWc5YR/DGWNAK",
-  "password2": false,
   "profile_pic": "/img/users/jnfijs-1652144006705.jpg",
   "id": 5
  },
@@ -67,7 +65,6 @@
   "domicilio": "aaca",
   "telefono": "564654654",
   "password": "$2a$10$eBnJpS1EbXBC87p9CXMjc.6tLjcuIGh0NerVLM5y3U6zfglbCbwNe",
-  "password2": false,
   "profile_pic": "/img/users/Magali-1652145297544.jpg",
   "id": 6
  },
@@ -79,7 +76,6 @@
   "domicilio": "aaca",
   "telefono": "564654654",
   "password": "$2a$10$ZxhbRNT5iGKxqjNY5UA.oOCkCbdOgMWeNYBZjkcIb1Ek58fmGVWmq",
-  "password2": false,
   "profile_pic": "/img/users/Magali-1652145328650.jpg",
   "id": 7
  },
@@ -91,7 +87,6 @@
   "domicilio": "callefalsa 123",
   "telefono": "01143456348",
   "password": "$2a$10$IXJnQx3E.sxCSOC2XfUJ6.75mVPWvITQKcVHKioKhBBGNM2pzQrji",
-  "password2": "123",
   "profile_pic": "/img/users/1653100019711.jpg",
   "id": 8
  },
@@ -103,7 +98,6 @@
   "domicilio": "callefalsa 123",
   "telefono": "01143456348",
   "password": "$2a$10$ejEsiM1Q4J6SLCFZ313TJeh6zwrvqsPg3nX8RUuHrQRhu8RSghjJ2",
-  "password2": "123",
   "profile_pic": "/img/users/1653100704462.jpg",
   "id": 9
  }
