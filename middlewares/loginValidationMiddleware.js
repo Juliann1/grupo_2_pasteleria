@@ -28,11 +28,17 @@ const loginValidations = [
     .bail()
     .custom((value, { req }) => {
         let userToLogin = users.find(user => user.email == req.body.email);
-        let passwordMatch = bcrypt.compareSync(req.body.password, userToLogin.password)
-        if (!passwordMatch) {
-            throw new Error("La contraseña es incorrecta");
+       
+        
+        if (userToLogin){
+            let passwordMatch = bcrypt.compareSync(req.body.password, userToLogin.password)
+            if (!passwordMatch) {
+                throw new Error("La contraseña es incorrecta");
+            }
+            return true;
         }
-        return true;
+        return true
+        
     }),
     
 ];

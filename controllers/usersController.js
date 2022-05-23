@@ -16,7 +16,8 @@ const usersController = {
         if (userToLogin) {
             let passwordMatch = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (passwordMatch) {
-                return res.send('Email y contraseña coinciden')
+                //DELETEAR PASSWORD
+                res.redirect("/users/" + userToLogin.id);
             }
             res.render('users/login', { style: "login.css", errors: errors.mapped()});
         }

@@ -80,25 +80,14 @@
   "id": 7
  },
  {
+  "id": 8,
   "nombreApellido": "Gus Yoldi",
   "usuario": "Roli",
   "email": "yoldi.gustavo@gmail.com",
-  "nacimiento": "2022-05-25",
+  "nacimiento": "2022-05-04",
   "domicilio": "callefalsa 123",
   "telefono": "01143456348",
-  "password": "$2a$10$IXJnQx3E.sxCSOC2XfUJ6.75mVPWvITQKcVHKioKhBBGNM2pzQrji",
-  "profile_pic": "/img/users/1653100019711.jpg",
-  "id": 8
- },
- {
-  "nombreApellido": "Gus Yoldi",
-  "usuario": "Roli",
-  "email": "yoldi.gustavo@gmail.com",
-  "nacimiento": "2022-05-25",
-  "domicilio": "callefalsa 123",
-  "telefono": "01143456348",
-  "password": "$2a$10$ejEsiM1Q4J6SLCFZ313TJeh6zwrvqsPg3nX8RUuHrQRhu8RSghjJ2",
-  "profile_pic": "/img/users/1653100704462.jpg",
-  "id": 9
+  "password": "$2a$10$BLOZ8bPbYDfUIytEhUIRbOMr2CD4nfv.G2lNsnB87/JEN5YiX3mHm",
+  "profile_pic": "/img/users/1653342641071.jpg"
  }
 ]
