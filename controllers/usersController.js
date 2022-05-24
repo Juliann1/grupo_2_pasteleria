@@ -4,6 +4,7 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require('express-validator')
 const usersFilePath = path.join(__dirname, "../data/users.json");
 let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const User = require('../models/User')
 
 const usersController = {
     login: (req, res) => {
@@ -11,7 +12,8 @@ const usersController = {
     },
     loginProcess: (req, res) => {
         const errors = validationResult(req)
-        let userToLogin = users.find(user => user.email == req.body.email);
+        let userToLogin = User.findByEmail(req.body.email);
+        
         if (userToLogin) {
             let passwordMatch = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (passwordMatch) {
@@ -51,7 +53,7 @@ const usersController = {
         delete req.body.password2;
 
         let newUser = {
-            id: users.length + 1,
+            id: users.length + 1, // Tenemos que agregar generador de id
             ...req.body,
             password: encPassword,
             profile_pic,
@@ -60,13 +62,13 @@ const usersController = {
         users.push(newUser);
 
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        res.redirect("/users/" + newUser.id);
+        res.redirect("/users/login");
     },
     userDetail: (req, res) => {
         // let userId = req.params.id;
         // let usuario = users.find((usuario) => usuario.id == userId);
 
-        return  res.render("users/userDetail", {
+        return res.render("users/userDetail", {
             style: "userDetail.css",
             usuario: req.session.userLogged
         });
