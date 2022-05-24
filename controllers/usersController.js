@@ -15,8 +15,8 @@ const usersController = {
         if (userToLogin) {
             let passwordMatch = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (passwordMatch) {
+                delete userToLogin.password  
                 req.session.userLogged = userToLogin
-                delete req.session.userLogged.password  
                 return res.redirect("/users/" + req.session.userLogged.id);
             }
            return res.render('users/login', { style: "login.css", errors: errors.mapped()});
@@ -25,7 +25,6 @@ const usersController = {
     },
     logout: (req, res) => {
         req.session.destroy();
-        console.log(req.session);
         return res.redirect('/')
     },
     register: (req, res) => {

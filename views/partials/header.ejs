@@ -7,10 +7,13 @@
     <label for="menu-bar" class="fa fa-bars"></label>
     <!--ESTA ES LA BARRA DE NAVEGACION-->
     <nav class="navbar">
-        <a href="/users/">Mi Perfil</a>
-        <a href="/users/register">Registrate</a>
-        <a href="/users/login"><i class="fa-solid fa-user"></i></a>
-        <a href="/users/logout"><i class="fa-solid fa-user"></i>Logout</a>
+        <% if (locals.isLogged) { %>
+        <a href="/users/<%=locals.userLogged.id%>  "></a>
+        <a href="/users/logout">Logout</a>
         <a href="/products/productCart"><i class="fa-solid fa-basket-shopping"></i></a>
+        <% }else { %>
+            <a href="/users/login">Login <i class="fa-solid fa-user"></i></a>
+            <a href="/users/register">Registrate</a>
+        <% } %>
     </nav>
 </header>
