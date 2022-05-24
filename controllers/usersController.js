@@ -12,17 +12,21 @@ const usersController = {
     loginProcess: (req, res) => {
         const errors = validationResult(req)
         let userToLogin = users.find(user => user.email == req.body.email);
-        
         if (userToLogin) {
             let passwordMatch = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (passwordMatch) {
-                //DELETEAR PASSWORD
-                res.redirect("/users/" + userToLogin.id);
+                req.session.userLogged = userToLogin
+                delete req.session.userLogged.password  
+                return res.redirect("/users/" + req.session.userLogged.id);
             }
-            res.render('users/login', { style: "login.css", errors: errors.mapped()});
+           return res.render('users/login', { style: "login.css", errors: errors.mapped()});
         }
-
-        res.render('users/login', { style: "login.css", errors: errors.mapped()});
+         return res.render('users/login', { style: "login.css", errors: errors.mapped()});
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        console.log(req.session);
+        return res.redirect('/')
     },
     register: (req, res) => {
         res.render("users/register", { style: "register.css" });
@@ -60,11 +64,12 @@ const usersController = {
         res.redirect("/users/" + newUser.id);
     },
     userDetail: (req, res) => {
-        let userId = req.params.id;
-        let usuario = users.find((usuario) => usuario.id == userId);
-        res.render("users/userDetail", {
+        // let userId = req.params.id;
+        // let usuario = users.find((usuario) => usuario.id == userId);
+
+        return  res.render("users/userDetail", {
             style: "userDetail.css",
-            usuario: usuario,
+            usuario: req.session.userLogged
         });
     },
 };

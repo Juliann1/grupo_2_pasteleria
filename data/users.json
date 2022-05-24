@@ -69,17 +69,6 @@
   "id": 6
  },
  {
-  "nombreApellido": "Magali",
-  "usuario": "magui",
-  "email": "magali@gmail",
-  "nacimiento": "2022-04-21",
-  "domicilio": "aaca",
-  "telefono": "564654654",
-  "password": "$2a$10$ZxhbRNT5iGKxqjNY5UA.oOCkCbdOgMWeNYBZjkcIb1Ek58fmGVWmq",
-  "profile_pic": "/img/users/Magali-1652145328650.jpg",
-  "id": 7
- },
- {
   "id": 8,
   "nombreApellido": "Gus Yoldi",
   "usuario": "Roli",
