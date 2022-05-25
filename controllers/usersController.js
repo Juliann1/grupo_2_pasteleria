@@ -4,11 +4,12 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require('express-validator')
 const usersFilePath = path.join(__dirname, "../data/users.json");
 let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-const User = require('../models/User')
+const User = require('../models/User');
+
 
 const usersController = {
     login: (req, res) => {
-        res.render("users/login", { style: "login.css" });
+       return res.render("users/login", { style: "login.css" });
     },
     loginProcess: (req, res) => {
         const errors = validationResult(req)
@@ -17,8 +18,11 @@ const usersController = {
         if (userToLogin) {
             let passwordMatch = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (passwordMatch) {
-                delete userToLogin.password  
-                req.session.userLogged = userToLogin
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                if (req.body.stayConnected) {
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000*60)*2} );
+                }
                 return res.redirect("/users/" + req.session.userLogged.id);
             }
            return res.render('users/login', { style: "login.css", errors: errors.mapped()});
@@ -27,13 +31,14 @@ const usersController = {
     },
     logout: (req, res) => {
         req.session.destroy();
-        return res.redirect('/')
+        res.clearCookie('userEmail');
+        return res.redirect('/');
     },
     register: (req, res) => {
-        res.render("users/register", { style: "register.css" });
+        return res.render("users/register", { style: "register.css" });
     },
     registerPOST: (req, res) => {
-        const errors = validationResult(req)
+        const errors = validationResult(req);
 
         if (!errors.isEmpty()) {  
             delete req.body.password
@@ -65,10 +70,7 @@ const usersController = {
         res.redirect("/users/login");
     },
     userDetail: (req, res) => {
-        // let userId = req.params.id;
-        // let usuario = users.find((usuario) => usuario.id == userId);
-
-        return res.render("users/userDetail", {
+       return res.render("users/userDetail", {
             style: "userDetail.css",
             usuario: req.session.userLogged
         });

@@ -15,8 +15,10 @@ app.use(
         saveUninitialized: false,
     })
 );
-app.use(userLoggedMidleware);
+
 app.use(cookieParser());
+
+app.use(userLoggedMidleware);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 const methodOverride = require("method-override");
