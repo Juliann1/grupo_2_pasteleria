@@ -78,5 +78,16 @@
   "telefono": "01143456348",
   "password": "$2a$10$BLOZ8bPbYDfUIytEhUIRbOMr2CD4nfv.G2lNsnB87/JEN5YiX3mHm",
   "profile_pic": "/img/users/1653342641071.jpg"
+ },
+ {
+  "id": 8,
+  "nombreApellido": "julian",
+  "usuario": "julian",
+  "email": "julian@gmail.com",
+  "nacimiento": "2022-06-07",
+  "domicilio": "123",
+  "telefono": "1231",
+  "password": "$2a$10$vwofyY2lcipTRIl3Q/83qOAfN0jtIfDaACM/0OM7SlY8QL.GfjZZi",
+  "profile_pic": "/img/users/1654987257884.jpg"
  }
 ]

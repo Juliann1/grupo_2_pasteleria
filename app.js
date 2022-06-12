@@ -4,7 +4,9 @@ const app = express();
 const path = require("path");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
-const userLoggedMidleware = require('./middlewares/userLoggedMidleware');
+const userLoggedMidleware = require("./middlewares/userLoggedMidleware");
+const db = require("./database/models/index");
+const { sequelize } = db;
 // Middlewares:
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -15,6 +17,15 @@ app.use(
         saveUninitialized: false,
     })
 );
+
+// Testing database connection
+
+sequelize
+    .authenticate()
+    .then(console.log("Connection has been established successfully."))
+    .catch((err) => {
+        console.error("Unable to connect to the database:", err);
+    });
 
 app.use(cookieParser());
 
@@ -30,4 +41,3 @@ app.use("/", rutaMain);
 // LOCAL HOST
 const PORT = process.env.PORT || 3030;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
