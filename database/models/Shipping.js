@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Tip";
+    let alias = "Shipping";
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -7,12 +7,12 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true,
         },
-        tip: {
-            type: dataTypes.STRING(50),
+        shipping: {
+            type: dataTypes.STRING(255),
             allowNull: false,
         },
     };
-    const Tip = sequelize.define(alias, cols, { timestamps: false });
+    const Shipping = sequelize.define(alias, cols, { timestamps: false });
 
-    return Tip;
+    return Shipping;
 };

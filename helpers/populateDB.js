@@ -18,6 +18,7 @@ function populateDB() {
 
     products.forEach(product => {
         db.Product.create({
+            id: product.id,
             product: product.name,
             description: product.description,
             price: product.precio,

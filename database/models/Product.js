@@ -8,11 +8,11 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
         },
         product: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(100),
             allowNull: false,
         },
         description: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(255),
             allowNull: false,
         },
         price: {
@@ -23,18 +23,31 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(255),
             allowNull: false,
         },
-        tip_id: {
+        tip: {
+            type: dataTypes.STRING(255),
+            allowNull: false,
+        },
+        shipping_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false,
         },
+        category_id: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
+            allowNull: false,
+        }
     };
 
     const Product = sequelize.define(alias, cols, { timestamps: false });
 
     Product.associate = function (models) {
-        Product.belongsTo(models.Tip, {
-            as: "tip",
-            foreignKey: "tip_id",
+        Product.belongsTo(models.Shipping, {
+            as: "shipping",
+            foreignKey: "shipping_id",
+        });
+
+        Product.belongsTo(models.Category, {
+            as: "category",
+            foreignKey: "category_id",
         });
     };
 
