@@ -56,19 +56,19 @@ module.exports = function(sequelize, DataTypes) {
     let User = sequelize.define(alias, cols, config);
 
     User.associate = function(models) {
-        User.hasOne(models.UserEmail, {
+        User.belongsTo(models.UserEmail, {
             as: "email",
             foreignKey: "email_id", 
         })
-        User.hasOne(models.UserAddress, {
+        User.belongsTo(models.UserAddress, {
             as: "address",
             foreignKey: "address_id", 
         })
-        User.hasOne(models.UserPhone, {
+        User.belongsTo(models.UserPhone, {
             as: "phone",
             foreignKey: "phone_id", 
         })
-        User.hasOne(models.UserAvatar, {
+        User.belongsTo(models.UserAvatar, {
             as: "avatar",
             foreignKey: "avatar_id", 
         })

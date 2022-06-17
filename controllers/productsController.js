@@ -3,21 +3,40 @@ const path = require("path");
 const productsFilePath = path.join(__dirname, "../data/products.json");
 let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const { validationResult } = require("express-validator");
+const db = require('../database/models')
 
 const productsController = {
     products: (req, res) => {
         res.render("index");
     },
-    categories: (req, res) => {
-        let categoryId = req.params.category;
-        let productCategory = products.filter(
-            (producto) => producto.category == categoryId
-        );
-        console.log(products);
-        res.render("products/products", {
-            productCategory,
-            style: "products.css",
-        });
+    categories: async (req, res) => {
+        try {
+            let categoryName = req.params.category
+            let products = await db.Product.findAll({
+                include: [{
+                    association: 'category',
+                    where: {
+                        category: categoryName
+                    }
+                }],
+            })
+
+            let productCategory = products.map(product => {
+                return {
+                    id: product.id,
+                    name: product.product_name,
+                    img1: JSON.parse(product.images)[0],
+                    precio: product.price
+                }
+            })
+
+            res.status(200).render("products/products", {
+                productCategory,
+                style: "products.css",
+            });
+        } catch (err) {
+            throw new Error(err)
+        } 
     },
     create: (req, res) => {
         res.render("products/productCreate", { style: "register.css" });
