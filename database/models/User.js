@@ -3,36 +3,45 @@ module.exports = function(sequelize, DataTypes) {
 
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         user_name: {
-            type: DataTypes.STRING(30)
+            type: DataTypes.STRING(30),
+            allowNull: false
         },
         first_name: {
             type: DataTypes.STRING(30),
+            allowNull: false
         },
         last_name: {
-            type: DataTypes.STRING(30)
+            type: DataTypes.STRING(30),
+            allowNull: false
         },
         pasword: {
-            type: DataTypes.STRING(60)
+            type: DataTypes.STRING(60),
+            allowNull: false
         },
         birthday: {
-            type: DataTypes.DATE
+            type: DataTypes.DATEONLY,
+            allowNull: false
         },
         email_id: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false
         },
         address_id: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false
         },
         phone_id: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false
         },
         avatar_id: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false
         },
         // cc_id: {
         //     type: DataTypes.INTEGER

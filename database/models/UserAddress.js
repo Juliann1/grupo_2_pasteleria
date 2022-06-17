@@ -3,15 +3,17 @@ module.exports = function(sequelize, DataTypes) {
 
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         address: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING(100),
+            allowNull: false
         },
         user_id: {
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false
         },
         // province_id: {
         //     type: dataTypes.INTEGER

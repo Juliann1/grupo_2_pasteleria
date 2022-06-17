@@ -3,15 +3,15 @@ module.exports = function(sequelize, DataTypes) {
 
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
-        user_id: {
-            type: DataTypes.INTEGER
+        phone: {
+            type: DataTypes.STRING(16)
         },
-        number: {
-            type: DataTypes.INTEGER
+        user_id: {
+            type: DataTypes.INTEGER(10).UNSIGNED
         }
     }
 

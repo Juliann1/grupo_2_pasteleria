@@ -1,42 +1,54 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
     let alias = "Product";
-
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING(50)
+        product_name: {
+            type: DataTypes.STRING(50),
+            allowNull: false,
         },
-        info: {
-            type: DataTypes.STRING(100)
+        product_description: {
+            type: DataTypes.STRING(255),
+            allowNull: false,
+        },
+        images: {
+            type: DataTypes.STRING(255),
+            allowNull: false,
         },
         price: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false,
         },
-        description: {
-            type: DataTypes.STRING(255)
+        tip: {
+            type: DataTypes.STRING(255),
+            allowNull: false,
         },
-        tip_id: {
-            type: DataTypes.INTEGER
+        shipping_id: {
+            type: DataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false,
+        },
+        category_id: {
+            type: DataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false,
         }
-    }
+    };
 
-    let config = {
-        tableName: "products",
-        timestamps: false,
-    }
-    
-    let Product = sequelize.define(alias, cols, config);
+    const Product = sequelize.define(alias, cols, { timestamps: false });
 
-    Product.associate = function(models) {
-        Product.hasOne(models.ProductTip, {
-            as: "tip",
-            foreignKey: "tip_id",   
-        })
-    }
+    Product.associate = function (models) {
+        Product.belongsTo(models.Shipping, {
+            as: "shipping",
+            foreignKey: "shipping_id",
+        });
+
+        Product.belongsTo(models.Category, {
+            as: "category",
+            foreignKey: "category_id",
+        });
+    };
 
     return Product;
-}
+};

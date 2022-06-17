@@ -132,19 +132,5 @@
         "img1": "/img/chocolate2.jpg",
         "img2": "/img/chocolate2.jpg",
         "img3": "/img/chocolate2.jpg"
-    },
-    {
-        "name": "fdij",
-        "information": "dfgjpsodfjsdzpd",
-        "precio": 15,
-        "entrega": "dfivjxcjpsos",
-        "consejos": "dlfknlcspods",
-        "reclamos": "dlskjsdfjopz",
-        "description": "dlvknxcpsodjspo",
-        "category": "panaderia",
-        "img1": "/img/fdij-1652053174219.jpg",
-        "img2": "/img/fdij-1652053174345.jpg",
-        "img3": "/img/fdij-1652053174374.jpg",
-        "id": 10
     }
 ]
