@@ -3,11 +3,9 @@ const path = require('path')
 
 module.exports = [
     body("name").notEmpty().withMessage("Agregue un nombre"),
-    body("information").notEmpty().withMessage("Agregue información"),
     body("precio").notEmpty().withMessage("Agregue un precio"),
     body("entrega").notEmpty().withMessage("Agregue un metodo de entrega"),
     body("consejos").notEmpty().withMessage("Agregue un consejo"),
-    body("reclamos").notEmpty().withMessage("Agregar contacto de reclamo"),
     body("description").notEmpty().withMessage("Agregar descripción"),
     body("category").notEmpty().withMessage("Debe seleccionar una categoria"),
     body("img1").custom((value, { req }) => {

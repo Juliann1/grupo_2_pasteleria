@@ -43,7 +43,7 @@ const productsController = {
     create: (req, res) => {
         res.render("products/productCreate", { style: "register.css" });
     },
-    createPOST: (req, res) => {
+    createPOST: async (req, res) => {
         let errors = validationResult(req);
 
         if (!errors.isEmpty()) {
@@ -54,19 +54,19 @@ const productsController = {
             });
         }
 
-        let files = req.files.map((e) => `/img/${e.filename}`);
+        let { name, description, precio, entrega, consejos, category } = req.body
+        let files = JSON.stringify(req.files.map((e) => `/img/${e.filename}`));
 
-        let newProduct = {
-            ...req.body,
-            img1: files[0],
-            img2: files[1],
-            img3: files[2],
-        };
+        let newProduct = await db.Product.create({
+            product_name: name,
+            product_description: description,
+            price: precio,
+            images: files,
+            tip: consejos,
+            shipping_id: entrega,
+            category_id: category
+        })
 
-        newProduct.id = products.length + 1;
-        products.push(newProduct);
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
         res.redirect("/products/" + newProduct.id);
     },
     productDetail: async (req, res) => {

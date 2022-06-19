@@ -25,21 +25,6 @@
                     <% } %>
                 </div>
                 <div class="inputcaja">
-                    <label for="informacion">Información</label>
-                    <input
-                        name="information"
-                        type="text"
-                        placeholder="Escriba aquí la informacion del producto"
-                        value="<%= locals.oldData ? oldData.information : null %>"
-                        required
-                    />
-                    <% if (locals.errors && errors.information) { %>
-                    <span class="error-text"
-                        ><%= errors.information.msg %></span
-                    >
-                    <% } %>
-                </div>
-                <div class="inputcaja">
                     <label for="precio">Precio del producto ($)</label>
                     <input name="precio" type="text" placeholder=" $1000" value="<%= locals.oldData ? oldData.precio : null %>" required/>
                     <% if (locals.errors && errors.precio) { %>
@@ -47,17 +32,11 @@
                     <% } %>
                 </div>
                 <div class="inputcaja">
-                    <label for="entrega">Entrega</label>
-                    <input
-                        name="entrega"
-                        type="text"
-                        placeholder="Ej: solo vía moto"
-                        value="<%= locals.oldData ? oldData.entrega : null %>"
-                        required
-                    />
-                    <% if (locals.errors && errors.entrega) { %>
-                    <span class="error-text"><%= errors.entrega.msg %></span>
-                    <% } %>
+                    <label for="entrega">entrega</label>
+                    <select id="entrega" name="entrega">
+                        <option value="1">Panadería</option>
+                        <option value="2">Pastelería</option>
+                    </select>
                 </div>
                 <div class="inputcaja">
                     <label for="consejos">Consejos</label>
@@ -70,19 +49,6 @@
                     />
                     <% if (locals.errors && errors.consejos) { %>
                     <span class="error-text"><%= errors.consejos.msg %></span>
-                    <% } %>
-                </div>
-                <div class="inputcaja">
-                    <label for="reclamos">Reclamos</label>
-                    <input
-                        name="reclamos"
-                        type="text"
-                        placeholder="Escribir a..."
-                        value="<%= locals.oldData ? oldData.reclamos : null %>"
-                        required
-                    />
-                    <% if (locals.errors && errors.reclamos) { %>
-                    <span class="error-text"><%= errors.reclamos.msg %></span>
                     <% } %>
                 </div>
                 <div class="inputcaja">
@@ -103,9 +69,9 @@
                 <div class="inputcaja">
                     <label for="tipoProducto">Qué tipo de producto es?</label>
                     <select id="tipoProducto" name="category">
-                        <option value="panaderia">Panadería</option>
-                        <option value="pasteleria">Pastelería</option>
-                        <option value="chocolateria">Chocolateria</option>
+                        <option value="1">Panadería</option>
+                        <option value="2">Pastelería</option>
+                        <option value="3">Chocolateria</option>
                     </select>
                 </div>
                 <div class="inputcaja">
