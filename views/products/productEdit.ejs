@@ -7,7 +7,7 @@
         <main>
             <form
                 method="POST"
-                action="/products/<%= producto.id %>?_method=PUT"
+                action="/products/<%= product.id %>?_method=PUT"
                 enctype="multipart/form-data"
             >
                 <img
@@ -24,18 +24,7 @@
                         name="name"
                         type="text"
                         placeholder="Ej: macarons"
-                        value="<%= producto.name%>"
-                        required
-                    />
-                </div>
-
-                <div class="inputcaja">
-                    <label for="informacion">Nueva info</label>
-                    <input
-                        name="information"
-                        type="text"
-                        placeholder="Escriba aquí la informacion del producto"
-                        value="<%= producto.information %>"
+                        value="<%= product.product_name %>"
                         required
                     />
                 </div>
@@ -45,19 +34,17 @@
                         name="precio"
                         type="text"
                         placeholder=" $1000"
-                        value="<%= producto.precio%>"
+                        value="<%= product.price %>"
                         required
                     />
                 </div>
                 <div class="inputcaja">
                     <label for="entrega">Nueva entrega</label>
-                    <input
-                        name="entrega"
-                        type="text"
-                        placeholder="Ej: solo vía moto"
-                        value="<%= producto.entrega%>"
-                        required
-                    />
+                    <select name="entrega" id="entrega">
+                        <% for( let i = 0; i < shipping.length; i++ ) { %>
+                            <option value="<%= shipping[i].id %>" <%= product.shipping_id == shipping[i].id ? 'selected' : null %>><%= shipping[i].shipping %></option>
+                        <% } %>
+                    </select> 
                 </div>
                 <div class="inputcaja">
                     <label for="consejos">Nuevo consejos</label>
@@ -65,17 +52,7 @@
                         name="consejos"
                         type="text"
                         placeholder="Ej:no mantener al sol "
-                        value="<%= producto.consejos%>"
-                        required
-                    />
-                </div>
-                <div class="inputcaja">
-                    <label for="reclamos">Nuevo reclamos</label>
-                    <input
-                        name="reclamos"
-                        type="text"
-                        placeholder="Escribir a..."
-                        value="<%= producto.reclamos%>"
+                        value="<%= product.tip %>"
                         required
                     />
                 </div>
@@ -85,16 +62,16 @@
                         name="description"
                         type="text"
                         placeholder="Escriba aquí la informacion larga del producto "
-                        value="<%= producto.description%>"
+                        value="<%= product.product_description %>"
                         required
                     />
                 </div>
                 <div class="inputcaja">
                     <label for="tipoProducto">Qué tipo de producto es?</label>
                     <select id="tipoProducto" name="category">
-                        <option value="panadería">Panadería</option>
-                        <option value="Pastelería">Pastelería</option>
-                        <option value="Chocolateria">Chocolateria</option>
+                        <option value="1">Panadería</option>
+                        <option value="2">Pastelería</option>
+                        <option value="3">Chocolateria</option>
                     </select>
                 </div>
                 <div class="inputcaja">
@@ -106,7 +83,7 @@
                 <button class="btn">Enviar</button>
             </form>
             <form
-                action="/products/<%= producto.id%>?_method=DELETE"
+                action="/products/<%= product.id%>?_method=DELETE"
                 method="POST"
             >
                 <button class="btn">Borrar</button>

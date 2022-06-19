@@ -1,7 +1,3 @@
-const fs = require("fs");
-const path = require("path");
-const productsFilePath = path.join(__dirname, "../data/products.json");
-let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
 
@@ -44,36 +40,44 @@ const productsController = {
         res.render("products/productCreate", { style: "register.css" });
     },
     createPOST: async (req, res) => {
-        let errors = validationResult(req);
+        try {
+            let errors = validationResult(req);
 
-        if (!errors.isEmpty()) {
-            return res.render("products/productCreate", {
-                style: "register.css",
-                errors: errors.mapped(),
-                oldData: req.body,
+            if (!errors.isEmpty()) {
+                return res.status(400).render("products/productCreate", {
+                    style: "register.css",
+                    errors: errors.mapped(),
+                    oldData: req.body,
+                });
+            }
+
+            let { name, description, precio, entrega, consejos, category } = req.body;
+            let images = JSON.stringify(
+                req.files.map((e) => `/img/${e.filename}`)
+            );
+
+            let newProduct = await db.Product.create({
+                product_name: name,
+                product_description: description,
+                price: precio,
+                images,
+                tip: consejos,
+                shipping_id: entrega,
+                category_id: category,
             });
+
+            res.redirect("/products/" + newProduct.id);
+        } catch (err) {
+            console.log(err);
         }
-
-        let { name, description, precio, entrega, consejos, category } = req.body
-        let files = JSON.stringify(req.files.map((e) => `/img/${e.filename}`));
-
-        let newProduct = await db.Product.create({
-            product_name: name,
-            product_description: description,
-            price: precio,
-            images: files,
-            tip: consejos,
-            shipping_id: entrega,
-            category_id: category
-        })
-
-        res.redirect("/products/" + newProduct.id);
     },
     productDetail: async (req, res) => {
         try {
             let productId = req.params.id;
-            let product = await db.Product.findByPk(productId);
-            let delivery = await db.Shipping.findByPk(product.shipping_id);
+            let product = await db.Product.findByPk(productId, {
+                include: ["shipping"],
+            });
+
             let images = JSON.parse(product.images);
 
             let producto = {
@@ -83,7 +87,7 @@ const productsController = {
                 img1: images[0],
                 img2: images[1],
                 img3: images[2],
-                entrega: delivery.shipping,
+                entrega: product.shipping.shipping,
                 consejos: product.tip,
             };
 
@@ -98,43 +102,84 @@ const productsController = {
     productCart: (req, res) => {
         res.render("products/productCart.ejs", { style: "productCart.css" });
     },
-    edit: (req, res) => {
-        let productId = req.params.id;
-        let producto = products.find((producto) => producto.id == productId);
-        res.render("products/productEdit.ejs", {
-            style: "register.css",
-            producto: producto,
-        });
+    edit: async (req, res) => {
+        try {
+            let productId = req.params.id;
+
+            let product = await db.Product.findByPk(productId, {
+                include: ["category", "shipping"],
+            });
+
+            let shipping = await db.Shipping.findAll();
+            product.images = JSON.parse(product.images);
+
+            res.status(200).render("products/productEdit.ejs", {
+                style: "register.css",
+                product,
+                shipping,
+            });
+        } catch (err) {
+            console.log(err);
+            res.redirect("/");
+        }
     },
-    editPUT: (req, res) => {
-        let id = req.params.id;
+    editPUT: async (req, res) => {
+        try {
+            let id = req.params.id;
 
-        let firstImage = req.files.find((e) => e.fieldname == "img1");
-        let secondImage = req.files.find((e) => e.fieldname == "img2");
-        let thirdImage = req.files.find((e) => e.fieldname == "img3");
+            let firstImage = req.files.find((e) => e.fieldname == "img1");
+            let secondImage = req.files.find((e) => e.fieldname == "img2");
+            let thirdImage = req.files.find((e) => e.fieldname == "img3");
 
-        products = products.map((p) => {
-            if (p.id != id) {
-                return p;
-            }
-            let product = {
-                ...p,
-                ...req.body,
-                img1: firstImage ? `/img/${firstImage.filename}` : p.img1,
-                img2: secondImage ? `/img/${secondImage.filename}` : p.img2,
-                img3: thirdImage ? `/img/${thirdImage.filename}` : p.img3,
+            let { name, description, precio, entrega, consejos, category } = req.body;
+
+            let images = await db.Product.findByPk(id, {
+                attributes: ["images"],
+            });
+
+            let parsedImages = JSON.parse(images.images);
+
+            let newImages = JSON.stringify([
+                firstImage ? `/img/${firstImage.filename}` : parsedImages[0],
+                secondImage ? `/img/${secondImage.filename}` : parsedImages[1],
+                thirdImage ? `/img/${thirdImage.filename}` : parsedImages[2],
+            ]);
+
+            let editedProduct = {
+                product_name: name,
+                product_description: description,
+                price: precio,
+                images: newImages,
+                tip: consejos,
+                shipping_id: entrega,
+                category_id: category,
             };
-            return product;
-        });
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-        res.redirect("/products/" + id);
+            await db.Product.update(editedProduct, {
+                where: {
+                    id,
+                },
+            });
+
+            res.redirect("/products/" + id);
+        } catch (err) {
+            console.log(err);
+        }
     },
-    delete: (req, res) => {
-        let id = req.params.id;
-        products = products.filter((p) => p.id != id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-        res.redirect("/products");
+    delete: async (req, res) => {
+        try {
+            let id = req.params.id;
+
+            await db.Product.destroy({
+                where: {
+                    id,
+                }
+            });
+
+            res.redirect("/products");
+        } catch (err) {
+            console.log(err);
+        }
     },
 };
 
