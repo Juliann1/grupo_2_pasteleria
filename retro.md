@@ -31,15 +31,3 @@
   
   •No ponernos a resolver sobre la marcha en la reunion.
   
- 
-
-
-
-
-
-
-
-
-
- 
-  

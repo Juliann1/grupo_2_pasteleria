@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
-        user_name: {
+        username: {
             type: DataTypes.STRING(30),
             allowNull: false
         },
@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING(30),
             allowNull: false
         },
-        pasword: {
+        user_password: {
             type: DataTypes.STRING(60),
             allowNull: false
         },
@@ -27,20 +27,20 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.DATEONLY,
             allowNull: false
         },
-        email_id: {
-            type: DataTypes.INTEGER(10).UNSIGNED,
+        email: {
+            type: DataTypes.STRING(100),
             allowNull: false
         },
-        address_id: {
-            type: DataTypes.INTEGER(10).UNSIGNED,
+        address: {
+            type: DataTypes.STRING(100),
             allowNull: false
         },
-        phone_id: {
-            type: DataTypes.INTEGER(10).UNSIGNED,
+        phone: {
+            type: DataTypes.STRING(16),
             allowNull: false
         },
-        avatar_id: {
-            type: DataTypes.INTEGER(10).UNSIGNED,
+        avatar: {
+            type: DataTypes.STRING(100),
             allowNull: false
         },
         // cc_id: {
@@ -54,27 +54,6 @@ module.exports = function(sequelize, DataTypes) {
     }
     
     let User = sequelize.define(alias, cols, config);
-
-    User.associate = function(models) {
-        User.belongsTo(models.UserEmail, {
-            as: "email",
-            foreignKey: "email_id", 
-        })
-        User.belongsTo(models.UserAddress, {
-            as: "address",
-            foreignKey: "address_id", 
-        })
-        User.belongsTo(models.UserPhone, {
-            as: "phone",
-            foreignKey: "phone_id", 
-        })
-        User.belongsTo(models.UserAvatar, {
-            as: "avatar",
-            foreignKey: "avatar_id", 
-        })
-
-
-    }
 
     return User;
 }

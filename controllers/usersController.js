@@ -1,78 +1,108 @@
-const fs = require("fs");
-const path = require("path");
 const bcrypt = require("bcryptjs");
-const { validationResult } = require('express-validator')
-const usersFilePath = path.join(__dirname, "../data/users.json");
-let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-const User = require('../models/User');
-
+const { validationResult } = require("express-validator");
+const db = require("../database/models");
 
 const usersController = {
     login: (req, res) => {
-       return res.render("users/login", { style: "login.css" });
+        return res.render("users/login", { style: "login.css" });
     },
-    loginProcess: (req, res) => {
-        const errors = validationResult(req)
-        let userToLogin = User.findByEmail(req.body.email);
-        
-        if (userToLogin) {
-            let passwordMatch = bcrypt.compareSync(req.body.password, userToLogin.password)
-            if (passwordMatch) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-                if (req.body.stayConnected) {
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000*60)*2} );
+    loginProcess: async (req, res) => {
+        try {
+            const errors = validationResult(req);
+            let userToLogin = await db.User.findOne({
+                where: {
+                    email: req.body.email,
+                },
+            });
+
+            if (userToLogin) {
+                let passwordMatch = bcrypt.compareSync(
+                    req.body.password,
+                    userToLogin.user_password
+                );
+
+                if (passwordMatch) {
+                    delete userToLogin.user_password;
+
+                    req.session.userLogged = userToLogin;
+                    if (req.body.stayConnected) {
+                        res.cookie("userEmail", req.body.email, {
+                            maxAge: 1000 * 60 * 2,
+                        });
+                    }
+                    return res.redirect("/users/" + req.session.userLogged.id);
                 }
-                return res.redirect("/users/" + req.session.userLogged.id);
+                return res.render("users/login", {
+                    style: "login.css",
+                    errors: errors.mapped(),
+                });
             }
-           return res.render('users/login', { style: "login.css", errors: errors.mapped()});
+            return res.render("users/login", {
+                style: "login.css",
+                errors: errors.mapped(),
+            });
+        } catch (err) {
+            console.log(err);
         }
-         return res.render('users/login', { style: "login.css", errors: errors.mapped()});
     },
     logout: (req, res) => {
         req.session.destroy();
-        res.clearCookie('userEmail');
-        return res.redirect('/');
+        res.clearCookie("userEmail");
+        return res.redirect("/");
     },
     register: (req, res) => {
         return res.render("users/register", { style: "register.css" });
     },
-    registerPOST: (req, res) => {
-        const errors = validationResult(req);
+    registerPOST: async (req, res) => {
+        try {
+            const errors = validationResult(req);
 
-        if (!errors.isEmpty()) {  
-            delete req.body.password
-            delete req.body.password2
-            
-            return res.render('users/register', {
-                style: "register.css",
-                errors: errors.mapped(),    
-                oldData: req.body
-            })
+            if (!errors.isEmpty()) {
+                delete req.body.password;
+                delete req.body.password2;
+
+                return res.render("users/register", {
+                    style: "register.css",
+                    errors: errors.mapped(),
+                    oldData: req.body,
+                });
+            }
+
+            let {
+                nombreApellido,
+                usuario,
+                email,
+                nacimiento,
+                domicilio,
+                telefono,
+                password,
+            } = req.body;
+
+            let [firstName, lastName] = nombreApellido;
+            let profile_pic = `/img/users/${req.file.filename}`;
+            let encPassword = bcrypt.hashSync(password, 10);
+
+            await db.User.create({
+                username: usuario,
+                first_name: firstName,
+                last_name: lastName,
+                address: domicilio,
+                email: email,
+                birthday: nacimiento,
+                avatar: profile_pic,
+                user_password: encPassword,
+                phone: telefono,
+            });
+
+            res.redirect("/users/login");
+        } catch (err) {
+            console.log(err);
         }
-
-        let profile_pic = `/img/users/${req.file.filename}`;
-
-        let encPassword = bcrypt.hashSync(req.body.password, 10);
-
-        delete req.body.password2;
-
-        let newUser = {
-            id: users.length + 1, // Tenemos que agregar generador de id
-            ...req.body,
-            password: encPassword,
-            profile_pic,
-        };
-
-        users.push(newUser);
-
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        res.redirect("/users/login");
     },
     userDetail: (req, res) => {
-       return res.render("users/userDetail", {
+        return res.render("users/userDetail", {
             style: "userDetail.css",
-            usuario: req.session.userLogged
+            usuario: req.session.userLogged,
         });
     },
 };
