@@ -43,12 +43,33 @@ body {
     margin: -6px;
 
 }
+.fotos-carrousel{
+    width: 90%;
+    height: 60%;
+
+
+}
 .recomendados .carrousel {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 50px;
     padding-top: 20px;
+}
+
+.boton{
+    font-size: 30px;
+    border-radius: 34px;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    color: chocolate;
+    background-color: burlywood;
+    text-align: center;
+}
+.boton:hover{
+    transition: all .3s ease;
+    box-shadow: 0px 0px 10px chocolate;
 }
 
 .recomendados .carrousel img {
