@@ -26,7 +26,30 @@ main{
     border: var(--color2) solid 2px;
     
 }
-
+.errores{
+    list-style: none;
+    font-size: 20px;
+    align-items: initial;
+    background-color: rgb(255, 173, 173);
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid red;
+    display: none;
+    justify-content: left;
+    border-radius: 5px;
+}
+.errores.active{
+    display: block;
+}
+.is-valid {
+    color: #198754;
+    border: 1px solid green;
+  }
+  
+.is-invalid {
+    color: #842029;
+    border: 1px solid #BB2D3B;
+}
 main form{
     background: white;
     display: block;

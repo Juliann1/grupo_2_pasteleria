@@ -13,6 +13,15 @@ html {
     font-size: 62.5% !important;
 }
 
+.errores{
+    list-style: none;
+    font-size: 15px;
+    display: none;
+    color: red;
+}
+.errores.active{
+    display: block;
+}
 
 .form {
     background-color: #fff;

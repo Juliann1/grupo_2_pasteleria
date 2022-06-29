@@ -6,26 +6,26 @@ function carrousel(contenedor){
     contenedor.addEventListener("click", e =>{
         let atras = contenedor.querySelector('.atras'),
             adelante = contenedor.querySelector('.adelante'),
-            img = contenedor.querySelector('.fotos-carrousel img'),
+            foto = contenedor.querySelector('.fotos-carrousel'),
             target = e.target;
         
         if(target == atras){
             if(cont >0){
-                img.src = imagenes[cont -1];
+                foto.style.backgroundImage = "url(" +imagenes[cont -1] + ")";
                 cont --;
             }else
             {
-                img.src = imagenes[imagenes.length -1];
+                foto.style.backgroundImage = "url(" + imagenes[imagenes.length -1] + ")";
                 cont = imagenes.length -1;
             }
         } else{
             if(target == adelante){
                 if(cont < imagenes.length -1){
-                    img.src = imagenes [cont + 1];
+                    foto.style.backgroundImage = "url(" + imagenes[cont + 1]  + ")";
                     cont ++;
                 }else
                 {
-                    img.src = imagenes[0];
+                    foto.style.backgroundImage = "url(" + imagenes[0]  + ")";
                     cont = 0;
                 }
 

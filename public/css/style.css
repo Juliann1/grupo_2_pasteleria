@@ -44,10 +44,12 @@ body {
 
 }
 .fotos-carrousel{
-    width: 90%;
-    height: 60%;
-
-
+    width: 90vw;
+    height: 70vh;
+    background-image: url('/img/fotocarrousell.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .recomendados .carrousel {
     display: flex;

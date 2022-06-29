@@ -9,17 +9,20 @@
     <!--ACA ESTAN LAS SECCIONES-->
 
     <main>
-    
+       
         <form
+        novalidate
+        id="formulario"
          method="POST"
         action="/users/register"
         enctype="multipart/form-data">
+
 
             <img src="../img/logo_teapothouse.png" alt="logo Teapot house" width="142" height="100" class="tphouse-logo marginbtm" />
             <h3>REGISTRATE.</h3>
             <div class="inputcaja">
                 <label for="nombreUsuario">Nombre y Apellido</label>
-                <input name="nombreApellido" type="text" placeholder="Ej: Teapot House" <% if (locals.oldData && oldData.nombreApellido) { %>
+                <input id="nombreApellido" name="nombreApellido" type="text" placeholder="Ej: Teapot House" <% if (locals.oldData && oldData.nombreApellido) { %>
                  value="<%= oldData.nombreApellido %>"
                 <% } %> required>
                 <% if (locals.errors && errors.nombreApellido) { %>
@@ -28,7 +31,7 @@
             </div>
             <div class="inputcaja">
                 <label for="usuario">Nombre de Usuario</label>
-                <input name="usuario" type="text" placeholder="Ej: TeapotH" <% if (locals.oldData && oldData.usuario) { %>
+                <input  class="usuario" name="usuario" type="text"  <% if (locals.oldData && oldData.usuario) { %>
                 value="<%= oldData.usuario %>"
                 <% } %> required>
                 <% if (locals.errors && errors.usuario) { %>
@@ -37,7 +40,7 @@
             </div>
             <div class="inputcaja">
                 <label for="email">Email</label>
-                <input name="email" type="email" placeholder="Ej: teapothouse@gmail.com" <% if (locals.oldData && oldData.email) { %>
+                <input class="email" name="email" type="email" placeholder="Ej: teapothouse@gmail.com" <% if (locals.oldData && oldData.email) { %>
                 value="<%= oldData.email %>"
                 <% } %> required>
                 <% if (locals.errors && errors.email) { %>
@@ -46,7 +49,7 @@
             </div>
             <div class="inputcaja">
                 <label for="nacimiento">Fecha de nacimiento</label>
-                <input name="nacimiento" type="date" <% if (locals.oldData && oldData.nacimiento) { %>
+                <input class="nacimiento" name="nacimiento" type="date" <% if (locals.oldData && oldData.nacimiento) { %>
                 value="<%= oldData.nacimiento %>"
                 <% } %> autocomplete required>
                 <% if (locals.errors && errors.nacimiento) { %>
@@ -55,7 +58,7 @@
             </div>
             <div class="inputcaja">
                 <label for="domicilio">Domicilio</label>
-                <input name="domicilio" type="text" placeholder="Ubicacion" <% if (locals.oldData && oldData.domicilio) { %>
+                <input class="domicilio" name="domicilio" type="text" placeholder="Ubicacion" <% if (locals.oldData && oldData.domicilio) { %>
                 value="<%= oldData.domicilio %>"
                 <% } %> required>
                 <% if (locals.errors && errors.domicilio) { %>
@@ -64,7 +67,7 @@
             </div>
             <div class="inputcaja">
                 <label for="telefono">Numero de telefono</label>
-                <input name="telefono" type="tel" placeholder="Ej: 3434565879" <% if (locals.oldData && oldData.telefono) { %>
+                <input class="telefono" name="telefono" type="tel" placeholder="Ej: 3434565879" <% if (locals.oldData && oldData.telefono) { %>
                 value="<%= oldData.telefono %>"
                 <% } %> required>
                 <% if (locals.errors && errors.telefono) { %>
@@ -73,25 +76,26 @@
             </div>
             <div class="inputcaja">
                 <label for="password">Ingrese contraseña</label>
-                <input name="password" type="password" placeholder="********" required>
+                <input class="password" name="password" type="password" placeholder="********" required>
                 <% if (locals.errors && errors.password) { %>
                 <span class="error-text"><%= errors.password.msg %> </span>
                 <% } %>
             </div>
             <div class="inputcaja">
                 <label for="password2">Confirme su contraseña</label>
-                <input name="password2" type="password" placeholder="********" required>
+                <input class="password2" name="password2" type="password" placeholder="********" required>
                 <% if (locals.errors && errors.password2) { %>
                 <span class="error-text"><%= errors.password2.msg %> </span>
                 <% } %>
             </div>
             <div class="inputcaja">
                 <label for="imagen">Imagen de usuario</label>
-                <input type="file" name="profile_pic" accept=".jpg" required/>
+                <input class="profile-pic" type="file" name="profile_pic" accept=".jpg" required/>
                 <% if (locals.errors && errors.profile_pic) { %>
                 <span class="error-text"><%= errors.profile_pic.msg %> </span>
                 <% } %>
             </div>
+            <ul class="errores"></ul>
             <br>
     
             <button class="btn">ENVIAR</button>
@@ -101,7 +105,7 @@
             </button>
         </form>
     </main>
-
+<script src="/js/registerValidation.js"></script>
 
     <!--EL PIE DE PAGINA-->
 
