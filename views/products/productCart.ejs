@@ -15,17 +15,17 @@
                             <span class="nombre-producto"><%= p.name %> </span>
                             <span class="precio-producto">$<%= p.precio  %> </span>
                             <div class="control">
-                                <button class="dec">-</button>
-                                <span class="cantidad"><%= p.cantidad %></span>
-                                <button class="inc">+</button>
+                                <button id="boton-menos" class="dec">-</button>
+                                <span id="cantidad" class="cantidad"><%= p.cantidad %></span>
+                                <button id="boton-mas" class="inc">+</button>
+                                <button class="eliminar">X</button>
                             </div>
-                            <button class="eliminar">X</button>
                         <% }); %>
                     </li>
                 </ul>
             <% } %>
         </div>
     </main>
-    <script src="/js/cart.js"></script>
+    <script src="/js/cart2.js"></script>
 </body>
 </html>
