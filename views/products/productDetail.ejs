@@ -18,12 +18,12 @@
                 </div>
                 <div class="carrito">
                     <div class="compras">
-                        <button class="emogi"><i class="fa-solid fa-minus"></i></button>
-                        <input class="numero" type="number">
-                        <button class="emogi"><i class="fa-solid fa-plus"></i></button>
+                        <button id="boton-menos" class="emogi"><i class="fa-solid fa-minus"></i></button>
+                        <input id="cantidad" class="numero" type="number" value="0">
+                        <button id="boton-mas" class="emogi"><i class="fa-solid fa-plus"></i></button>
                         <button><i class="fa-solid fa-person-carry-box"></i></button>
                     </div>
-                    <a class="añadir" href="/productCart">Añadir al carrito</a>
+                    <button id="add" class="añadir" data-id="<%= producto.id %>">Añadir al carrito</button>
                 </div>
                 <div class="links">
                     <a class="link" href="#">Customizar pedido</a>
@@ -64,6 +64,7 @@
             </div>
             <img src= <%= producto.img3 %>>
             </section>
+            <script src="/js/cart.js"></script>
     
     </section>
     

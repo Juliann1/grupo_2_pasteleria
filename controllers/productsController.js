@@ -81,6 +81,7 @@ const productsController = {
             let images = JSON.parse(product.images);
 
             let producto = {
+                id: productId,
                 name: product.product_name,
                 description: product.product_description,
                 precio: product.price,
@@ -98,9 +99,6 @@ const productsController = {
         } catch (err) {
             console.log(err);
         }
-    },
-    productCart: (req, res) => {
-        res.render("products/productCart.ejs", { style: "productCart.css" });
     },
     edit: async (req, res) => {
         try {

@@ -13,10 +13,8 @@ router.post(
     validations,
     productsController.createPOST
 );
-router.get("/productCart", productsController.productCart);
 router.get("/:id", productsController.productDetail);
 router.get("/:id/edit", productsController.edit);
 router.put("/:id", creationMulterMiddleware.any(), productsController.editPUT);
 router.delete("/:id", productsController.delete);
-
 module.exports = router;
