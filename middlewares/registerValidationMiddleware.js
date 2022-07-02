@@ -1,9 +1,14 @@
 const { body } = require("express-validator");
 const path = require("path");
-const fs = require("fs");
+const { User } = require('../database/models')
 
 const validations = [
-    body("nombreApellido").notEmpty().withMessage("Debe ingresar su nombre"),
+    body("nombreApellido")
+    .notEmpty()
+    .withMessage("Debe ingresar su nombre")
+    .bail()
+    .isLength({min: 2})
+    .withMessage("Debe contener al menos 2 caracteres"),
     body("usuario")
         .notEmpty()
         .withMessage("Debe ingresar un nombre de usuario"),
@@ -12,7 +17,19 @@ const validations = [
         .withMessage("Debe ingresar un email")
         .bail()
         .isEmail()
-        .withMessage("Debe ingresar un email valido"),
+        .withMessage("Debe ingresar un email valido")
+        .bail()
+        .custom(async (val) => {
+            const user = await User.findOne({
+                where: {
+                    email: val
+                }
+            })
+
+            if (user) {
+                throw new Error('Este email ya fue registrado');
+            }
+        }),
     body("nacimiento")
         .notEmpty()
         .withMessage("Debe ingresar su fecha de nacimiento"),
@@ -20,7 +37,12 @@ const validations = [
     body("telefono")
         .notEmpty()
         .withMessage("Debe ingresar su numero de telefono"),
-    body("password").notEmpty().withMessage("Debe ingresar una contraseña"),
+    body("password")
+    .notEmpty()
+    .withMessage("Debe ingresar una contraseña")
+    .bail()
+    .isLength({min: 8})
+    .withMessage("Debe contener al menos 8 caracteres"),
     body("password2")
         .notEmpty()
         .withMessage("Debe ingresar la contraseña nuevamente")
@@ -34,12 +56,12 @@ const validations = [
     body("profile_pic").custom((value, { req }) => {
         let file = req.file;
         
-        let acceptedExtensions = [".jpg", ".png"];
+        let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
 
         if (!file) {
             throw new Error(`Tienes que subir una imagen`);
         } else {
-            if (!acceptedExtensions.includes(path.extname(file.originalname))) {
+            if (!acceptedExtensions.includes(path.extname(file.originalname).toLowerCase())) {
                 throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`);
             }
         }

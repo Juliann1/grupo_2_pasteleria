@@ -31,7 +31,7 @@
             </div>
             <div class="inputcaja">
                 <label for="usuario">Nombre de Usuario</label>
-                <input  class="usuario" name="usuario" type="text"  <% if (locals.oldData && oldData.usuario) { %>
+                <input  class="usuario" name="usuario" type="text" placeholder="Ej: TeapotHouse" <% if (locals.oldData && oldData.usuario) { %>
                 value="<%= oldData.usuario %>"
                 <% } %> required>
                 <% if (locals.errors && errors.usuario) { %>
@@ -90,7 +90,7 @@
             </div>
             <div class="inputcaja">
                 <label for="imagen">Imagen de usuario</label>
-                <input class="profile-pic" type="file" name="profile_pic" accept=".jpg" required/>
+                <input class="profile-pic" type="file" name="profile_pic" required/>
                 <% if (locals.errors && errors.profile_pic) { %>
                 <span class="error-text"><%= errors.profile_pic.msg %> </span>
                 <% } %>

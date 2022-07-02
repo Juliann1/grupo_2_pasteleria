@@ -79,7 +79,9 @@ const usersController = {
                 password,
             } = req.body;
 
+            nombreApellido = nombreApellido.split(' ') // Asumiendo que la persona usa un nombre y un apellido
             let [firstName, lastName] = nombreApellido;
+            
             let profile_pic = `/img/users/${req.file.filename}`;
             let encPassword = bcrypt.hashSync(password, 10);
 

@@ -1,9 +1,6 @@
 const { body } = require("express-validator");
-const fs = require("fs");
-const path = require("path");
 const bcrypt = require("bcryptjs");
-const usersFilePath = path.join(__dirname, "../data/users.json");
-let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const { User } = require('../database/models')
 
 const loginValidations = [
     body("email")
@@ -13,32 +10,37 @@ const loginValidations = [
     .isEmail()
     .withMessage("Debe ingresar un email valido")
     .bail()
-    .custom((value, { req }) => {
-        let userToLogin = users.find(user => user.email == req.body.email);
+    .custom(async (value) => {
+        let userToLogin = await User.findOne({
+            where: {
+                email: value
+            },
+            attributes: ['email']
+        });
         if (!userToLogin) {
             throw new Error("Este email no se encuentra registrado");
         }
-        return true;
-    }),
-    
 
+    }),
     body("password")
     .notEmpty()
     .withMessage("Debe ingresar una contraseña")
     .bail()
-    .custom((value, { req }) => {
-        let userToLogin = users.find(user => user.email == req.body.email);
-       
-        
+    .custom(async (value, { req }) => {
+        let userToLogin = await User.findOne({
+            where: {
+                email: req.body.email
+            },
+            attributes: ['user_password']     
+        });
+        console.log(userToLogin)
         if (userToLogin){
-            let passwordMatch = bcrypt.compareSync(req.body.password, userToLogin.password)
+            let passwordMatch = bcrypt.compareSync(value, userToLogin.user_password)
             if (!passwordMatch) {
                 throw new Error("La contraseña es incorrecta");
             }
             return true;
         }
-        return true
-        
     }),
     
 ];
