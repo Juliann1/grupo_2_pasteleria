@@ -15,7 +15,7 @@
                         <img src="<%= p.img %>" />
                         <span class="nombre-producto"><%= p.name %> </span>
                         <span class="precio-producto"
-                            >$<%= p.precio *p.cantidad %>
+                            >subtotal: $<%= p.precio *p.cantidad %>
                         </span>
                         <div class="control">
                             <button id="boton-menos" class="dec">-</button>
@@ -35,5 +35,6 @@
             </div>
         </main>
         <script src="/js/cart2.js"></script>
+        <%- include('../partials/footer'); %> 
     </body>
 </html>

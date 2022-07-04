@@ -113,4 +113,9 @@
     cursor: pointer;
     width: 200;
     border-radius: 20px;
+
+}
+
+main{
+    margin-bottom: 100px;
 }
