@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () =>{
     let eliminar = document.querySelector('.eliminar');
 
     botonAgregar.addEventListener('click', e =>{
+        let productID = e.target.dataset.id;
+
+        fetch(`/cart/add`)
         cantidad.value++;
     });
     
