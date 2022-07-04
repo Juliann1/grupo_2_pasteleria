@@ -23,6 +23,7 @@
                 <div class="inputcaja">
                     <label for="name">Nuevo nombre</label>
                     <input
+                        id="nombre"
                         name="name"
                         type="text"
                         placeholder="Ej: macarons"
@@ -61,6 +62,7 @@
                 <div class="inputcaja">
                     <label for="Descripción">Nueva descripción detallada</label>
                     <input
+                        id="descripcion"
                         name="description"
                         type="text"
                         placeholder="Escriba aquí la informacion larga del producto "
@@ -82,6 +84,7 @@
                     <input type="file" name="img2" accept=".jpg" />
                     <input type="file" name="img3" accept=".jpg" />
                 </div>
+                <ul class="errores"></ul>
                 <button class="btn">Enviar</button>
             </form>
             <form
@@ -91,6 +94,7 @@
                 <button class="btn">Borrar</button>
             </form>
         </main>
+        <script src="/js/productCreateValidation.js"></script>
         <%- include('../partials/footer'); %>
     </body>
 </html>
