@@ -14,7 +14,7 @@
     margin-bottom: 20px;
 }
 
-.cart .product-list{
+.product-list{
     width: 1000px;
     margin: auto;
     display: flex;
@@ -28,8 +28,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px;
+    width: 100%;
     border-bottom: 1px solid #000;
 }
 
@@ -55,8 +56,9 @@
 }
 
 .cart .product-list li .control .cantidad, .cart .product-list li .control .dec, .cart .product-list li .control .inc{
-    width: 20px;
-    height: 30px;
+    width: 45px;
+    font-size: 20px;
+    height: 45px;
     border-radius: 5px;
     text-align: center;
     margin: 24px 10px;
@@ -71,7 +73,9 @@
 .cart .product-list li .control .dec{
     background-color: grey;
     color: #fff;
-    width: 32px;
+
+    width: 40px;
+    height: 40px;
     /* height: 35px; */
     border-radius: 22px;
 }
@@ -79,7 +83,8 @@
 .cart .product-list li .control .inc{
     background-color: grey;
     color: #fff;
-    width: 32px;
+    width: 40px;
+    height: 40px;
     /* height: 35px; */
     border-radius: 22px;
 }
@@ -92,4 +97,20 @@
     border-radius: 60px;
     padding: 10px;
     margin-left: 6px
+}
+#total{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#comprar{
+    font-size: 20px;
+    font-style: none;
+    border: 1px solid lightgrey;
+    margin-top: 20px;
+    background-color: #6adbd8;
+    padding: 5px;
+    cursor: pointer;
+    width: 200;
+    border-radius: 20px;
 }

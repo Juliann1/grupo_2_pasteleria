@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head'); %> 
-<body>
-    <%- include('../partials/header'); %> 
-    <main>
-        <div class="cart">
-            <% if(list.length === 0){ %>
+    <%- include('../partials/head'); %>
+    <body>
+        <%- include('../partials/header'); %>
+        <main>
+            <div class="cart">
+                <% if(list.length === 0){ %>
                 <h2>No hay elementos en el carrito</h2>
-            <% } else { %>
+                <% } else { %>
                 <ul class="product-list">
+                    <h2>Mi carrito</h2>
+                    <% let total =0; list.map( p => { %>
                     <li>
-                        <% list.map( p => { %> 
-                            <img src="<%= p.img %>">
-                            <span class="nombre-producto"><%= p.name %> </span>
-                            <span class="precio-producto">$<%= p.precio  %> </span>
-                            <div class="control">
-                                <button id="boton-menos" class="dec">-</button>
-                                <span id="cantidad" class="cantidad"><%= p.cantidad %></span>
-                                <button id="boton-mas" class="inc">+</button>
-                                <button class="eliminar">X</button>
-                            </div>
-                        <% }); %>
+                        <img src="<%= p.img %>" />
+                        <span class="nombre-producto"><%= p.name %> </span>
+                        <span class="precio-producto"
+                            >$<%= p.precio *p.cantidad %>
+                        </span>
+                        <div class="control">
+                            <button id="boton-menos" class="dec">-</button>
+                            <span id="cantidad" class="cantidad"
+                                ><%= p.cantidad %></span
+                            >
+                            <button id="boton-mas" class="inc">+</button>
+                            <button id="eliminar" class="eliminar">X</button>
+                        </div>
+                        <% total = total + p.precio * p.cantidad}); %>
                     </li>
+                    <span id="total">Total de la compra $<%= total%></span>
+                    <button id="comprar">Terminar compra</button>
+                    <button id="comprar"><a href="/">Seguir comprando</a></button>
                 </ul>
-            <% } %>
-        </div>
-    </main>
-    <script src="/js/cart2.js"></script>
-</body>
+                <% } %>
+            </div>
+        </main>
+        <script src="/js/cart2.js"></script>
+    </body>
 </html>

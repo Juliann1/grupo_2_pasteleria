@@ -1,14 +1,29 @@
+//const { header } = require("express-validator");
+
 document.addEventListener("DOMContentLoaded", () =>{
     let botonAgregar = document.getElementById('boton-mas');
     let botonBorrar = document.getElementById('boton-menos');
     let cantidad = document.getElementById('cantidad');
     let eliminar = document.querySelector('.eliminar');
 
-    botonAgregar.addEventListener('click', e =>{
+    eliminar.addEventListener('click', e =>{
         let productID = e.target.dataset.id;
 
-        fetch(`/cart/add`)
-        cantidad.value++;
+        fetch(`/cart/:id`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: productID,
+                count: cantidad.value 
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            alert("se borró artículo del carrito");
+        }).catch(err => console.log(err));
+        
     });
     
     botonBorrar.addEventListener('click', e =>{
