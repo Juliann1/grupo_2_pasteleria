@@ -5,6 +5,8 @@
         <%- include('../partials/header'); %>
         <main>
             <form
+                novalidate
+                id="formulario"
                 method="POST"
                 action="/products/create"
                 enctype="multipart/form-data"
@@ -19,14 +21,28 @@
                 <h3>Ingresá tus productos</h3>
                 <div class="inputcaja">
                     <label for="nombre">Nombre del producto</label>
-                    <input name="name" type="text" placeholder="Ej: macarons" value="<%= locals.oldData ? oldData.name : null %>" required/>
+                    <input
+                        id="nombre"
+                        name="name"
+                        type="text"
+                        placeholder="Ej: macarons"
+                        value="<%= locals.oldData ? oldData.name : null %>"
+                        required
+                    />
                     <% if (locals.errors && errors.name) { %>
                     <span class="error-text"><%= errors.name.msg %></span>
                     <% } %>
                 </div>
                 <div class="inputcaja">
                     <label for="precio">Precio del producto ($)</label>
-                    <input name="precio" type="text" placeholder=" $1000" value="<%= locals.oldData ? oldData.precio : null %>" required/>
+                    <input
+                        id="precio"
+                        name="precio"
+                        type="text"
+                        placeholder=" $1000"
+                        value="<%= locals.oldData ? oldData.precio : null %>"
+                        required
+                    />
                     <% if (locals.errors && errors.precio) { %>
                     <span class="error-text"><%= errors.precio.msg %></span>
                     <% } %>
@@ -34,8 +50,13 @@
                 <div class="inputcaja">
                     <label for="entrega">Entrega</label>
                     <select id="entrega" name="entrega">
-                        <option value="1">Es un producto delicado, la entrega únicamente será en auto o para retirar desde el local</option>
-                        <option value="2">Se puede realizar cualquier método de entrega</option>
+                        <option value="1">
+                            Es un producto delicado, la entrega únicamente será
+                            en auto o para retirar desde el local
+                        </option>
+                        <option value="2">
+                            Se puede realizar cualquier método de entrega
+                        </option>
                     </select>
                 </div>
                 <div class="inputcaja">
@@ -54,6 +75,7 @@
                 <div class="inputcaja">
                     <label for="Descripción">Descripción detallada</label>
                     <input
+                        id="descripcion"
                         name="description"
                         type="text"
                         placeholder="Escriba aquí la informacion larga del producto "
@@ -76,17 +98,19 @@
                 </div>
                 <div class="inputcaja">
                     <label for="Imagen">Imagen del producto</label>
-                    <input type="file" name="img1" accept=".jpg" required/>
-                    <input type="file" name="img2" accept=".jpg" required/>
-                    <input type="file" name="img3" accept=".jpg" required/>
+                    <input type="file" name="img1" accept=".jpg" required />
+                    <input type="file" name="img2" accept=".jpg" required />
+                    <input type="file" name="img3" accept=".jpg" required />
                     <% if (locals.errors && errors.img1) { %>
                     <span class="error-text"><%= errors.img1.msg %></span>
                     <% } %>
                 </div>
+                <ul class="errores"></ul>
                 <button class="btn">Enviar</button>
                 <button class="btn">Borrar</button>
             </form>
         </main>
+        <script src="/js/productCreateValidation.js"></script>
         <%- include('../partials/footer'); %>
     </body>
 </html>
