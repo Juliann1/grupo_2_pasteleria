@@ -25,8 +25,10 @@ const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
 // Rutas:
 const rutaMain = require("./routes/main");
+const rutaApi = require('./routes/api/apiRoutes')
 // CONTROLLER RUTAS
 app.use("/", rutaMain);
+app.use("/api/", rutaApi)
 // LOCAL HOST
 const PORT = process.env.PORT || 3030;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
