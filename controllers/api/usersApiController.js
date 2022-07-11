@@ -4,7 +4,7 @@ const usersApiController = {
     list: async (req, res) => {
         const users = await User.findAndCountAll({
             attributes: {
-                exclude: ["user_password", "address", "phone"],
+                exclude: ["user_password", "address", "phone", "avatar", "birthday"],
             },
         });
 
@@ -19,6 +19,18 @@ const usersApiController = {
         
         res.json(newUsers);
     },
+    detail: async (req, res) => {
+        const user = await User.findOne({
+            where: {
+                id: req.params.id
+            },
+            attributes: {
+                exclude: ["user_password"]
+            }
+        })
+
+        res.json(user)
+    }
 };
 
 module.exports = usersApiController;
