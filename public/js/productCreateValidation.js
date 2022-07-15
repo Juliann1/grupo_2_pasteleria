@@ -13,7 +13,7 @@ function validarFormulario(elemento) {
     if (nombre.value.length == 0) {
         errors.push("El nombre del producto es un campo obligatorio");
     } else {
-        if (nombreApellido.value.length < 5) {
+        if (nombre.value.length < 5) {
             errors.push("El nombre y apellido deberán tener más de dos letras");
         }
     }
