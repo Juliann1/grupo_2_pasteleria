@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", () =>{
         let productID = e.target.dataset.id;
 
         fetch(`/cart/:id`, {
-            method: 'DELETE',
+            method: "DELETE",
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json",
             },
             body: JSON.stringify({
                 id: productID,
-                count: cantidad.value 
-            })
+                count: cantidad.value -1,
+            }),
         })
         .then(res => res.json())
         .then(data => {
