@@ -20,10 +20,7 @@ const usersApiController = {
         res.json(newUsers);
     },
     detail: async (req, res) => {
-        const user = await User.findOne({
-            where: {
-                id: req.params.id
-            },
+        const user = await User.findByPk(req.params.id, {  
             attributes: {
                 exclude: ["user_password"]
             }

@@ -22,8 +22,35 @@ const productsApiController = {
 
         res.json(newProducts);
     },
-    // detail: async (req, res) => {
-    // }
+    detail: async (req, res) => {
+        const relationships = ["category", "shipping"]
+
+        const product = await db.Product.findByPk(req.params.id, {
+            include: relationships
+        })
+
+        const helperFn = (pro) => {
+            const relations = relationships.map(e => {
+                return pro[e].dataValues
+            })
+            return relations
+        }
+        
+        const imageUrl = `http://localhost:3030/api${JSON.parse(product.images)[0]}`
+        
+        // Habria que preguntar si la estructura armada es la que pide el PDF
+
+        const newProduct = {
+            ...product.dataValues,
+            relations: helperFn(product),
+            imageUrl
+        }
+
+        delete newProduct.category
+        delete newProduct.shipping
+
+        res.json(newProduct)
+    }
 };
 
 module.exports = productsApiController;

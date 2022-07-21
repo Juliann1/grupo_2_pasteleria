@@ -33,7 +33,7 @@ const loginValidations = [
             },
             attributes: ['user_password']     
         });
-        console.log(userToLogin)
+        
         if (userToLogin){
             let passwordMatch = bcrypt.compareSync(value, userToLogin.user_password)
             if (!passwordMatch) {
