@@ -10,12 +10,12 @@
                 <% } else { %>
                 <ul class="product-list">
                     <h2>Mi carrito</h2>
-                    <% let total =0; list.map( p => { %>
+                    <% let total = 0; list.map( p => { %>
                     <li>
-                        <img src="<%= p.img %>" />
-                        <span class="nombre-producto"><%= p.name %> </span>
+                        <a href="/products/<%= p.id%>"><img src="<%= p.img %>" /></a>
+                        <span class="nombre-producto"><a href="/products/<%= p.id%>"><%= p.name %></a></span>
                         <span class="precio-producto"
-                            >subtotal: $<%= p.precio *p.cantidad %>
+                            >subtotal: $<%= p.cantidad == 0 ? p.precio : p.precio *p.cantidad %>
                         </span>
                         <div class="control">
                             <button id="boton-menos" class="dec">-</button>
@@ -27,7 +27,7 @@
                         </div>
                         <% total = total + p.precio * p.cantidad}); %>
                     </li>
-                    <span id="total">Total de la compra $<%= total%></span>
+                    <span id="total">Total de la compra $<%= total %></span>
                     <button id="comprar">Terminar compra</button>
                     <button id="comprar"><a href="/products">Seguir comprando</a></button>
                 </ul>
@@ -35,6 +35,6 @@
             </div>
         </main>
         <script src="/js/cart2.js"></script>
-        <%- include('../partials/footer'); %> 
+        <%- include('../partials/footer') %> 
     </body>
-</html>
+    </html>

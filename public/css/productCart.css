@@ -47,6 +47,8 @@
 .cart .product-list li .nombre-producto, .cart .product-list li .precio-producto{
     font-size: 20px;
     margin-left: 10px;
+    text-decoration: none;
+    
 }
 
 .cart .product-list li .control{
