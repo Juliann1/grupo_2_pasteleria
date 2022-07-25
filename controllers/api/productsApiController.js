@@ -36,6 +36,7 @@ const productsApiController = {
             return relations
         }
         
+        const firstImage = JSON.parse(product.images)[0]
         const imageUrl = `http://localhost:3030/api${JSON.parse(product.images)[0]}`
         
         // Habria que preguntar si la estructura armada es la que pide el PDF
@@ -43,7 +44,8 @@ const productsApiController = {
         const newProduct = {
             ...product.dataValues,
             relations: helperFn(product),
-            imageUrl
+            imageUrl,
+            firstImage
         }
 
         delete newProduct.category
