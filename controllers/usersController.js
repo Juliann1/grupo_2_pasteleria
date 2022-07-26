@@ -28,7 +28,7 @@ const usersController = {
                     req.session.cart = [];
                     if (req.body.stayConnected) {
                         res.cookie("userEmail", req.body.email, {
-                            maxAge: 1000 * 60 * 2,
+                            maxAge: 2000 * 60 * 2,
                         });
                     }
                     return res.redirect("/users/" + req.session.userLogged.id);
