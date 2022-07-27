@@ -19,12 +19,12 @@
                             >subtotal: $<%= p.cantidad == 0 ? p.precio : p.precio *p.cantidad %>
                         </span>
                         <div class="control">
-                            <button id="boton-menos" class="dec">-</button>
+                            <button id="boton-menos" class="dec"><i class="fa-solid fa-minus"></i></button>
                             <span id="cantidad" class="cantidad"
                                 ><%= p.cantidad %></span
                             >
-                            <button id="boton-mas" class="inc">+</button>
-                            <button id="eliminar" class="eliminar">X</button>
+                            <button id="boton-mas" class="inc"><i class="fa-solid fa-plus"></i></button>
+                            <button id="eliminar" class="eliminar"><i class="fa-solid fa-xmark"></i></button>
                         </div>
                         <% total = total + p.precio * p.cantidad}); %>
                     </li>

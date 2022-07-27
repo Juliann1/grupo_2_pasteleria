@@ -4,10 +4,20 @@ const db = require("../database/models");
 const cartController = {
     add: (req, res) => {
         if (req.session.cart) {
-            req.session.cart = [
-                ...req.session.cart,
-                { id: req.body.id, cantidad: req.body.count },
-            ];
+            if(req.session.cart.find(p =>p.id === req.body.id)){
+                req.session.cart.forEach(p=> {
+                    if(p.id === req.body.id){
+                        p.cantidad = p.cantidad + parseInt(req.body.count);
+                    }
+                    
+                });
+            }else{
+                req.session.cart = [
+                    ...req.session.cart,
+                    { id: req.body.id, cantidad: parseInt(req.body.count) },
+                ];    
+            }
+            
         } else {
             req.session.cart = [{ id: req.body.id, cantidad: req.body.count }];
         }
