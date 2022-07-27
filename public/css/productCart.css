@@ -51,8 +51,18 @@ main{
     font-size: 20px;
     margin-left: 10px;
     text-decoration: none;
-    
+    padding: 0 20px;
 }
+
+.cart .product-list li .precio-producto {
+    flex-grow: 1;
+}
+
+.cart .product-list li .nombre-producto {
+    width: 300px;
+}
+
+
 
 .cart .product-list li .control{
     display: flex;
