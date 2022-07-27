@@ -60,18 +60,18 @@ main{
     align-items: center;
 }
 
-.cart .product-list li .control .cantidad, .cart .product-list li .control .dec, .cart .product-list li .control .inc{
+.cart .product-list li .control .cantidad, .cart .product-list li .control .dec, .cart .product-list li .control .inc, .cart .product-list li .control .eliminar{
     width: 45px;
     font-size: 20px;
     height: 45px;
     border-radius: 5px;
     text-align: center;
     margin: 24px 10px;
-    padding: 5px;
+    padding: 8px;
     background-color: lightgray;
 }
 
-.cart .product-list li .control .dec, .cart .product-list li .control .inc{
+.cart .product-list li .control .dec, .cart .product-list li .control .inc, .cart .product-list li .control .eliminar{
     cursor: pointer;
 }
     
@@ -94,14 +94,11 @@ main{
     border-radius: 22px;
 }
 
-.cart .product-list li .eliminar{
-    cursor: pointer;
+.cart .product-list li .control .eliminar{
     background-color: #6adbd8;
     color: #fff;
-    width: 37px;
-    border-radius: 60px;
-    padding: 10px;
-    margin-left: 6px
+    border-radius: 50%;
+    margin-left: 6px;
 }
 #total{
     font-size: 30px;
