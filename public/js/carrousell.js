@@ -1,4 +1,4 @@
-var imagenes = ['/img/carrousel2.jpg','/img/fotocarrousell.jpg','/img/carrousel3.jpg'],
+var imagenes = ['/img/bombonesChocolate.jpg','/img/rollsCanela.jpg','/img/sconsQueso.jpg','/img/fotocarrousell.jpg','/img/carrousel3.jpg'],
 
  cont = 0;
 
