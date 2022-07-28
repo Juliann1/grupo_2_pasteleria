@@ -4,8 +4,8 @@ var imagenes = ['/img/bombonesChocolate.jpg','/img/rollsCanela.jpg','/img/sconsQ
 
 function carrousel(contenedor){
     contenedor.addEventListener("click", e =>{
-        let atras = contenedor.querySelector('.atras'),
-            adelante = contenedor.querySelector('.adelante'),
+        let atras = contenedor.querySelector('.atras i'),
+            adelante = contenedor.querySelector('.adelante i'),
             foto = contenedor.querySelector('.fotos-carrousel'),
             target = e.target;
         

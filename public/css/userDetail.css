@@ -34,3 +34,14 @@
 .datos-usuario h3{
     color: #6adbd8;
 }
+
+@media (max-width: 450px) {
+   .bloque{
+    display: flex;
+    flex-direction: column;
+   }
+   .datos-usuario{
+    align-items: center;
+    justify-content: center;
+   }
+}

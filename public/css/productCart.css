@@ -131,3 +131,12 @@ main{
 main{
     margin-bottom: 100px;
 }
+
+
+@media (max-width: 650px) {
+    .cart .product-list li{
+        flex-direction: column;
+        align-self: center;
+    }
+    
+ }
