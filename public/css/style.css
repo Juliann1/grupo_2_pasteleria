@@ -233,7 +233,10 @@ body {
     html {
         font-size: 49%;
     }
-    .carrousel{
+    .recomendados .carrousel{
         display: none;
+    }
+    .listado-productos .caja-contenedor{
+        margin-top: 40px;
     }
 }
