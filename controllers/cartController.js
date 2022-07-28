@@ -38,8 +38,11 @@ const cartController = {
         res.status(200).send("OK");
     },
     count: (req, res) => {
-        req.session.cart = req.session.map((p) => {
+        
+        req.session.cart = req.session.cart.map((p) => {
+
             if (p.id == req.params.productId) {
+              
                 return { id: p.id, cantidad: p.cantidad + req.params.change };
             }
         });
