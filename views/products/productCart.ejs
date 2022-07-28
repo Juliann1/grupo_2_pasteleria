@@ -12,7 +12,7 @@
                 <ul class="product-list">
                     <h2>Mi carrito</h2>
                     <% let total = 0; list.map( p => { %>
-                    <li>
+                    <li class="product-in-cart">
                         <a href="/products/<%= p.id%>"><img src="<%= p.img %>" /></a>
                         <span class="nombre-producto"><a href="/products/<%= p.id%>"><%= p.name %></a></span>
                         <span class="precio-producto"
@@ -35,7 +35,7 @@
                 <% } %>
             </div>
         </main>
-        <script src="/js/cart2.js"></script>
+        <script src="/js/shoppingCart.js"></script>
         <%- include('../partials/footer') %> 
     </body>
     </html>

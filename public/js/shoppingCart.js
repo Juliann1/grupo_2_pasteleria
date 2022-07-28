@@ -5,6 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
     let botonBorrar = document.getElementById("boton-menos");
     let cantidad = document.getElementById("cantidad");
     let eliminar = document.querySelector(".eliminar");
+
+    //Probando
+    let productInCart = document.querySelector('.product-in-cart')
+
+    botonAgregar.addEventListener("click", (e) => {
+        e.traget
+        // console.log(productInCart);
+    });
+
+
+    function countProductsInCart() {
+
+    }
+
+    //Probando
+
+
+
+
     if (eliminar) {
         eliminar.addEventListener("click", (e) => {
             let productID = e.target.dataset.id;

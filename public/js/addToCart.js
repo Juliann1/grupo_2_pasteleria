@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let botonBorrar = document.getElementById("boton-menos");
     let cantidad = document.getElementById("cantidad");
     let agregarCarrito = document.getElementById("add");
-
-    console.log(botonBorrar);
+   
 
     botonAgregar.addEventListener("click", (e) => {
         cantidad.value++;
