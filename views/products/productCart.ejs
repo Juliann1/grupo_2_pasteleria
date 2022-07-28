@@ -16,13 +16,13 @@
                         <a href="/products/<%= p.id%>"><img src="<%= p.img %>" /></a>
                         <span class="nombre-producto"><a href="/products/<%= p.id%>"><%= p.name %></a></span>
                         <span class="precio-producto"
-                            >subtotal: $<%= p.cantidad == 0 ? p.precio : p.precio *p.cantidad %>
+                            >subtotal: $<%=  p.precio *p.cantidad  %>
                         </span>
                         <div class="control">
                             <button id="boton-menos" class="dec"><i class="fa-solid fa-minus"></i></button>
-                            <span id="cantidad" class="cantidad"
-                                ><%= p.cantidad %></span
-                            >
+                            <input type="number" id="cantidad" class="cantidad" value="<%= p.cantidad %>" disabled
+                                >
+
                             <button id="boton-mas" class="inc"><i class="fa-solid fa-plus"></i></button>
                             <button id="eliminar" class="eliminar"><i class="fa-solid fa-xmark"></i></button>
                         </div>

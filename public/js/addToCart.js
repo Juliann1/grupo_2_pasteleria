@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     botonBorrar.addEventListener("click", (e) => {
-        if (cantidad.value != 0) {
+        if (cantidad.value != 1) {
             cantidad.value = cantidad.value - 1;
         }
     });

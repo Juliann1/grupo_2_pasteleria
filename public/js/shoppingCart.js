@@ -46,9 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     botonBorrar.addEventListener("click", (e) => {
-        if (cantidad > 0) {
-            cantidad.value--;
+        if (cantidad.value != 1) {
+            cantidad.value = cantidad.value - 1;
         }
+        
+    });
+    botonAgregar.addEventListener("click", (e) => {
+        console.log("aaaaaaaa");
+        cantidad.value++;
     });
 
     /*agregarCarrito.addEventListener('click', e =>{
